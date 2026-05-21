@@ -1,0 +1,20 @@
+{
+  "name": "js-theme-animation",
+  "version": "0.0.0",
+  "description": "",
+  "homepage": "https://github.com/MaxiGarcia13/js-theme-animation#readme",
+  "bugs": {
+    "url": "https://github.com/MaxiGarcia13/js-theme-animation/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaxiGarcia13/js-theme-animation.git"
+  },
+  "license": "ISC",
+  "author": "Maximiliano Garcia Mortigliengo",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
