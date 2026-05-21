@@ -1,0 +1,36 @@
+---
+import MoonIcon from "./icons/moon.astro";
+import SunIcon from "./icons/sun.astro";
+---
+
+<button type="button" data-theme-toggle class="rounded-md border p-3">
+  <MoonIcon id="moon-icon" class="block size-6" />
+  <SunIcon id="sun-icon" class="hidden size-6" />
+</button>
+
+<script>
+  import {
+    circularRevealChange,
+    type ThemeRevealOrigin,
+  } from "@maxigarcia/js-theme-animation";
+
+  function toggleTheme() {
+    const isDark = document.documentElement.dataset.theme === "dark";
+    document.documentElement.dataset.theme = isDark ? "light" : "dark";
+
+    const moonIcon = document.getElementById("moon-icon");
+    const sunIcon = document.getElementById("sun-icon");
+
+    moonIcon?.classList.toggle("hidden", !isDark);
+    moonIcon?.classList.toggle("block", isDark);
+
+    sunIcon?.classList.toggle("block", !isDark);
+    sunIcon?.classList.toggle("hidden", isDark);
+  }
+
+  document
+    .querySelector("[data-theme-toggle]")
+    ?.addEventListener("click", (event) => {
+      circularRevealChange(toggleTheme, event as unknown as ThemeRevealOrigin);
+    });
+</script>
