@@ -1,15 +1,15 @@
 ---
-import MoonIcon from "./icons/moon.astro";
-import SunIcon from "./icons/sun.astro";
+import MoonIcon from './icons/moon.astro';
+import SunIcon from './icons/sun.astro';
 ---
 
 <button
   type="button"
   data-theme-toggle
-  class="rounded p-3 bg-gray-200 dark:bg-gray-800 cursor-pointer flex items-center gap-3"
+  class="inline-flex cursor-pointer items-center gap-3 rounded-xl border border-surface-border bg-accent px-5 py-3 text-sm font-medium text-accent-foreground shadow-sm transition-[transform,box-shadow] duration-200 hover:shadow-md hover:shadow-glow/30 active:scale-[0.98]"
 >
-  <MoonIcon id="moon-icon" class="block size-6" />
-  <SunIcon id="sun-icon" class="hidden size-6" />
+  <MoonIcon id="moon-icon" class="block size-5 shrink-0" />
+  <SunIcon id="sun-icon" class="hidden size-5 shrink-0" />
   <span>Toggle theme</span>
 </button>
 
@@ -17,26 +17,26 @@ import SunIcon from "./icons/sun.astro";
   import {
     circularRevealChange,
     type ThemeRevealOrigin,
-  } from "@maxigarcia/js-theme-animation";
+  } from '@maxigarcia/js-theme-animation';
 
   function toggleTheme() {
-    const isDark = document.documentElement.classList.contains("dark");
+    const isDark = !document.documentElement.classList.contains('dark');
 
-    document.documentElement.classList.toggle("dark", !isDark);
+    document.documentElement.classList.toggle('dark', isDark);
 
-    const moonIcon = document.getElementById("moon-icon");
-    const sunIcon = document.getElementById("sun-icon");
+    const moonIcon = document.getElementById('moon-icon');
+    const sunIcon = document.getElementById('sun-icon');
 
-    moonIcon?.classList.toggle("hidden", !isDark);
-    moonIcon?.classList.toggle("block", isDark);
+    moonIcon?.classList.toggle('hidden', isDark);
+    sunIcon?.classList.toggle('block', isDark);
 
-    sunIcon?.classList.toggle("block", !isDark);
-    sunIcon?.classList.toggle("hidden", isDark);
+    moonIcon?.classList.toggle('block', !isDark);
+    sunIcon?.classList.toggle('hidden', !isDark);
   }
 
   document
-    .querySelector("[data-theme-toggle]")
-    ?.addEventListener("click", (event) => {
+    .querySelector('[data-theme-toggle]')
+    ?.addEventListener('click', (event) => {
       circularRevealChange(toggleTheme, event as unknown as ThemeRevealOrigin);
     });
 </script>
