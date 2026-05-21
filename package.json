@@ -1,7 +1,8 @@
 {
-  "name": "js-theme-animation",
+  "name": "js-theme-animation-monorepo",
   "type": "module",
   "version": "0.0.0",
+  "private": true,
   "description": "",
   "author": "Maximiliano Garcia Mortigliengo",
   "license": "ISC",
@@ -13,15 +14,16 @@
   "bugs": {
     "url": "https://github.com/MaxiGarcia13/js-theme-animation/issues"
   },
-  "main": "index.js",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "clean": "rm -rf dist",
-    "prebuild": "npm run clean",
-    "build": "tsc && node scripts/copy-css-files.ts",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
-    "prepublish:npm": "npm run build",
-    "publish:npm": "npm publish --access public"
+    "build": "npm run build -w js-theme-animation && npm run build -w app",
+    "dev": "npm run dev -w app",
+    "lint": "eslint packages",
+    "lint:fix": "eslint --fix packages",
+    "prepublish:npm": "npm run build -w js-theme-animation",
+    "publish:npm": "npm publish -w js-theme-animation --access public"
   },
   "devDependencies": {
     "@maxigarcia/eslint-config": "^1.5.0",
