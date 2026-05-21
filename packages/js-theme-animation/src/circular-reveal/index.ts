@@ -1,6 +1,11 @@
-export function revealThemeChange(
-  applyThemeChange: () => void,
-  click: MouseEvent,
+export interface ThemeRevealOrigin {
+  clientX: number;
+  clientY: number;
+}
+
+export function circularRevealChange(
+  apply: () => void,
+  click: ThemeRevealOrigin,
 ): void {
   const x = (click.clientX / window.innerWidth) * 100;
   const y = (click.clientY / window.innerHeight) * 100;
@@ -9,9 +14,9 @@ export function revealThemeChange(
   document.documentElement.style.setProperty('--theme-reveal-y', `${y}%`);
 
   if (!document.startViewTransition) {
-    applyThemeChange();
+    apply();
     return;
   }
 
-  document.startViewTransition(applyThemeChange);
+  document.startViewTransition(apply);
 }
