@@ -1,5 +1,8 @@
 @import 'tailwindcss';
+
 @import '@maxigarcia/js-theme-animation/circular-reveal/index.css';
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 html {
   view-transition-name: root;
@@ -11,7 +14,7 @@ html {
   color: #111;
 }
 
-:root[data-theme='dark'] {
+:root.dark {
   color-scheme: dark;
   background-color: #111;
   color: #eee;
