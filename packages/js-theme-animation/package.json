@@ -1,0 +1,24 @@
+{
+  "name": "@maxigarcia/js-theme-animation",
+  "type": "module",
+  "version": "0.0.0",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./circular-reveal/index.css": "./dist/circular-reveal/index.css"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean",
+    "build": "tsc && node scripts/copy-css-files.ts",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
+  }
+}
