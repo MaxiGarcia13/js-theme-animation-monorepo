@@ -4,18 +4,69 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@theme {
+  --font-sans: ui-sans-serif, system-ui, sans-serif, 'Segoe UI', Roboto, sans-serif;
+  --font-display: ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: var(--palette-background);
+  --color-foreground: var(--palette-foreground);
+  --color-muted: var(--palette-muted);
+  --color-muted-foreground: var(--palette-muted-foreground);
+  --color-surface: var(--palette-surface);
+  --color-surface-border: var(--palette-surface-border);
+  --color-accent: var(--palette-accent);
+  --color-accent-foreground: var(--palette-accent-foreground);
+  --color-glow: var(--palette-glow);
+}
+
 html {
   view-transition-name: root;
 }
 
 :root {
   color-scheme: light;
-  background-color: #fff;
-  color: #111;
+
+  --palette-background: #f8f6ff;
+  --palette-foreground: #1a1625;
+  --palette-muted: #e8e4f5;
+  --palette-muted-foreground: #5c5670;
+  --palette-surface: rgb(255 255 255 / 0.72);
+  --palette-surface-border: rgb(124 92 255 / 0.18);
+  --palette-accent: #7c5cff;
+  --palette-accent-foreground: #ffffff;
+  --palette-glow: rgb(124 92 255 / 0.35);
 }
 
 :root.dark {
   color-scheme: dark;
-  background-color: #111;
-  color: #eee;
+
+  --palette-background: #0c0a14;
+  --palette-foreground: #f0ecff;
+  --palette-muted: #1e1a2e;
+  --palette-muted-foreground: #9d94b8;
+  --palette-surface: rgb(22 18 36 / 0.65);
+  --palette-surface-border: rgb(167 139 250 / 0.22);
+  --palette-accent: #a78bfa;
+  --palette-accent-foreground: #0c0a14;
+  --palette-glow: rgb(167 139 250 / 0.4);
+}
+
+body {
+  background-color: var(--palette-background);
+  color: var(--palette-foreground);
+  font-family: var(--font-sans);
+}
+
+.landing-mesh {
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -20%, var(--palette-glow), transparent),
+    radial-gradient(ellipse 60% 40% at 100% 0%, rgb(251 191 36 / 0.12), transparent),
+    radial-gradient(ellipse 50% 30% at 0% 100%, rgb(56 189 248 / 0.1), transparent);
+}
+
+.dark .landing-mesh {
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -20%, var(--palette-glow), transparent),
+    radial-gradient(ellipse 60% 40% at 100% 0%, rgb(251 191 36 / 0.08), transparent),
+    radial-gradient(ellipse 50% 30% at 0% 100%, rgb(56 189 248 / 0.06), transparent);
 }
