@@ -3,9 +3,14 @@ import MoonIcon from "./icons/moon.astro";
 import SunIcon from "./icons/sun.astro";
 ---
 
-<button type="button" data-theme-toggle class="rounded-md border p-3">
+<button
+  type="button"
+  data-theme-toggle
+  class="rounded p-3 bg-gray-200 dark:bg-gray-800 cursor-pointer flex items-center gap-3"
+>
   <MoonIcon id="moon-icon" class="block size-6" />
   <SunIcon id="sun-icon" class="hidden size-6" />
+  <span>Toggle theme</span>
 </button>
 
 <script>
@@ -15,8 +20,9 @@ import SunIcon from "./icons/sun.astro";
   } from "@maxigarcia/js-theme-animation";
 
   function toggleTheme() {
-    const isDark = document.documentElement.dataset.theme === "dark";
-    document.documentElement.dataset.theme = isDark ? "light" : "dark";
+    const isDark = document.documentElement.classList.contains("dark");
+
+    document.documentElement.classList.toggle("dark", !isDark);
 
     const moonIcon = document.getElementById("moon-icon");
     const sunIcon = document.getElementById("sun-icon");

@@ -3,18 +3,27 @@ import "../styles/global.css";
 import ThemeToggleButton from "../components/theme-toggle-button.astro";
 ---
 
-<html lang="en" data-theme="light">
+<html lang="en" class="dark">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>JS Theme Animation</title>
   </head>
   <body>
-    <h1>Astro</h1>
+    <main class="container mx-auto p-4 space-y-10">
+      <h1 class="text-4xl font-bold text-center">JS Theme Animation</h1>
 
-    <ThemeToggleButton />
+      <section class="grid grid-cols-3 gap-4 flex-wrap my-4">
+        <article class="border p-4 rounded space-y-4">
+          <h2 class="text-2xl font-bold">Circular Reveal</h2>
+          <div class="flex justify-center items-center">
+            <ThemeToggleButton />
+          </div>
+        </article>
+      </section>
+    </main>
   </body>
 </html>
