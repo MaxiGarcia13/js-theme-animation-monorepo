@@ -19,6 +19,7 @@
     "prebuild": "npm run clean",
     "build": "tsc && node scripts/copy-css-files.ts",
     "lint": "eslint .",
-    "lint:fix": "eslint --fix ."
+    "lint:fix": "eslint --fix .",
+    "phoenix": "npm run clean && rm -rf node_modules"
   }
 }

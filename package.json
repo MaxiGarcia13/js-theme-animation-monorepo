@@ -18,12 +18,14 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "npm run build -w js-theme-animation && npm run build -w app",
+    "build": "npm run build -w @maxigarcia/js-theme-animation && npm run build -w app",
     "dev": "npm run dev -w app",
     "lint": "eslint packages",
     "lint:fix": "eslint --fix packages",
-    "prepublish:npm": "npm run build -w js-theme-animation",
-    "publish:npm": "npm publish -w js-theme-animation --access public"
+    "prepublish:npm": "npm run build -w @maxigarcia/js-theme-animation",
+    "publish:npm": "npm publish -w @maxigarcia/js-theme-animation --access public",
+    "clean": "npm run phoenix -w @maxigarcia/js-theme-animation && npm run phoenix -w app",
+    "phoenix": "npm run clean && npm i && npm run build"
   },
   "devDependencies": {
     "@maxigarcia/eslint-config": "^1.5.0",

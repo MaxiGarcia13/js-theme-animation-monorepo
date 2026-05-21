@@ -10,10 +10,12 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "clean": "rm -rf .astro dist",
+    "phoenix": "npm run clean && rm -rf node_modules"
   },
   "dependencies": {
-    "astro": "^6.3.7",
-    "js-theme-animation": "*"
+    "@maxigarcia/js-theme-animation": "*",
+    "astro": "^6.3.7"
   }
 }
