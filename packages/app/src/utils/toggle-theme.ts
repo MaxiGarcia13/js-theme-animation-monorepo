@@ -11,7 +11,7 @@ export function toggleTheme(button: HTMLButtonElement) {
   );
 
   moonIcon?.classList.toggle('hidden', isDark);
-  sunIcon?.classList.toggle('block', isDark);
-  moonIcon?.classList.toggle('block', !isDark);
   sunIcon?.classList.toggle('hidden', !isDark);
+  moonIcon?.classList.toggle('block', !isDark);
+  sunIcon?.classList.toggle('block', isDark);
 }

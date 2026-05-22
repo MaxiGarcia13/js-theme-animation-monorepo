@@ -14,6 +14,10 @@ const sweepDirections = [
   { value: 'down', label: 'Down' },
   { value: 'left', label: 'Left' },
   { value: 'right', label: 'Right' },
+  { value: 'corner-top-left', label: 'Corner Top Left' },
+  { value: 'corner-top-right', label: 'Corner Top Right' },
+  { value: 'corner-bottom-left', label: 'Corner Bottom Left' },
+  { value: 'corner-bottom-right', label: 'Corner Bottom Right' },
 ];
 ---
 
@@ -31,7 +35,7 @@ const sweepDirections = [
       id="sweep-direction"
       data-sweep-direction
       options={sweepDirections}
-      class="h-full"
+      class="h-full max-w-24"
     />
   </div>
 </AnimationDemoCard>
