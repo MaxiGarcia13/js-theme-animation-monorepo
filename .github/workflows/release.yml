@@ -63,7 +63,6 @@ jobs:
         uses: MaxiGarcia13/gh-actions/.github/actions/read-release-tag@main
 
   release-notes:
-    name: Create release notes
     needs: release
     uses: MaxiGarcia13/gh-actions/.github/workflows/create-release-notes.yml@main
     with:
