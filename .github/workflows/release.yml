@@ -17,8 +17,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    outputs:
-      tag: ${{ steps.release_tag.outputs.tag }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -29,6 +27,7 @@ jobs:
         with:
           cache: npm
           node-version: 24
+          registry-url: 'https://registry.npmjs.org'
 
       - run: npm ci
 
@@ -56,4 +55,3 @@ jobs:
         run: npx nx release publish --projects=@maxigarcia/js-theme-animation --first-release
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
