@@ -26,12 +26,12 @@ export function onCircularRevealAnimation(
 
   document.startViewTransition(apply);
 
-  const animationEndListener = () => {
+  const animationComplete = () => {
     html.style.removeProperty('--theme-reveal-x');
     html.style.removeProperty('--theme-reveal-y');
 
     html.classList.remove('circular-reveal');
   };
 
-  $onTransitionEnd(animationEndListener, 600);
+  $onTransitionEnd(animationComplete, 600);
 }

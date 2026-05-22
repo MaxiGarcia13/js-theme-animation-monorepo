@@ -1,9 +1,9 @@
 @keyframes curtain-reveal {
   from {
-    clip-path: inset(0 0 100% 0);
+    clip-path: var(--theme-reveal-direction-from);
   }
   to {
-    clip-path: inset(0 0 0 0);
+    clip-path: var(--theme-reveal-direction-to);
   }
 }
 
@@ -19,7 +19,7 @@ html.curtain-reveal::view-transition-old(root) {
 
 html.curtain-reveal::view-transition-new(root) {
   z-index: 1;
-  animation: curtain-reveal 0.5s ease-in-out forwards;
+  animation: curtain-reveal 0.45s ease-in-out forwards;
 }
 
 /* Reduce motion */
