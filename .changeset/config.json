@@ -5,10 +5,7 @@
   "tag": true,
   "commit": true,
   "fixed": [],
-  "linked": [
-    "@maxigarcia/js-theme-animation",
-    "app"
-  ],
+  "linked": [],
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
