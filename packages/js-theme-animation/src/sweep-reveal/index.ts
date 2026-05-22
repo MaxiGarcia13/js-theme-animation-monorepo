@@ -1,8 +1,18 @@
 import { $html, $onTransitionEnd } from '../utils/index.js';
 
+export type SweepDirection
+  = 'up'
+    | 'down'
+    | 'left'
+    | 'right'
+    | 'corner-top-left'
+    | 'corner-top-right'
+    | 'corner-bottom-left'
+    | 'corner-bottom-right';
+
 export function onSweepRevealAnimation(
   apply: () => void,
-  direction: 'up' | 'down' | 'left' | 'right' = 'up',
+  direction: SweepDirection = 'up',
 ): void {
   if (!document.startViewTransition) {
     apply();
@@ -11,10 +21,14 @@ export function onSweepRevealAnimation(
   const html = $html();
 
   const directions = {
-    up: ['inset(0 0 100% 0)', 'inset(0 0 0 0)'],
-    down: ['inset(100% 0 0 0)', 'inset(0 0 0 0)'],
-    left: ['inset(0 100% 0 0)', 'inset(0 0 0 0)'],
-    right: ['inset(0 0 0 100%)', 'inset(0 0 0 0)'],
+    'up': ['inset(0 0 100% 0)', 'inset(0 0 0 0)'],
+    'down': ['inset(100% 0 0 0)', 'inset(0 0 0 0)'],
+    'left': ['inset(0 100% 0 0)', 'inset(0 0 0 0)'],
+    'right': ['inset(0 0 0 100%)', 'inset(0 0 0 0)'],
+    'corner-top-left': ['inset(0 100% 100% 0)', 'inset(0 0 0 0)'],
+    'corner-top-right': ['inset(0 0 100% 100%)', 'inset(0 0 0 0)'],
+    'corner-bottom-left': ['inset(100% 100% 0 0)', 'inset(0 0 0 0)'],
+    'corner-bottom-right': ['inset(100% 0 0 100%)', 'inset(0 0 0 0)'],
   };
 
   const [directionFrom, directionTo] = directions[direction] ?? directions.up;
