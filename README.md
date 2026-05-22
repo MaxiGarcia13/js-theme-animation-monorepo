@@ -46,9 +46,9 @@ This monorepo uses [Nx](https://nx.dev/) to track project dependencies, run task
 
 Releases use [Nx Release](https://nx.dev/docs/features/manage-releases) with [independent versioning](https://nx.dev/docs/guides/nx-release/release-projects-independently) and [Conventional Commits](https://www.conventionalcommits.org/). Each released project gets a git tag like `@maxigarcia/js-theme-animation@1.2.3`.
 
-| Project | npm publish | git tag |
-| ------- | ----------- | ------- |
-| `@maxigarcia/js-theme-animation` | yes | `@maxigarcia/js-theme-animation@{version}` |
+| Project                              | npm publish    | git tag                                        |
+| ------------------------------------ | -------------- | ---------------------------------------------- |
+| `@maxigarcia/js-theme-animation`     | yes            | `@maxigarcia/js-theme-animation@{version}`     |
 | `@maxigarcia/js-theme-animation-app` | no (`private`) | `@maxigarcia/js-theme-animation-app@{version}` |
 
 From the repo root (local dry run):
@@ -57,13 +57,6 @@ From the repo root (local dry run):
 npm run version-packages   # bump versions, changelogs, and git tags (no publish)
 npm run release            # publish the library to npm only (usually run in CI)
 ```
-
-### CI (GitHub Actions)
-
-- **[CI](.github/workflows/ci.yml)** — runs lint and build on pull requests.
-- **[Release](.github/workflows/release.yml)** — on push to `main`: lints, builds, runs `nx release` to version both projects and create tags when conventional commits warrant it, commits and pushes tags to `main`, then publishes only `@maxigarcia/js-theme-animation` to npm.
-
-Add an [npm automation token](https://www.npmjs.com/settings/~youruser/tokens) as the `NPM_TOKEN` repository secret. Add a `GH_TOKEN` secret (PAT or fine-grained token with **contents: write**) so the workflow can push version commits to `main`.
 
 ## Requirements
 
