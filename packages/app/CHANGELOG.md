@@ -1,0 +1,37 @@
+## 0.1.0 (2026-05-22)
+
+### 🚀 Features
+
+- Add README.md for app package to document demo site functionality ([22050cf](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/22050cf))
+- Add GitHub links to demo cards for improved accessibility ([6852eab](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/6852eab))
+- Integrate Checkbox and Select components into CircularRevealDemoCard for enhanced interactivity ([1e9d37c](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/1e9d37c))
+- Add Checkbox component for improved form handling ([4afe183](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/4afe183))
+- Enhance circular reveal animation with blur effect options ([591e568](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/591e568))
+- Enhance Select component with ChevronDownIcon for improved dropdown UI ([10c0cf3](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/10c0cf3))
+- Update Sweep Reveal Demo Card and Theme Toggle Button for enhanced functionality ([917a22c](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/917a22c))
+- Introduce Sweep Reveal Demo Card and associated animations ([8d16546](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/8d16546))
+- Introduce Select component and enhance demo cards with class support ([7bf50cf](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/7bf50cf))
+- Implement toggleTheme utility function for dark mode support ([0e68563](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/0e68563))
+- Add Circular Reveal Demo Card component for theme transitions ([ef6a68a](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/ef6a68a))
+- Extend Animation Demo Card to support additional HTML attributes ([663d6ec](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/663d6ec))
+- Add curtain reveal animation import to global CSS and update package.json ([78aea38](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/78aea38))
+- Enhance theme toggle button with animation support and update index page ([67f964c](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/67f964c))
+- Introduce Animation Demo Card component and enhance index layout ([df340ad](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/df340ad))
+- Add GitHub icon component for enhanced visual representation ([6778032](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/6778032))
+- Revamp global CSS for enhanced theming and layout ([1e00708](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/1e00708))
+- Refine theme toggle button and update index page layout ([fa9f8ee](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/fa9f8ee))
+- Update global CSS for dark theme support and custom variants ([31b3ecb](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/31b3ecb))
+- Enhance index page with theme toggle and global styles ([885e1d0](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/885e1d0))
+- Implement theme toggle button with moon and sun icons ([88b40cc](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/88b40cc))
+
+### 🩹 Fixes
+
+- Update GitHub repository URL in index page ([f1b5ace](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/f1b5ace))
+
+### 🧱 Updated Dependencies
+
+- Updated @maxigarcia/js-theme-animation to 0.1.0
+
+### ❤️ Thank You
+
+- Maximiliano Garcia Mortigliengo

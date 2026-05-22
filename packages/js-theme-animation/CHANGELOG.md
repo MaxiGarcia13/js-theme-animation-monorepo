@@ -1,0 +1,22 @@
+## 0.1.0 (2026-05-22)
+
+### 🚀 Features
+
+- Integrate Changesets for versioning and release management ([0cf1661](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/0cf1661))
+- Add README files for circular and sweep reveal animations ([a24a5fd](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/a24a5fd))
+- Enhance circular reveal animation with blur effect options ([591e568](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/591e568))
+- Enhance onSweepRevealAnimation with additional direction support ([ecf6117](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/ecf6117))
+- Introduce Sweep Reveal Demo Card and associated animations ([8d16546](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/8d16546))
+- Enhance curtain reveal animation with directional support and cleanup logic ([2caa7ce](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/2caa7ce))
+- Add curtain reveal animation import to global CSS and update package.json ([78aea38](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/78aea38))
+- Add utility functions for DOM manipulation and transition handling ([f49cb43](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/f49cb43))
+- Refactor circular reveal animation and improve CSS handling ([bd41654](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/bd41654))
+
+### 🩹 Fixes
+
+- Ensure consistent handling of '--theme-reveal-y' property in circular reveal animation ([9fc3aea](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/9fc3aea))
+- Correct property handling in circular reveal animation ([06f4fb8](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/06f4fb8))
+
+### ❤️ Thank You
+
+- Maximiliano Garcia Mortigliengo
