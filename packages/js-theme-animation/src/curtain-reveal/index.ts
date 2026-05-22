@@ -12,9 +12,9 @@ export function onCurtainRevealAnimation(
 
   const directions = {
     up: ['inset(0 0 100% 0)', 'inset(0 0 0 0)'],
-    down: ['inset(0 0 0 0)', 'inset(0 0 100% 0)'],
-    left: ['inset(0 100% 0 0)', 'inset(0 0 0 100%)'],
-    right: ['inset(0 0 0 100%)', 'inset(0 100% 0 0)'],
+    down: ['inset(100% 0 0 0)', 'inset(0 0 0 0)'],
+    left: ['inset(0 100% 0 0)', 'inset(0 0 0 0)'],
+    right: ['inset(0 0 0 100%)', 'inset(0 0 0 0)'],
   };
 
   const [directionFrom, directionTo] = directions[direction] ?? directions.up;
@@ -28,7 +28,8 @@ export function onCurtainRevealAnimation(
 
   const animationComplete = () => {
     html.classList.remove('curtain-reveal');
-    html.style.removeProperty('--theme-reveal-direction');
+    html.style.removeProperty('--theme-reveal-direction-from');
+    html.style.removeProperty('--theme-reveal-direction-to');
   };
 
   $onTransitionEnd(animationComplete, 600);
