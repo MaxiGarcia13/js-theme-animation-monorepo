@@ -11,6 +11,21 @@
   "bugs": {
     "url": "https://github.com/MaxiGarcia13/js-theme-animation/issues"
   },
+  "keywords": [
+    "theme",
+    "transition",
+    "view transitions",
+    "view transitions api",
+    "utility",
+    "library",
+    "css",
+    "javascript",
+    "web",
+    "dark mode",
+    "light mode",
+    "dark theme",
+    "light theme"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
