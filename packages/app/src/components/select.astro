@@ -13,14 +13,18 @@ interface Props extends HTMLAttributes<'select'> {
 
 const { options, class: className, id, ...rest } = Astro.props;
 
-const selectClass =
-  'cursor-pointer appearance-none rounded-xl border border-surface-border bg-surface py-3 pl-5 pr-10 text-sm font-medium text-foreground shadow-sm transition-[box-shadow] duration-200 hover:shadow-md hover:shadow-glow/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent';
-
 const chevronId = id ? `${id}-chevron` : 'select-chevron';
 ---
 
 <div class:list={['relative inline-flex', className]}>
-  <select id={id} class:list={[selectClass, 'h-full w-full min-w-0']} {...rest}>
+  <select
+    id={id}
+    class:list={[
+      'cursor-pointer appearance-none rounded-xl border border-surface-border bg-surface py-3 pl-5 pr-10 text-sm font-medium text-foreground shadow-sm transition-[box-shadow] duration-200 hover:shadow-md hover:shadow-glow/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent',
+      'h-full w-full min-w-0',
+    ]}
+    {...rest}
+  >
     {
       options.map((option) => (
         <option value={option.value}>{option.label}</option>
