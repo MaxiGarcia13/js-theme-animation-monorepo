@@ -56,15 +56,4 @@ jobs:
         run: npx nx release publish --projects=@maxigarcia/js-theme-animation --first-release
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - name: Read release tag
-        id: release_tag
-        uses: MaxiGarcia13/gh-actions/.github/actions/read-release-tag@main
-
-  release-notes:
-    needs: release
-    permissions:
-      contents: write
-    uses: MaxiGarcia13/gh-actions/.github/workflows/create-release-notes.yml@main
-    with:
-      tag: ${{ needs.release.outputs.tag }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
