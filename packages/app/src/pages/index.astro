@@ -48,7 +48,9 @@ import packageJson from '../../package.json';
       <SweepRevealDemoCard class="flex-1" />
     </section>
 
-    <footer class="text-center text-sm text-muted-foreground">
+    <footer
+      class="text-center inline-flex mx-auto items-center gap-2 text-sm text-muted-foreground"
+    >
       <a
         href={GITHUB_JS_THEME_ANIMATION_URL}
         target="_blank"
@@ -56,10 +58,9 @@ import packageJson from '../../package.json';
         class="inline-flex items-center gap-2 transition-colors hover:text-foreground"
       >
         <GithubIcon id="github-icon-footer" class="size-4 shrink-0" />
-        <span>
-          MaxiGarcia13/js-theme-animation - APP v{packageJson.version}
-        </span>
+        <span> MaxiGarcia13/js-theme-animation </span>
       </a>
+      - APP v{packageJson.version}
     </footer>
   </main>
 </AppLayout>
