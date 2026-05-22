@@ -72,8 +72,7 @@ jobs:
 
       - run: git pull && git pull --tags
 
-      # get last tag from packages
-      - name: Get last tag
+      - name: Get latest tag
         id: tag
         run: |
           set -euo pipefail
