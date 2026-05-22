@@ -3,9 +3,12 @@
   "changelog": "@changesets/cli/changelog",
   "version": true,
   "tag": true,
-  "commit": false,
+  "commit": true,
   "fixed": [],
-  "linked": [],
+  "linked": [
+    "@maxigarcia/js-theme-animation",
+    "app"
+  ],
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
