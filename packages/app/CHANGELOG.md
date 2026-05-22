@@ -1,3 +1,13 @@
+## 0.1.3 (2026-05-22)
+
+### 🩹 Fixes
+
+- Correct package.json import path and update footer display ([4fbe42c](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/4fbe42c))
+
+### ❤️ Thank You
+
+- Maximiliano Garcia Mortigliengo
+
 ## 0.1.2 (2026-05-22)
 
 ### 🩹 Fixes
