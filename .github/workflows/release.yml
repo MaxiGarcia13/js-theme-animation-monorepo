@@ -9,10 +9,10 @@ concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
   lint:
+    if: github.event_name != 'push' || !startsWith(github.event.head_commit.message, 'chore(release):')
     uses: ./.github/workflows/lint.yml
 
   release:
-    if: github.event_name != 'push' || !startsWith(github.event.head_commit.message, 'chore(release):')
     needs: lint
     name: Release
     runs-on: ubuntu-latest
