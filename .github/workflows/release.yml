@@ -17,6 +17,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    outputs:
+      tag: ${{ steps.release_tag.outputs.tag }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -55,3 +57,15 @@ jobs:
         run: npm run release
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Read release tag
+        id: release_tag
+        uses: MaxiGarcia13/gh-actions/.github/actions/read-release-tag@main
+        with:
+          working_directory: ./packages/js-theme-animation
+
+  release-notes:
+    needs: release
+    uses: ./.github/workflows/create-release-notes.yml
+    with:
+      tag: ${{ needs.release.outputs.tag }}
