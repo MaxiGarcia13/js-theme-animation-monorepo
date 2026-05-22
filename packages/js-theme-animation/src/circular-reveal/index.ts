@@ -32,8 +32,8 @@ export function onCircularRevealAnimation(
     }
   }
 
-  html.style.setProperty('--theme-reveal-y', `${y}%`);
   html.style.setProperty('--theme-reveal-x', `${x}%`);
+  html.style.setProperty('--theme-reveal-y', `${y}%`);
 
   if (!document.startViewTransition) {
     apply();
@@ -43,8 +43,8 @@ export function onCircularRevealAnimation(
   document.startViewTransition(apply);
 
   const animationComplete = () => {
-    html.style.removeProperty('--theme-reveal-y');
     html.style.removeProperty('--theme-reveal-x');
+    html.style.removeProperty('--theme-reveal-y');
     html.style.removeProperty('--theme-reveal-blur');
 
     html.classList.remove('circular-reveal', 'circular-reveal--blur-circle');
