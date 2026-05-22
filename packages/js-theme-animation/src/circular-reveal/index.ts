@@ -14,11 +14,11 @@ export interface CircularRevealOptions {
 
 export function onCircularRevealAnimation(
   apply: () => void,
-  click: ThemeRevealOrigin,
+  origin: ThemeRevealOrigin,
   options?: CircularRevealOptions,
 ): void {
-  const x = (click.clientX / window.innerWidth) * 100;
-  const y = (click.clientY / window.innerHeight) * 100;
+  const x = (origin.clientX / window.innerWidth) * 100;
+  const y = (origin.clientY / window.innerHeight) * 100;
 
   const html = $html();
 
