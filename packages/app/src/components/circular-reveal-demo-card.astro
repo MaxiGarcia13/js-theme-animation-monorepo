@@ -30,7 +30,9 @@ const { class: className } = Astro.props;
 
   if (button) {
     button.addEventListener('click', (event) => {
-      onCircularRevealAnimation(() => toggleTheme(button), event);
+      onCircularRevealAnimation(() => toggleTheme(button), event, {
+        blurCircle: false,
+      });
     });
   }
 </script>
