@@ -1,3 +1,14 @@
+## 0.1.5 (2026-05-22)
+
+### 🩹 Fixes
+
+- Update viewport meta tag for better responsiveness ([259bed5](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/259bed5))
+- Update Open Graph meta tags for improved SEO ([1d05764](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/1d05764))
+
+### ❤️ Thank You
+
+- Maximiliano Garcia Mortigliengo
+
 ## 0.1.4 (2026-05-22)
 
 ### 🩹 Fixes
