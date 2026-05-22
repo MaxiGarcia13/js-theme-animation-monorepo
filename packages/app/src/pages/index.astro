@@ -1,8 +1,8 @@
 ---
 import '../styles/global.css';
-import AnimationDemoCard from '../components/animation-demo-card.astro';
+import CircularRevealDemoCard from '../components/circular-reveal-demo-card.astro';
+import CurtainRevealDemoCard from '../components/curtain-reveal-demo-card.astro';
 import GithubIcon from '../components/icons/github.astro';
-import ThemeToggleButton from '../components/theme-toggle-button.astro';
 const GITHUB_REPO_URL =
   'https://github.com/MaxiGarcia13/js-theme-animation-monorepo/tree/main/packages/js-theme-animation';
 ---
@@ -54,21 +54,8 @@ const GITHUB_REPO_URL =
         class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
         aria-label="Animation demos"
       >
-        <AnimationDemoCard
-          title="Circular Reveal"
-          description="A radial clip-path expands from the click origin, sweeping the new theme into view."
-          badge="Live demo"
-        >
-          <ThemeToggleButton animation="circular" />
-        </AnimationDemoCard>
-
-        <AnimationDemoCard
-          title="Curtain Reveal"
-          description="The new theme sweeps in from the top like a curtain dropping into place."
-          badge="Live demo"
-        >
-          <ThemeToggleButton animation="curtain" />
-        </AnimationDemoCard>
+        <CircularRevealDemoCard />
+        <CurtainRevealDemoCard />
       </section>
 
       <footer class="text-center text-sm text-muted-foreground">
