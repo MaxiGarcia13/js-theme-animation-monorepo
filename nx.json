@@ -3,9 +3,14 @@
   "defaultBase": "main",
   "targetDefaults": {
     "build": {
-      "dependsOn": ["^build"],
+      "dependsOn": [
+        "^build"
+      ],
       "cache": true,
-      "outputs": ["{projectRoot}/dist", "{projectRoot}/.astro"]
+      "outputs": [
+        "{projectRoot}/dist",
+        "{projectRoot}/.astro"
+      ]
     },
     "lint": {
       "cache": true
@@ -15,7 +20,9 @@
     }
   },
   "release": {
-    "projects": ["@maxigarcia/js-theme-animation"],
+    "projects": [
+      "@maxigarcia/js-theme-animation"
+    ],
     "releaseTag": {
       "pattern": "v{version}"
     },
@@ -32,5 +39,6 @@
       "tag": false,
       "commitMessage": "chore: version packages"
     }
-  }
+  },
+  "analytics": false
 }
