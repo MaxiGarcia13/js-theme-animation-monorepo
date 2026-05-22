@@ -1,73 +1,62 @@
 ---
-import '../styles/global.css';
-import CircularRevealDemoCard from '../components/circular-reveal-demo-card.astro';
-import SweepRevealDemoCard from '../components/sweep-reveal-demo-card.astro';
-import GithubIcon from '../components/icons/github.astro';
-import { GITHUB_JS_THEME_ANIMATION_URL } from '../../constants/app';
+import CircularRevealDemoCard from '@/components/circular-reveal-demo-card.astro';
+import SweepRevealDemoCard from '@/components/sweep-reveal-demo-card.astro';
+import AppLayout from '@/layouts/app-layout.astro';
+import GithubIcon from '@/components/icons/github.astro';
+import { GITHUB_JS_THEME_ANIMATION_URL } from '@/consts/app';
 ---
 
-<html lang="en" class="dark">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>JS Theme Animation</title>
-  </head>
-  <body class="landing-mesh min-h-dvh antialiased">
-    <main
-      class="mx-auto flex min-h-dvh max-w-5xl flex-col gap-16 px-6 py-16 sm:px-8 sm:py-24"
-    >
-      <header class="space-y-6 text-center">
-        <p
-          class="inline-flex items-center gap-2 rounded-full border border-surface-border bg-surface px-4 py-1.5 text-sm text-muted-foreground backdrop-blur-sm"
-        >
-          <span class="size-1.5 rounded-full bg-accent" aria-hidden="true"
-          ></span>
-          View Transitions API
-        </p>
-        <h1
-          class="bg-linear-to-br from-foreground via-foreground to-muted-foreground bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-5xl md:text-6xl"
-        >
-          JS Theme Animation
-        </h1>
-        <p
-          class="mx-auto max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg"
-        >
-          Lightweight, CSS-first theme transitions for the web. Try the demos
-          below — each interaction reveals a different animation technique.
-        </p>
-        <a
-          href={GITHUB_JS_THEME_ANIMATION_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 rounded-full border border-surface-border bg-surface px-5 py-2.5 text-sm font-medium text-foreground backdrop-blur-sm transition-colors duration-200 hover:border-accent/40 hover:bg-muted"
-        >
-          <GithubIcon id="github-icon" class="size-5 shrink-0" />
-          View on GitHub
-        </a>
-      </header>
-
-      <section
-        class="flex flex-col gap-6 sm:flex-row flex-wrap"
-        aria-label="Animation demos"
+<AppLayout>
+  <main
+    class="mx-auto flex min-h-dvh max-w-5xl flex-col gap-16 px-6 py-16 sm:px-8 sm:py-24"
+  >
+    <header class="space-y-6 text-center">
+      <p
+        class="inline-flex items-center gap-2 rounded-full border border-surface-border bg-surface px-4 py-1.5 text-sm text-muted-foreground backdrop-blur-sm"
       >
-        <CircularRevealDemoCard class="flex-1" />
-        <SweepRevealDemoCard class="flex-1" />
-      </section>
+        <span class="size-1.5 rounded-full bg-accent" aria-hidden="true"></span>
+        View Transitions API
+      </p>
+      <h1
+        class="bg-linear-to-br from-foreground via-foreground to-muted-foreground bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-5xl md:text-6xl"
+      >
+        JS Theme Animation
+      </h1>
+      <p
+        class="mx-auto max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg"
+      >
+        Lightweight, CSS-first theme transitions for the web. Try the demos
+        below — each interaction reveals a different animation technique.
+      </p>
+      <a
+        href={GITHUB_JS_THEME_ANIMATION_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 rounded-full border border-surface-border bg-surface px-5 py-2.5 text-sm font-medium text-foreground backdrop-blur-sm transition-colors duration-200 hover:border-accent/40 hover:bg-muted"
+      >
+        <GithubIcon id="github-icon" class="size-5 shrink-0" />
+        View on GitHub
+      </a>
+    </header>
 
-      <footer class="text-center text-sm text-muted-foreground">
-        <a
-          href={GITHUB_JS_THEME_ANIMATION_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 transition-colors hover:text-foreground"
-        >
-          <GithubIcon id="github-icon-footer" class="size-4 shrink-0" />
-          MaxiGarcia13/js-theme-animation
-        </a>
-      </footer>
-    </main>
-  </body>
-</html>
+    <section
+      class="flex flex-col gap-6 sm:flex-row flex-wrap"
+      aria-label="Animation demos"
+    >
+      <CircularRevealDemoCard class="flex-1" />
+      <SweepRevealDemoCard class="flex-1" />
+    </section>
+
+    <footer class="text-center text-sm text-muted-foreground">
+      <a
+        href={GITHUB_JS_THEME_ANIMATION_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 transition-colors hover:text-foreground"
+      >
+        <GithubIcon id="github-icon-footer" class="size-4 shrink-0" />
+        MaxiGarcia13/js-theme-animation
+      </a>
+    </footer>
+  </main>
+</AppLayout>

@@ -1,0 +1,52 @@
+---
+import '@/styles/global.css';
+
+import {
+  description,
+  author,
+  keywords as keywordsArray,
+} from '../../../../package.json';
+
+const keywords = keywordsArray.join(', ');
+const websiteUrl = Astro.url.toString();
+const faviconUrl = websiteUrl + 'favicon.svg';
+---
+
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>JS Theme Animation</title>
+
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+
+    <meta name="robots" content="index,follow" />
+    <meta name="author" content={author} />
+    <link rel="canonical" href={websiteUrl} />
+    <meta name="theme-color" content="#0c0a14" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="JS Theme Animation" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="JS Theme Animation" />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={websiteUrl} />
+    <meta property="og:image" content={faviconUrl} />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:image:alt" content="JS Theme Animation app icon" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="JS Theme Animation" />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={faviconUrl} />
+    <meta name="twitter:image:alt" content="JS Theme Animation app icon" />
+  </head>
+  <body class="landing-mesh min-h-dvh antialiased">
+    <slot />
+  </body>
+</html>

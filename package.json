@@ -17,6 +17,21 @@
   "workspaces": [
     "packages/*"
   ],
+  "keywords": [
+    "theme",
+    "transition",
+    "view transitions",
+    "view transitions api",
+    "utility",
+    "library",
+    "css",
+    "javascript",
+    "web",
+    "dark mode",
+    "light mode",
+    "dark theme",
+    "light theme"
+  ],
   "scripts": {
     "build": "nx run-many -t build",
     "dev": "nx dev @maxigarcia/js-theme-animation-app",
