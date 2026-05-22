@@ -99,3 +99,11 @@ jobs:
             --title "Release $TAG" \
             --generate-notes \
             --verify-tag
+
+  deploy:
+    needs: release
+    uses: MaxiGarcia13/gh-actions/.github/workflows/deploy-to-vercel.yml@main
+    secrets: inherit
+    with:
+      deployment_environment: Production
+      deployment_url: https://js-theme-animation.vercel.app
