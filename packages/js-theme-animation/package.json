@@ -2,6 +2,15 @@
   "name": "@maxigarcia/js-theme-animation",
   "type": "module",
   "version": "0.0.0",
+  "license": "ISC",
+  "homepage": "https://github.com/MaxiGarcia13/js-theme-animation/tree/main/packages/js-theme-animation#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaxiGarcia13/js-theme-animation.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MaxiGarcia13/js-theme-animation/issues"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
