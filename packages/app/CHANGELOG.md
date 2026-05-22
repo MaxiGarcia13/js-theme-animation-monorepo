@@ -1,3 +1,14 @@
+## 0.2.0 (2026-05-22)
+
+### 🚀 Features
+
+- add animation demos section and app footer components ([e38cd05](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/e38cd05))
+- add installation and usage guide with code snippets ([f303830](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/f303830))
+
+### ❤️ Thank You
+
+- Maximiliano Garcia Mortigliengo
+
 ## 0.1.5 (2026-05-22)
 
 ### 🩹 Fixes
