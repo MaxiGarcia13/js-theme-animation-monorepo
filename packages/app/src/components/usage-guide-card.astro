@@ -1,0 +1,54 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+import type { UsageGuideCardData } from '@/consts/install-and-use-guide';
+import CodeSnippet from './code-snippet.astro';
+import GithubIcon from './icons/github.astro';
+
+interface Props extends HTMLAttributes<'article'> {
+  guide: UsageGuideCardData;
+}
+
+const { guide, class: className, ...rest } = Astro.props;
+const headingId = `${guide.title.toLowerCase().replace(/\s+/g, '-')}-guide-heading`;
+const githubIconId = `github-icon-${guide.title.toLowerCase().replace(/\s+/g, '-')}-guide`;
+---
+
+<article
+  {...rest}
+  class:list={[
+    'flex flex-col gap-5 rounded-2xl border border-surface-border bg-surface p-6 shadow-sm backdrop-blur-md sm:p-8',
+    className,
+  ]}
+  aria-labelledby={headingId}
+>
+  <header class="space-y-2">
+    <div class="flex items-start justify-between gap-3">
+      <h3
+        id={headingId}
+        class="text-lg font-semibold tracking-tight text-foreground"
+      >
+        {guide.title}
+      </h3>
+      <a
+        href={guide.githubUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-surface-border bg-surface px-3 py-1.5 text-xs font-medium text-foreground transition-colors duration-200 hover:border-accent/40 hover:bg-muted"
+      >
+        <GithubIcon id={githubIconId} class="size-3.5 shrink-0" />
+        View code
+      </a>
+    </div>
+    <p class="text-sm leading-relaxed text-muted-foreground">
+      {guide.description}
+    </p>
+  </header>
+
+  <div class="flex flex-col gap-4">
+    {
+      guide.snippets.map((snippet) => (
+        <CodeSnippet label={snippet.label} code={snippet.code} />
+      ))
+    }
+  </div>
+</article>

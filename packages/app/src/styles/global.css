@@ -20,10 +20,6 @@
   --color-glow: var(--palette-glow);
 }
 
-html {
-  view-transition-name: root;
-}
-
 :root {
   color-scheme: light;
 

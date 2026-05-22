@@ -3,3 +3,9 @@ export const GITHUB_REPO_URL
 
 export const GITHUB_JS_THEME_ANIMATION_URL
   = `${GITHUB_REPO_URL}/tree/main/packages/js-theme-animation/`;
+
+export const GITHUB_CIRCULAR_REVEAL_URL
+  = `${GITHUB_JS_THEME_ANIMATION_URL}/src/circular-reveal`;
+
+export const GITHUB_SWEEP_REVEAL_URL
+  = `${GITHUB_JS_THEME_ANIMATION_URL}/src/sweep-reveal`;

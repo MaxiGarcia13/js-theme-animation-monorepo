@@ -1,5 +1,5 @@
 ---
-import { GITHUB_JS_THEME_ANIMATION_URL } from '../consts/app';
+import { GITHUB_CIRCULAR_REVEAL_URL } from '@/consts/app';
 import AnimationDemoCard from './animation-demo-card.astro';
 import Checkbox from './checkbox.astro';
 import Select from './select.astro';
@@ -10,8 +10,6 @@ interface Props {
 }
 
 const { class: className } = Astro.props;
-
-const GITHUB_CIRCULAR_REVEAL_URL = `${GITHUB_JS_THEME_ANIMATION_URL}/src/circular-reveal`;
 
 const blurAmountOptions = [
   { value: '4px', label: '4px' },
