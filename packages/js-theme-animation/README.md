@@ -10,20 +10,20 @@ npm install @maxigarcia/js-theme-animation
 
 ## Animations
 
-| Technique | Docs |
-| --- | --- |
+| Technique       | Docs                                                             |
+| --------------- | ---------------------------------------------------------------- |
 | Circular reveal | [src/circular-reveal/README.md](./src/circular-reveal/README.md) |
-| Sweep reveal | [src/sweep-reveal/README.md](./src/sweep-reveal/README.md) |
+| Sweep reveal    | [src/sweep-reveal/README.md](./src/sweep-reveal/README.md)       |
 
 Each module has its own README with setup, API, and usage examples.
 
 ## Package exports
 
-| Import | Purpose |
-| --- | --- |
-| `@maxigarcia/js-theme-animation` | `onCircularRevealAnimation`, `onSweepRevealAnimation`, types |
-| `@maxigarcia/js-theme-animation/circular-reveal/index.css` | Styles for circular reveal |
-| `@maxigarcia/js-theme-animation/sweep-reveal/index.css` | Styles for sweep reveal |
+| Import                                                     | Purpose                                                      |
+| ---------------------------------------------------------- | ------------------------------------------------------------ |
+| `@maxigarcia/js-theme-animation`                           | `onCircularRevealAnimation`, `onSweepRevealAnimation`, types |
+| `@maxigarcia/js-theme-animation/circular-reveal/index.css` | Styles for circular reveal                                   |
+| `@maxigarcia/js-theme-animation/sweep-reveal/index.css`    | Styles for sweep reveal                                      |
 
 ## Live demo
 
@@ -44,11 +44,25 @@ npm run build -w @maxigarcia/js-theme-animation
 npm run lint -w @maxigarcia/js-theme-animation
 ```
 
-Publish (after build):
+### Versioning & publish (Changesets)
 
-```bash
-npm run publish:npm
-```
+1. After a change, add a changeset from the monorepo root:
+
+   ```bash
+   npm run changeset
+   ```
+
+2. When ready to release, bump versions and update changelogs:
+
+   ```bash
+   npm run version-packages
+   ```
+
+3. Commit the version/changelog updates, then publish to npm:
+
+   ```bash
+   npm run release
+   ```
 
 ## Browser support
 

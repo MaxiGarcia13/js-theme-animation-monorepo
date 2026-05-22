@@ -52,18 +52,18 @@ If `document.startViewTransition` is unavailable, `apply` runs immediately with 
 
 ### `onCircularRevealAnimation(apply, click, options?)`
 
-| Parameter | Type | Description |
-| --- | --- | --- |
-| `apply` | `() => void` | Runs inside `startViewTransition`; update theme classes or variables here. |
-| `click` | `{ clientX: number; clientY: number }` | Origin for the circle (e.g. a `MouseEvent`). |
-| `options` | `CircularRevealOptions` | Optional blur inside the circle. |
+| Parameter | Type                                   | Description                                                                |
+| --------- | -------------------------------------- | -------------------------------------------------------------------------- |
+| `apply`   | `() => void`                           | Runs inside `startViewTransition`; update theme classes or variables here. |
+| `click`   | `{ clientX: number; clientY: number }` | Origin for the circle (e.g. a `MouseEvent`).                               |
+| `options` | `CircularRevealOptions`                | Optional blur inside the circle.                                           |
 
 **`CircularRevealOptions`**
 
-| Option | Type | Default | Description |
-| --- | --- | --- | --- |
-| `blurCircle` | `boolean` | `false` | Blur inside the expanding circle; clears as the reveal finishes. |
-| `blurAmount` | `string` | `'12px'` | Blur radius when `blurCircle` is `true`. |
+| Option       | Type      | Default  | Description                                                      |
+| ------------ | --------- | -------- | ---------------------------------------------------------------- |
+| `blurCircle` | `boolean` | `false`  | Blur inside the expanding circle; clears as the reveal finishes. |
+| `blurAmount` | `string`  | `'12px'` | Blur radius when `blurCircle` is `true`.                         |
 
 ## Behavior
 
