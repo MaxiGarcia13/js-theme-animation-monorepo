@@ -34,7 +34,7 @@
     "git": {
       "commit": true,
       "tag": true,
-      "commitMessage": "chore(release):"
+      "commitMessage": "chore(release): version packages"
     }
   },
   "analytics": false
