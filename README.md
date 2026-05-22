@@ -39,17 +39,16 @@ npm install @maxigarcia/js-theme-animation
 Versioning uses [Changesets](https://github.com/changesets/changesets). From the repo root:
 
 1. `npm run changeset` — describe your change after each PR-worthy update
-2. `npm run version-packages` — bump `@maxigarcia/js-theme-animation` and write `CHANGELOG.md`
-3. `npm run release` — build and publish to npm
+2. Commit and push the `.changeset/*.md` file with your change
 
 The private `app` workspace is ignored by Changesets.
 
 ### CI (GitHub Actions)
 
 - **[CI](.github/workflows/ci.yml)** — runs `npm run lint` on pull requests and pushes to `main`.
-- **[Release](.github/workflows/release.yml)** — lints, then opens a “Version Packages” PR when changesets are pending, or publishes to npm when that PR is merged.
+- **[Release](.github/workflows/release.yml)** — on push to `main`: lints, runs `changeset version` (bumps version and updates `CHANGELOG.md` when a changeset is present), commits that bump to `main`, then publishes to npm.
 
-Add an [npm automation token](https://www.npmjs.com/settings/~youruser/tokens) as the `NPM_TOKEN` repository secret. `GITHUB_TOKEN` is provided by Actions.
+Add an [npm automation token](https://www.npmjs.com/settings/~youruser/tokens) as the `NPM_TOKEN` repository secret. Add a `GH_TOKEN` secret (PAT or fine-grained token with **contents: write**) so the workflow can push version commits to `main`.
 
 ## Requirements
 
