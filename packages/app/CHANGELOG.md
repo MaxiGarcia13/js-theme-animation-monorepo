@@ -1,3 +1,13 @@
+## 0.1.2 (2026-05-22)
+
+### 🩹 Fixes
+
+- Improve footer layout in index.astro ([aa38ebe](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/aa38ebe))
+
+### ❤️ Thank You
+
+- Maximiliano Garcia Mortigliengo
+
 ## 0.1.1 (2026-05-22)
 
 ### 🩹 Fixes
