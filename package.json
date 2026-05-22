@@ -18,20 +18,22 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "npm run build -w @maxigarcia/js-theme-animation && npm run build -w app",
-    "dev": "npm run dev -w app",
+    "build": "nx run-many -t build",
+    "dev": "nx dev app",
     "lint": "eslint packages",
     "lint:fix": "eslint --fix packages",
-    "version-packages": "changeset version",
-    "release": "changeset publish",
-    "prepublish:npm": "npm run build -w @maxigarcia/js-theme-animation",
+    "version-packages": "nx release --projects=@maxigarcia/js-theme-animation --skip-publish",
+    "release": "nx release publish --projects=@maxigarcia/js-theme-animation",
+    "prepublish:npm": "nx run @maxigarcia/js-theme-animation:build",
     "publish:npm": "npm run release",
     "clean": "npm run phoenix -w @maxigarcia/js-theme-animation && npm run phoenix -w app",
     "phoenix": "npm run clean && npm i && npm run build"
   },
   "devDependencies": {
     "@maxigarcia/eslint-config": "^1.5.0",
+    "@nx/js": "^22.7.2",
     "@types/node": "^25.9.1",
+    "nx": "22.7.2",
     "typescript": "^6.0.3",
     "vitest": "^4.1.5"
   },

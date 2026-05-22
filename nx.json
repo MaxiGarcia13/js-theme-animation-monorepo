@@ -1,0 +1,36 @@
+{
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "defaultBase": "main",
+  "targetDefaults": {
+    "build": {
+      "dependsOn": ["^build"],
+      "cache": true,
+      "outputs": ["{projectRoot}/dist", "{projectRoot}/.astro"]
+    },
+    "lint": {
+      "cache": true
+    },
+    "dev": {
+      "continuous": true
+    }
+  },
+  "release": {
+    "projects": ["@maxigarcia/js-theme-animation"],
+    "releaseTag": {
+      "pattern": "v{version}"
+    },
+    "version": {
+      "conventionalCommits": true,
+      "preVersionCommand": "npx nx run @maxigarcia/js-theme-animation:build"
+    },
+    "changelog": {
+      "workspaceChangelog": false,
+      "projectChangelogs": true
+    },
+    "git": {
+      "commit": false,
+      "tag": false,
+      "commitMessage": "chore: version packages"
+    }
+  }
+}
