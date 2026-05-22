@@ -20,6 +20,7 @@
   "scripts": {
     "build": "nx run-many -t build",
     "dev": "nx dev @maxigarcia/js-theme-animation-app",
+    "preview": "nx preview @maxigarcia/js-theme-animation-app",
     "lint": "eslint packages",
     "lint:fix": "eslint --fix packages",
     "version-packages": "nx release --skip-publish",
