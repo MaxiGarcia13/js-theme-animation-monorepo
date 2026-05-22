@@ -1,3 +1,16 @@
+## 0.1.4 (2026-05-22)
+
+### 🩹 Fixes
+
+- Update meta tags to use a consistent title variable ([53947e0](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/53947e0))
+- Refactor select component class handling ([0e88493](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/0e88493))
+- Simplify footer content in index.astro ([927aef1](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/927aef1))
+- Refine footer layout and content in index.astro ([dcdfbdf](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/dcdfbdf))
+
+### ❤️ Thank You
+
+- Maximiliano Garcia Mortigliengo
+
 ## 0.1.3 (2026-05-22)
 
 ### 🩹 Fixes
