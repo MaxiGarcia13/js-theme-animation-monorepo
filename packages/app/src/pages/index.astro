@@ -3,8 +3,7 @@ import '../styles/global.css';
 import CircularRevealDemoCard from '../components/circular-reveal-demo-card.astro';
 import SweepRevealDemoCard from '../components/sweep-reveal-demo-card.astro';
 import GithubIcon from '../components/icons/github.astro';
-const GITHUB_REPO_URL =
-  'https://github.com/MaxiGarcia13/js-theme-animation-monorepo/tree/main/packages/js-theme-animation';
+import { GITHUB_JS_THEME_ANIMATION_URL } from '../../constants/app';
 ---
 
 <html lang="en" class="dark">
@@ -40,7 +39,7 @@ const GITHUB_REPO_URL =
           below — each interaction reveals a different animation technique.
         </p>
         <a
-          href={GITHUB_REPO_URL}
+          href={GITHUB_JS_THEME_ANIMATION_URL}
           target="_blank"
           rel="noopener noreferrer"
           class="inline-flex items-center gap-2 rounded-full border border-surface-border bg-surface px-5 py-2.5 text-sm font-medium text-foreground backdrop-blur-sm transition-colors duration-200 hover:border-accent/40 hover:bg-muted"
@@ -60,7 +59,7 @@ const GITHUB_REPO_URL =
 
       <footer class="text-center text-sm text-muted-foreground">
         <a
-          href={GITHUB_REPO_URL}
+          href={GITHUB_JS_THEME_ANIMATION_URL}
           target="_blank"
           rel="noopener noreferrer"
           class="inline-flex items-center gap-2 transition-colors hover:text-foreground"

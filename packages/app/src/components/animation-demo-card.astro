@@ -1,13 +1,18 @@
 ---
 import type { HTMLAttributes } from 'astro/types';
+import GithubIcon from './icons/github.astro';
 
 interface Props extends HTMLAttributes<'article'> {
   title: string;
   description?: string;
   badge?: string;
+  githubUrl?: string;
 }
 
-const { title, description, badge, class: className, ...rest } = Astro.props;
+const { title, description, badge, githubUrl, class: className, ...rest } =
+  Astro.props;
+
+const githubIconId = `github-icon-${title.toLowerCase().replace(/\s+/g, '-')}`;
 ---
 
 <article
@@ -24,16 +29,33 @@ const { title, description, badge, class: className, ...rest } = Astro.props;
   </div>
 
   <header class="relative space-y-2">
-    {
-      badge && (
-        <span class="inline-block rounded-full bg-muted px-2.5 py-0.5 text-xs font-medium tracking-wide text-muted-foreground uppercase">
-          {badge}
-        </span>
-      )
-    }
-    <h2 class="text-xl font-semibold tracking-tight text-foreground">
-      {title}
-    </h2>
+    <div class="flex items-start justify-between gap-3">
+      <div class="min-w-0 space-y-2">
+        {
+          badge && (
+            <span class="inline-block rounded-full bg-muted px-2.5 py-0.5 text-xs font-medium tracking-wide text-muted-foreground uppercase">
+              {badge}
+            </span>
+          )
+        }
+        <h2 class="text-xl font-semibold tracking-tight text-foreground">
+          {title}
+        </h2>
+      </div>
+      {
+        githubUrl && (
+          <a
+            href={githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-surface-border bg-surface px-3 py-1.5 text-xs font-medium text-foreground transition-colors duration-200 hover:border-accent/40 hover:bg-muted"
+          >
+            <GithubIcon id={githubIconId} class="size-3.5 shrink-0" />
+            View code
+          </a>
+        )
+      }
+    </div>
     {
       description && (
         <p class="text-sm leading-relaxed text-muted-foreground">
