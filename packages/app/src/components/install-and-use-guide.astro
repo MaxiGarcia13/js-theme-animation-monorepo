@@ -1,0 +1,96 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+import CodeSnippet from './code-snippet.astro';
+import { name as PACKAGE_NAME } from '../../../js-theme-animation/package.json';
+
+interface Props extends HTMLAttributes<'section'> {}
+
+const { class: className, ...rest } = Astro.props;
+
+const installCommand = `npm install ${PACKAGE_NAME}`;
+
+const setupCss = `html {
+  view-transition-name: root;
+}
+
+@import '${PACKAGE_NAME}/circular-reveal/index.css';
+/* or */
+@import '${PACKAGE_NAME}/sweep-reveal/index.css';`;
+
+const circularRevealUsage = `import { onCircularRevealAnimation } from '${PACKAGE_NAME}';
+
+button.addEventListener('click', (event) => {
+  onCircularRevealAnimation(
+    () => document.documentElement.classList.toggle('dark'),
+    event,
+  );
+});`;
+
+const sweepRevealUsage = `import { onSweepRevealAnimation } from '${PACKAGE_NAME}';
+button.addEventListener('click', () => {
+  onSweepRevealAnimation(
+    () => document.documentElement.classList.toggle('dark'),
+    'up',
+  );
+});`;
+---
+
+<section
+  {...rest}
+  class:list={[
+    'rounded-2xl border border-surface-border bg-surface p-6 shadow-sm backdrop-blur-md sm:p-8',
+    className,
+  ]}
+  aria-labelledby="install-and-use-heading"
+>
+  <header class="space-y-2">
+    <h2
+      id="install-and-use-heading"
+      class="text-2xl font-semibold tracking-tight text-foreground"
+    >
+      Install &amp; use
+    </h2>
+    <p class="max-w-2xl text-sm leading-relaxed text-muted-foreground">
+      Add the package, enable a root view transition, import the animation
+      styles, then wrap your theme toggle with one of the helpers below.
+    </p>
+  </header>
+
+  <ol class="mt-8 flex list-none flex-col gap-8">
+    <li class="space-y-3">
+      <h3 class="text-sm font-semibold text-foreground">
+        <span
+          class="mr-2 inline-flex size-6 items-center justify-center rounded-full bg-muted text-xs font-bold text-accent"
+          aria-hidden="true">1</span
+        >
+        Install
+      </h3>
+      <CodeSnippet label="Terminal" code={installCommand} />
+    </li>
+
+    <li class="space-y-3">
+      <h3 class="text-sm font-semibold text-foreground">
+        <span
+          class="mr-2 inline-flex size-6 items-center justify-center rounded-full bg-muted text-xs font-bold text-accent"
+          aria-hidden="true">2</span
+        >
+        Setup CSS
+      </h3>
+      <CodeSnippet label="CSS" code={setupCss} />
+    </li>
+
+    <li class="space-y-3">
+      <h3 class="text-sm font-semibold text-foreground">
+        <span
+          class="mr-2 inline-flex size-6 items-center justify-center rounded-full bg-muted text-xs font-bold text-accent"
+          aria-hidden="true">3</span
+        >
+        Use in your app
+      </h3>
+      <div class="grid gap-4 lg:grid-cols-2">
+        <CodeSnippet label="Circular reveal" code={circularRevealUsage} />
+        <CodeSnippet label="Sweep reveal" code={sweepRevealUsage} />
+      </div>
+    </li>
+  </ol>
+</section>

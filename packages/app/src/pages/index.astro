@@ -1,5 +1,6 @@
 ---
 import CircularRevealDemoCard from '@/components/circular-reveal-demo-card.astro';
+import InstallAndUseGuide from '@/components/install-and-use-guide.astro';
 import SweepRevealDemoCard from '@/components/sweep-reveal-demo-card.astro';
 import AppLayout from '@/layouts/app-layout.astro';
 import GithubIcon from '@/components/icons/github.astro';
@@ -47,6 +48,8 @@ import packageJson from '../../package.json';
       <CircularRevealDemoCard class="flex-1" />
       <SweepRevealDemoCard class="flex-1" />
     </section>
+
+    <InstallAndUseGuide />
 
     <footer
       class="text-center inline-flex mx-auto items-center gap-2 text-sm text-muted-foreground"
