@@ -1,0 +1,29 @@
+---
+import AnimationDemoCard from './animation-demo-card.astro';
+import ThemeToggleButton from './theme-toggle-button.astro';
+---
+
+<AnimationDemoCard
+  data-curtain-reveal-demo
+  title="Curtain Reveal"
+  description="The new theme sweeps in from the top like a curtain dropping into place."
+  badge="Live demo"
+>
+  <ThemeToggleButton id="curtain" />
+</AnimationDemoCard>
+
+<script>
+  import { onCurtainRevealAnimation } from '@maxigarcia/js-theme-animation';
+  import { toggleTheme } from '../utils/toggle-theme';
+
+  const demo = document.querySelector('[data-curtain-reveal-demo]');
+  const button = demo?.querySelector<HTMLButtonElement>(
+    '[data-theme-toggle-button]',
+  );
+
+  if (button) {
+    button.addEventListener('click', () => {
+      onCurtainRevealAnimation(() => toggleTheme(button), 'up');
+    });
+  }
+</script>
