@@ -1,3 +1,13 @@
+## 0.1.1 (2026-05-22)
+
+### 🩹 Fixes
+
+- Add spacing in footer of index.astro for improved layout ([6f3425f](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/6f3425f))
+
+### ❤️ Thank You
+
+- Maximiliano Garcia Mortigliengo
+
 ## 0.1.0 (2026-05-22)
 
 ### 🚀 Features
