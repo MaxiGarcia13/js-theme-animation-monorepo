@@ -23,9 +23,7 @@
     "lint": "eslint packages",
     "lint:fix": "eslint --fix packages",
     "version-packages": "nx release --skip-publish",
-    "release": "nx release publish --projects=@maxigarcia/js-theme-animation",
-    "prepublish:npm": "nx run @maxigarcia/js-theme-animation:build",
-    "publish:npm": "npm run release",
+    "release": "nx release publish --projects=@maxigarcia/js-theme-animation --first-release --access public",
     "clean": "npm run phoenix -w @maxigarcia/js-theme-animation && npm run phoenix -w @maxigarcia/js-theme-animation-app",
     "phoenix": "npm run clean && npm i && npm run build"
   },

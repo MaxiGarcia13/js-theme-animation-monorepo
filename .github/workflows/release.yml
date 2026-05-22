@@ -52,6 +52,6 @@ jobs:
 
       - name: Publish to npm
         if: steps.version-commit.outputs.changed == 'true'
-        run: npx nx release publish --projects=@maxigarcia/js-theme-animation --first-release
+        run: npm run release
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
