@@ -1,5 +1,6 @@
 ---
 import type { HTMLAttributes } from 'astro/types';
+import ChevronDownIcon from './icons/chevron-down.astro';
 
 export interface SelectOption {
   value: string;
@@ -13,13 +14,23 @@ interface Props extends HTMLAttributes<'select'> {
 const { options, class: className, id, ...rest } = Astro.props;
 
 const selectClass =
-  'cursor-pointer rounded-xl border border-surface-border bg-surface px-5 py-3 text-sm font-medium text-foreground shadow-sm transition-[box-shadow] duration-200 hover:shadow-md hover:shadow-glow/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent';
+  'cursor-pointer appearance-none rounded-xl border border-surface-border bg-surface py-3 pl-5 pr-10 text-sm font-medium text-foreground shadow-sm transition-[box-shadow] duration-200 hover:shadow-md hover:shadow-glow/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent';
+
+const chevronId = id ? `${id}-chevron` : 'select-chevron';
 ---
 
-<select id={id} class:list={[selectClass, className]} {...rest}>
-  {
-    options.map((option) => (
-      <option value={option.value}>{option.label}</option>
-    ))
-  }
-</select>
+<div class:list={['relative inline-flex', className]}>
+  <select id={id} class:list={[selectClass, 'h-full w-full min-w-0']} {...rest}>
+    {
+      options.map((option) => (
+        <option value={option.value}>{option.label}</option>
+      ))
+    }
+  </select>
+  <span
+    class="pointer-events-none absolute inset-y-0 right-3 flex items-center text-foreground"
+    aria-hidden="true"
+  >
+    <ChevronDownIcon id={chevronId} class="size-5 shrink-0" />
+  </span>
+</div>
