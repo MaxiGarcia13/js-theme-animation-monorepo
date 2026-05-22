@@ -1,15 +1,22 @@
 ---
-interface Props {
+import type { HTMLAttributes } from 'astro/types';
+
+interface Props extends HTMLAttributes<'article'> {
   title: string;
   description?: string;
   badge?: string;
 }
 
-const { title, description, badge } = Astro.props;
+const { title, description, badge, class: className, ...rest } =
+  Astro.props;
 ---
 
 <article
-  class="group relative flex flex-col gap-6 rounded-2xl border border-surface-border bg-surface p-6 shadow-sm backdrop-blur-md transition-shadow duration-300 hover:shadow-md hover:shadow-glow/20"
+  {...rest}
+  class:list={[
+    'group relative flex flex-col gap-6 rounded-2xl border border-surface-border bg-surface p-6 shadow-sm backdrop-blur-md transition-shadow duration-300 hover:shadow-md hover:shadow-glow/20',
+    className,
+  ]}
 >
   <div
     class="pointer-events-none absolute -inset-px rounded-2xl bg-linear-to-br from-accent/10 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
