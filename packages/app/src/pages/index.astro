@@ -4,7 +4,7 @@ import SweepRevealDemoCard from '@/components/sweep-reveal-demo-card.astro';
 import AppLayout from '@/layouts/app-layout.astro';
 import GithubIcon from '@/components/icons/github.astro';
 import { GITHUB_JS_THEME_ANIMATION_URL } from '@/consts/app';
-import packageJson from '../../../../package.json';
+import packageJson from '../../package.json';
 ---
 
 <AppLayout>
@@ -57,7 +57,7 @@ import packageJson from '../../../../package.json';
       >
         <GithubIcon id="github-icon-footer" class="size-4 shrink-0" />
         <span>
-          MaxiGarcia13/js-theme-animation (v{packageJson.version})
+          MaxiGarcia13/js-theme-animation - APP v{packageJson.version}
         </span>
       </a>
     </footer>
