@@ -1,6 +1,12 @@
 ---
 import AnimationDemoCard from './animation-demo-card.astro';
 import ThemeToggleButton from './theme-toggle-button.astro';
+
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
 ---
 
 <AnimationDemoCard
@@ -8,6 +14,7 @@ import ThemeToggleButton from './theme-toggle-button.astro';
   title="Circular Reveal"
   description="A radial clip-path expands from the click origin, sweeping the new theme into view."
   badge="Live demo"
+  class:list={[className]}
 >
   <ThemeToggleButton id="circular" />
 </AnimationDemoCard>

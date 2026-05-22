@@ -1,6 +1,20 @@
 ---
 import AnimationDemoCard from './animation-demo-card.astro';
+import Select from './select.astro';
 import ThemeToggleButton from './theme-toggle-button.astro';
+
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+
+const curtainDirections = [
+  { value: 'up', label: 'Up' },
+  { value: 'down', label: 'Down' },
+  { value: 'left', label: 'Left' },
+  { value: 'right', label: 'Right' },
+];
 ---
 
 <AnimationDemoCard
@@ -8,22 +22,38 @@ import ThemeToggleButton from './theme-toggle-button.astro';
   title="Curtain Reveal"
   description="The new theme sweeps in from the top like a curtain dropping into place."
   badge="Live demo"
+  class:list={[className]}
 >
-  <ThemeToggleButton id="curtain" />
+  <div class="flex-1 inline-flex items-center justify-center gap-4">
+    <ThemeToggleButton id="curtain" />
+
+    <Select
+      id="curtain-direction"
+      data-curtain-direction
+      options={curtainDirections}
+      class="h-full"
+    />
+  </div>
 </AnimationDemoCard>
 
 <script>
   import { onCurtainRevealAnimation } from '@maxigarcia/js-theme-animation';
   import { toggleTheme } from '../utils/toggle-theme';
 
+  type CurtainDirection = 'up' | 'down' | 'left' | 'right';
+
   const demo = document.querySelector('[data-curtain-reveal-demo]');
   const button = demo?.querySelector<HTMLButtonElement>(
     '[data-theme-toggle-button]',
   );
+  const directionSelect = demo?.querySelector<HTMLSelectElement>(
+    '[data-curtain-direction]',
+  );
 
-  if (button) {
+  if (button && directionSelect) {
     button.addEventListener('click', () => {
-      onCurtainRevealAnimation(() => toggleTheme(button), 'up');
+      const direction = directionSelect.value as CurtainDirection;
+      onCurtainRevealAnimation(() => toggleTheme(button), direction);
     });
   }
 </script>

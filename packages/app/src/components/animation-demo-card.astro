@@ -7,14 +7,13 @@ interface Props extends HTMLAttributes<'article'> {
   badge?: string;
 }
 
-const { title, description, badge, class: className, ...rest } =
-  Astro.props;
+const { title, description, badge, class: className, ...rest } = Astro.props;
 ---
 
 <article
   {...rest}
   class:list={[
-    'group relative flex flex-col gap-6 rounded-2xl border border-surface-border bg-surface p-6 shadow-sm backdrop-blur-md transition-shadow duration-300 hover:shadow-md hover:shadow-glow/20',
+    'group relative shrink-0 flex flex-col gap-6 rounded-2xl border border-surface-border bg-surface p-6 shadow-sm backdrop-blur-md transition-shadow duration-300 hover:shadow-md hover:shadow-glow/20',
     className,
   ]}
 >

@@ -1,0 +1,25 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+export interface SelectOption {
+  value: string;
+  label: string;
+}
+
+interface Props extends HTMLAttributes<'select'> {
+  options: SelectOption[];
+}
+
+const { options, class: className, id, ...rest } = Astro.props;
+
+const selectClass =
+  'cursor-pointer rounded-xl border border-surface-border bg-surface px-5 py-3 text-sm font-medium text-foreground shadow-sm transition-[box-shadow] duration-200 hover:shadow-md hover:shadow-glow/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent';
+---
+
+<select id={id} class:list={[selectClass, className]} {...rest}>
+  {
+    options.map((option) => (
+      <option value={option.value}>{option.label}</option>
+    ))
+  }
+</select>
