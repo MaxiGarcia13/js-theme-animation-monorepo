@@ -38,8 +38,7 @@
     "preview": "nx preview @maxigarcia/js-theme-animation-app",
     "lint": "eslint packages",
     "lint:fix": "eslint --fix packages",
-    "version-packages": "nx release --skip-publish",
-    "release": "nx release publish --projects=@maxigarcia/js-theme-animation --first-release --access public",
+    "release": "nx release publish --first-release --access public",
     "clean": "npm run phoenix -w @maxigarcia/js-theme-animation && npm run phoenix -w @maxigarcia/js-theme-animation-app",
     "phoenix": "npm run clean && npm i && npm run build"
   },
