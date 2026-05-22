@@ -1,5 +1,7 @@
 ---
 import AnimationDemoCard from './animation-demo-card.astro';
+import Checkbox from './checkbox.astro';
+import Select from './select.astro';
 import ThemeToggleButton from './theme-toggle-button.astro';
 
 interface Props {
@@ -7,6 +9,17 @@ interface Props {
 }
 
 const { class: className } = Astro.props;
+
+const blurAmountOptions = [
+  { value: '4px', label: '4px' },
+  { value: '8px', label: '8px' },
+  { value: '12px', label: '12px' },
+  { value: '16px', label: '16px' },
+  { value: '24px', label: '24px' },
+  { value: '32px', label: '32px' },
+  { value: '40px', label: '40px' },
+  { value: '60px', label: '60px' },
+];
 ---
 
 <AnimationDemoCard
@@ -16,7 +29,19 @@ const { class: className } = Astro.props;
   badge="Live demo"
   class:list={[className]}
 >
-  <ThemeToggleButton id="circular" />
+  <div class="inline-flex flex-1 flex-wrap items-center justify-center gap-4">
+    <ThemeToggleButton id="circular" />
+
+    <Checkbox id="circular-blur" data-circular-blur label="Blur" />
+
+    <Select
+      id="circular-blur-amount"
+      data-circular-blur-amount
+      options={blurAmountOptions}
+      value="12px"
+      class="h-full max-w-24"
+    />
+  </div>
 </AnimationDemoCard>
 
 <script>
@@ -27,11 +52,18 @@ const { class: className } = Astro.props;
   const button = demo?.querySelector<HTMLButtonElement>(
     '[data-theme-toggle-button]',
   );
+  const blurCheckbox = demo?.querySelector<HTMLInputElement>(
+    '[data-circular-blur]',
+  );
+  const blurAmountSelect = demo?.querySelector<HTMLSelectElement>(
+    '[data-circular-blur-amount]',
+  );
 
-  if (button) {
+  if (button && blurCheckbox && blurAmountSelect) {
     button.addEventListener('click', (event) => {
       onCircularRevealAnimation(() => toggleTheme(button), event, {
-        blurCircle: false,
+        blurCircle: blurCheckbox.checked,
+        blurAmount: blurAmountSelect.value,
       });
     });
   }
