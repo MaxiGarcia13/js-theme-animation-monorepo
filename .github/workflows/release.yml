@@ -27,6 +27,8 @@ jobs:
 
       - run: npm ci
 
+      - run: npm run build
+
       - name: Create version packages and publish to npm
         uses: changesets/action@v1
         with:
