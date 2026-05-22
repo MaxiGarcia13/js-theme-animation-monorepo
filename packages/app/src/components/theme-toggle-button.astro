@@ -2,72 +2,23 @@
 import MoonIcon from './icons/moon.astro';
 import SunIcon from './icons/sun.astro';
 
-export type ThemeAnimation = 'circular' | 'curtain';
-
 interface Props {
-  animation: ThemeAnimation;
+  id?: string;
 }
 
-const { animation } = Astro.props;
+const { id = 'default' } = Astro.props;
 ---
 
 <button
   type="button"
-  data-theme-toggle={animation}
+  data-theme-toggle-button
   class="inline-flex cursor-pointer items-center gap-3 rounded-xl border border-surface-border bg-accent px-5 py-3 text-sm font-medium text-accent-foreground shadow-sm transition-[transform,box-shadow] duration-200 hover:shadow-md hover:shadow-glow/30 active:scale-[0.98]"
 >
   <span data-theme-icon="moon" class="contents">
-    <MoonIcon id={`moon-icon-${animation}`} class="block size-5 shrink-0" />
+    <MoonIcon id={`moon-icon-${id}`} class="block size-5 shrink-0" />
   </span>
   <span data-theme-icon="sun" class="contents">
-    <SunIcon id={`sun-icon-${animation}`} class="hidden size-5 shrink-0" />
+    <SunIcon id={`sun-icon-${id}`} class="hidden size-5 shrink-0" />
   </span>
   <span>Toggle theme</span>
 </button>
-
-<script>
-  import {
-    onCircularRevealAnimation,
-    onCurtainRevealAnimation,
-  } from '@maxigarcia/js-theme-animation';
-
-  const animationActions = {
-    circular: onCircularRevealAnimation,
-    curtain: onCurtainRevealAnimation,
-  } as const;
-
-  function toggleTheme(button: HTMLButtonElement) {
-    const isDark = !document.documentElement.classList.contains('dark');
-
-    document.documentElement.classList.toggle('dark', isDark);
-
-    const moonIcon = button.querySelector<HTMLElement>(
-      '[data-theme-icon="moon"] svg',
-    );
-    const sunIcon = button.querySelector<HTMLElement>(
-      '[data-theme-icon="sun"] svg',
-    );
-
-    moonIcon?.classList.toggle('hidden', isDark);
-    sunIcon?.classList.toggle('block', isDark);
-
-    moonIcon?.classList.toggle('block', !isDark);
-    sunIcon?.classList.toggle('hidden', !isDark);
-  }
-
-  const buttons = document.querySelectorAll<HTMLButtonElement>(
-    '[data-theme-toggle]',
-  );
-
-  for (const button of buttons) {
-    const animation = button.dataset
-      .themeToggle as keyof typeof animationActions;
-    const animationAction = animationActions[animation];
-
-    if (!animationAction) continue;
-
-    button.addEventListener('click', (event) => {
-      animationAction(() => toggleTheme(button), event);
-    });
-  }
-</script>
