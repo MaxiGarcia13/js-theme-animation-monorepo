@@ -29,9 +29,7 @@
     },
     "changelog": {
       "workspaceChangelog": false,
-      "projectChangelogs": {
-        "createRelease": "github"
-      }
+      "projectChangelogs": true
     },
     "git": {
       "commit": true,
