@@ -1,11 +1,10 @@
 ---
-import CircularRevealDemoCard from '@/components/circular-reveal-demo-card.astro';
+import AnimationDemosSection from '@/components/animation-demos-section.astro';
+import AppFooter from '@/components/app-footer.astro';
 import InstallAndUseGuide from '@/components/install-and-use-guide.astro';
-import SweepRevealDemoCard from '@/components/sweep-reveal-demo-card.astro';
 import AppLayout from '@/layouts/app-layout.astro';
 import GithubIcon from '@/components/icons/github.astro';
 import { GITHUB_JS_THEME_ANIMATION_URL } from '@/consts/app';
-import packageJson from '../../package.json';
 ---
 
 <AppLayout>
@@ -41,29 +40,10 @@ import packageJson from '../../package.json';
       </a>
     </header>
 
-    <section
-      class="flex flex-col gap-6 sm:flex-row flex-wrap"
-      aria-label="Animation demos"
-    >
-      <CircularRevealDemoCard class="flex-1" />
-      <SweepRevealDemoCard class="flex-1" />
-    </section>
+    <AnimationDemosSection />
 
     <InstallAndUseGuide />
 
-    <footer
-      class="text-center inline-flex mx-auto items-center gap-2 text-sm text-muted-foreground"
-    >
-      <a
-        href={GITHUB_JS_THEME_ANIMATION_URL}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-flex items-center gap-2 transition-colors hover:text-foreground"
-      >
-        <GithubIcon id="github-icon-footer" class="size-4 shrink-0" />
-        MaxiGarcia13/js-theme-animation
-      </a>
-      - APP v{packageJson.version}
-    </footer>
+    <AppFooter />
   </main>
 </AppLayout>

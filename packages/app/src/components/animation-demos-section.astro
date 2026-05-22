@@ -1,0 +1,21 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+import CircularRevealDemoCard from './circular-reveal-demo-card.astro';
+import SweepRevealDemoCard from './sweep-reveal-demo-card.astro';
+
+interface Props extends HTMLAttributes<'section'> {}
+
+const { class: className, ...rest } = Astro.props;
+---
+
+<section
+  {...rest}
+  class:list={[
+    'flex flex-col gap-6 sm:flex-row flex-wrap',
+    className,
+  ]}
+  aria-label="Animation demos"
+>
+  <CircularRevealDemoCard class="flex-1" />
+  <SweepRevealDemoCard class="flex-1" />
+</section>

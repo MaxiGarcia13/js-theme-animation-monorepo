@@ -1,0 +1,29 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+import GithubIcon from './icons/github.astro';
+import { GITHUB_JS_THEME_ANIMATION_URL } from '@/consts/app';
+import packageJson from '../../package.json';
+
+interface Props extends HTMLAttributes<'footer'> {}
+
+const { class: className, ...rest } = Astro.props;
+---
+
+<footer
+  {...rest}
+  class:list={[
+    'text-center inline-flex mx-auto items-center gap-2 text-sm text-muted-foreground',
+    className,
+  ]}
+>
+  <a
+    href={GITHUB_JS_THEME_ANIMATION_URL}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="inline-flex items-center gap-2 transition-colors hover:text-foreground"
+  >
+    <GithubIcon id="github-icon-footer" class="size-4 shrink-0" />
+    MaxiGarcia13/js-theme-animation
+  </a>
+  - APP v{packageJson.version}
+</footer>
