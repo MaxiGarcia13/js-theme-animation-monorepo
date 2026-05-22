@@ -9,7 +9,7 @@ interface Props {
 
 const { class: className } = Astro.props;
 
-const curtainDirections = [
+const sweepDirections = [
   { value: 'up', label: 'Up' },
   { value: 'down', label: 'Down' },
   { value: 'left', label: 'Left' },
@@ -18,42 +18,42 @@ const curtainDirections = [
 ---
 
 <AnimationDemoCard
-  data-curtain-reveal-demo
-  title="Curtain Reveal"
-  description="The new theme sweeps in from the top like a curtain dropping into place."
+  data-sweep-reveal-demo
+  title="Sweep Reveal"
+  description="The new theme sweeps in from the chosen edge."
   badge="Live demo"
   class:list={[className]}
 >
   <div class="flex-1 inline-flex items-center justify-center gap-4">
-    <ThemeToggleButton id="curtain" />
+    <ThemeToggleButton id="sweep" />
 
     <Select
-      id="curtain-direction"
-      data-curtain-direction
-      options={curtainDirections}
+      id="sweep-direction"
+      data-sweep-direction
+      options={sweepDirections}
       class="h-full"
     />
   </div>
 </AnimationDemoCard>
 
 <script>
-  import { onCurtainRevealAnimation } from '@maxigarcia/js-theme-animation';
+  import { onSweepRevealAnimation } from '@maxigarcia/js-theme-animation';
   import { toggleTheme } from '../utils/toggle-theme';
 
-  type CurtainDirection = 'up' | 'down' | 'left' | 'right';
+  type SweepDirection = 'up' | 'down' | 'left' | 'right';
 
-  const demo = document.querySelector('[data-curtain-reveal-demo]');
+  const demo = document.querySelector('[data-sweep-reveal-demo]');
   const button = demo?.querySelector<HTMLButtonElement>(
     '[data-theme-toggle-button]',
   );
   const directionSelect = demo?.querySelector<HTMLSelectElement>(
-    '[data-curtain-direction]',
+    '[data-sweep-direction]',
   );
 
   if (button && directionSelect) {
     button.addEventListener('click', () => {
-      const direction = directionSelect.value as CurtainDirection;
-      onCurtainRevealAnimation(() => toggleTheme(button), direction);
+      const direction = directionSelect.value as SweepDirection;
+      onSweepRevealAnimation(() => toggleTheme(button), direction);
     });
   }
 </script>

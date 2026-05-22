@@ -8,7 +8,7 @@
       "import": "./dist/index.js"
     },
     "./circular-reveal/index.css": "./dist/circular-reveal/index.css",
-    "./curtain-reveal/index.css": "./dist/curtain-reveal/index.css"
+    "./sweep-reveal/index.css": "./dist/sweep-reveal/index.css"
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

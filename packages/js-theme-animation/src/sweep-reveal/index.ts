@@ -1,6 +1,6 @@
 import { $html, $onTransitionEnd } from '../utils/index.js';
 
-export function onCurtainRevealAnimation(
+export function onSweepRevealAnimation(
   apply: () => void,
   direction: 'up' | 'down' | 'left' | 'right' = 'up',
 ): void {
@@ -19,7 +19,7 @@ export function onCurtainRevealAnimation(
 
   const [directionFrom, directionTo] = directions[direction] ?? directions.up;
 
-  html.classList.add('curtain-reveal');
+  html.classList.add('sweep-reveal');
 
   html.style.setProperty('--theme-reveal-direction-from', directionFrom);
   html.style.setProperty('--theme-reveal-direction-to', directionTo);
@@ -27,7 +27,7 @@ export function onCurtainRevealAnimation(
   document.startViewTransition(apply);
 
   const animationComplete = () => {
-    html.classList.remove('curtain-reveal');
+    html.classList.remove('sweep-reveal');
     html.style.removeProperty('--theme-reveal-direction-from');
     html.style.removeProperty('--theme-reveal-direction-to');
   };

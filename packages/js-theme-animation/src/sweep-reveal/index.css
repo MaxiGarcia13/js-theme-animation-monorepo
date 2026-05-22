@@ -1,0 +1,30 @@
+@keyframes sweep-reveal {
+  from {
+    clip-path: var(--theme-reveal-direction-from);
+  }
+  to {
+    clip-path: var(--theme-reveal-direction-to);
+  }
+}
+
+html.sweep-reveal::view-transition-old(root),
+html.sweep-reveal::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+html.sweep-reveal::view-transition-old(root) {
+  z-index: 0;
+}
+
+html.sweep-reveal::view-transition-new(root) {
+  z-index: 1;
+  animation: sweep-reveal 0.45s ease-in-out forwards;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  html.sweep-reveal::view-transition-new(root) {
+    animation: none;
+  }
+}
