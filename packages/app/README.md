@@ -27,7 +27,7 @@ npm install
 npm run dev
 ```
 
-That runs `astro dev` for this workspace. The site is usually available at `http://localhost:4321`.
+That runs the demo via Nx (`nx dev app` → `astro dev`). The site is usually available at `http://localhost:4321`.
 
 From this package only:
 
@@ -39,7 +39,7 @@ npm run dev
 Build and preview:
 
 ```bash
-npm run build -w app
+npm run build   # builds the library, then the app
 npm run preview -w app
 ```
 

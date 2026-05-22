@@ -41,28 +41,20 @@ From the monorepo root:
 
 ```bash
 npm run build -w @maxigarcia/js-theme-animation
+# or: nx run @maxigarcia/js-theme-animation:build
 npm run lint -w @maxigarcia/js-theme-animation
 ```
 
-### Versioning & publish (Changesets)
+### Versioning & publish (Nx Release)
 
-1. After a change, add a changeset from the monorepo root:
+Use [Conventional Commits](https://www.conventionalcommits.org/) for changes under this package (`feat`, `fix`, `perf`, etc.). From the monorepo root:
 
-   ```bash
-   npm run changeset
-   ```
+```bash
+npm run version-packages   # bump version + changelog (no publish)
+npm run release            # publish to npm
+```
 
-2. When ready to release, bump versions and update changelogs:
-
-   ```bash
-   npm run version-packages
-   ```
-
-3. Commit the version/changelog updates, then publish to npm:
-
-   ```bash
-   npm run release
-   ```
+CI on `main` runs the same flow automatically when releasable commits are present. See the [root README](../../README.md#releasing-the-library).
 
 ## Browser support
 

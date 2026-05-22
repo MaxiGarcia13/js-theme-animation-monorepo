@@ -24,8 +24,8 @@ Per-animation usage lives under:
 
 ```bash
 npm install
-npm run dev      # demo site
-npm run build    # library + app
+npm run dev      # demo site (Nx runs app:dev)
+npm run build    # library + app (Nx builds dependencies first)
 ```
 
 Install the library in another project:
@@ -34,19 +34,31 @@ Install the library in another project:
 npm install @maxigarcia/js-theme-animation
 ```
 
+## Workspace tooling (Nx)
+
+This monorepo uses [Nx](https://nx.dev/) to track project dependencies, run tasks in the right order, and release the npm library.
+
+- `app` depends on `@maxigarcia/js-theme-animation` via npm workspaces (`"*"` in `package.json`); Nx detects the link from imports and workspace metadata.
+- `nx run-many -t build` builds the library before the app (`dependsOn: ["^build"]` in `nx.json`).
+- `nx graph` shows the project graph.
+
 ## Releasing the library
 
-Versioning uses [Changesets](https://github.com/changesets/changesets). From the repo root:
+Releases use [Nx Release](https://nx.dev/docs/features/manage-releases) with [Conventional Commits](https://www.conventionalcommits.org/). Use `feat`, `fix`, or `perf` commits that touch `packages/js-theme-animation` so CI can determine the semver bump.
 
-1. `npm run changeset` — describe your change after each PR-worthy update
-2. Commit and push the `.changeset/*.md` file with your change
+From the repo root (local dry run):
 
-The private `app` workspace is ignored by Changesets.
+```bash
+npm run version-packages   # bump version + changelog, no publish
+npm run release            # publish to npm (usually run in CI)
+```
+
+The private `app` workspace is not part of the release.
 
 ### CI (GitHub Actions)
 
-- **[CI](.github/workflows/ci.yml)** — runs `npm run lint` on pull requests and pushes to `main`.
-- **[Release](.github/workflows/release.yml)** — on push to `main`: lints, runs `changeset version` (bumps version and updates `CHANGELOG.md` when a changeset is present), commits that bump to `main`, then publishes to npm.
+- **[CI](.github/workflows/ci.yml)** — runs lint and build on pull requests.
+- **[Release](.github/workflows/release.yml)** — on push to `main`: lints, builds, runs `nx release` to bump version and update the changelog when conventional commits warrant it, commits that bump to `main`, then publishes to npm.
 
 Add an [npm automation token](https://www.npmjs.com/settings/~youruser/tokens) as the `NPM_TOKEN` repository secret. Add a `GH_TOKEN` secret (PAT or fine-grained token with **contents: write**) so the workflow can push version commits to `main`.
 
