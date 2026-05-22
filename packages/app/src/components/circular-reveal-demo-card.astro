@@ -1,0 +1,29 @@
+---
+import AnimationDemoCard from './animation-demo-card.astro';
+import ThemeToggleButton from './theme-toggle-button.astro';
+---
+
+<AnimationDemoCard
+  data-circular-reveal-demo
+  title="Circular Reveal"
+  description="A radial clip-path expands from the click origin, sweeping the new theme into view."
+  badge="Live demo"
+>
+  <ThemeToggleButton id="circular" />
+</AnimationDemoCard>
+
+<script>
+  import { onCircularRevealAnimation } from '@maxigarcia/js-theme-animation';
+  import { toggleTheme } from '../utils/toggle-theme';
+
+  const demo = document.querySelector('[data-circular-reveal-demo]');
+  const button = demo?.querySelector<HTMLButtonElement>(
+    '[data-theme-toggle-button]',
+  );
+
+  if (button) {
+    button.addEventListener('click', (event) => {
+      onCircularRevealAnimation(() => toggleTheme(button), event);
+    });
+  }
+</script>
