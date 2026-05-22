@@ -66,6 +66,6 @@ jobs:
 
   release-notes:
     needs: release
-    uses: MaxiGarcia13/gh-actions/.github/workflows/create-release-notes.yml
+    uses: MaxiGarcia13/gh-actions/.github/workflows/create-release-notes.yml@main
     with:
       tag: ${{ needs.release.outputs.tag }}
