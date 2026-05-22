@@ -70,7 +70,7 @@ jobs:
           fetch-depth: 0
           fetch-tags: true
 
-      - name: git pull
+      - run: git pull && git pull --tags
 
       # get last tag from packages
       - name: Get last tag
