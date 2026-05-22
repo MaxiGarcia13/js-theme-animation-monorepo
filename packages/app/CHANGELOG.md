@@ -1,3 +1,13 @@
+## 0.1.4 (2026-05-22)
+
+### 🩹 Fixes
+
+- Refine footer layout and content in index.astro ([dcdfbdf](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/dcdfbdf))
+
+### ❤️ Thank You
+
+- Maximiliano Garcia Mortigliengo
+
 ## 0.1.3 (2026-05-22)
 
 ### 🩹 Fixes
