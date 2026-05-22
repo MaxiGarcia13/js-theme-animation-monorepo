@@ -34,22 +34,21 @@ jobs:
 
       - run: npm run build
 
-      - name: Version packages
-        run: npm run version-packages
-
       - name: Configure git author
         uses: MaxiGarcia13/gh-actions/.github/actions/configure-git-author@main
 
-      - name: Commit and push version bump
+      - name: Version packages
         id: version-commit
         run: |
-          git add -A
-          if git diff --staged --quiet; then
+          before="$(git rev-parse HEAD)"
+          npm run version-packages -- --first-release
+          after="$(git rev-parse HEAD)"
+          if [ "$before" = "$after" ]; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          git commit -m "chore: version packages"
           git push
+          git push --tags
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
       - name: Publish to npm

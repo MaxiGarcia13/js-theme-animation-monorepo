@@ -1,6 +1,6 @@
-# app
+# @maxigarcia/js-theme-animation-app
 
-Interactive demo site for [@maxigarcia/js-theme-animation](../js-theme-animation/). It is the public-facing landing page where visitors can try each theme transition technique before adopting the library in their own projects.
+Private demo site for [@maxigarcia/js-theme-animation](../js-theme-animation/). Versioned and tagged in git (`@maxigarcia/js-theme-animation-app@{version}`) but not published to npm. It is the public-facing landing page where visitors can try each theme transition technique before adopting the library in their own projects.
 
 ## Purpose
 
@@ -27,7 +27,7 @@ npm install
 npm run dev
 ```
 
-That runs the demo via Nx (`nx dev app` → `astro dev`). The site is usually available at `http://localhost:4321`.
+That runs the demo via Nx (`nx dev @maxigarcia/js-theme-animation-app` → `astro dev`). The site is usually available at `http://localhost:4321`.
 
 From this package only:
 
@@ -40,7 +40,7 @@ Build and preview:
 
 ```bash
 npm run build   # builds the library, then the app
-npm run preview -w app
+npm run preview -w @maxigarcia/js-theme-animation-app
 ```
 
 Node **≥ 22.12.0** is required (see `package.json` `engines`).

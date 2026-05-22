@@ -3,14 +3,9 @@
   "defaultBase": "main",
   "targetDefaults": {
     "build": {
-      "dependsOn": [
-        "^build"
-      ],
+      "dependsOn": ["^build"],
       "cache": true,
-      "outputs": [
-        "{projectRoot}/dist",
-        "{projectRoot}/.astro"
-      ]
+      "outputs": ["{projectRoot}/dist", "{projectRoot}/.astro"]
     },
     "lint": {
       "cache": true
@@ -21,22 +16,24 @@
   },
   "release": {
     "projects": [
-      "@maxigarcia/js-theme-animation"
+      "@maxigarcia/js-theme-animation",
+      "@maxigarcia/js-theme-animation-app"
     ],
+    "projectsRelationship": "independent",
     "releaseTag": {
-      "pattern": "v{version}"
+      "pattern": "{projectName}@{version}"
     },
     "version": {
       "conventionalCommits": true,
-      "preVersionCommand": "npx nx run @maxigarcia/js-theme-animation:build"
+      "preVersionCommand": "npx nx run-many -t build -p @maxigarcia/js-theme-animation,@maxigarcia/js-theme-animation-app"
     },
     "changelog": {
       "workspaceChangelog": false,
       "projectChangelogs": true
     },
     "git": {
-      "commit": false,
-      "tag": false,
+      "commit": true,
+      "tag": true,
       "commitMessage": "chore: version packages"
     }
   },

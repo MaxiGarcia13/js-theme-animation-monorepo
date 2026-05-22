@@ -54,7 +54,7 @@ npm run version-packages   # bump version + changelog (no publish)
 npm run release            # publish to npm
 ```
 
-CI on `main` runs the same flow automatically when releasable commits are present. See the [root README](../../README.md#releasing-the-library).
+CI on `main` versions and tags both projects, but only publishes this package to npm. See the [root README](../../README.md#releasing).
 
 ## Browser support
 
