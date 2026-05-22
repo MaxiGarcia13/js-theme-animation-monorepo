@@ -7,23 +7,24 @@
   }
 }
 
-::view-transition-old(root),
-::view-transition-new(root) {
+html.circular-reveal::view-transition-old(root),
+html.circular-reveal::view-transition-new(root) {
   mix-blend-mode: normal;
 }
 
-::view-transition-old(root) {
+html.circular-reveal::view-transition-old(root) {
   animation: none;
   z-index: 0;
 }
 
-::view-transition-new(root) {
+html.circular-reveal::view-transition-new(root) {
   z-index: 1;
-  animation: circular-reveal 0.45s ease-in-out;
+  animation: circular-reveal 0.5s ease-in-out;
 }
 
+/* Reduce motion */
 @media (prefers-reduced-motion: reduce) {
-  ::view-transition-new(root) {
+  html.circular-reveal::view-transition-new(root) {
     animation: none;
   }
 }
