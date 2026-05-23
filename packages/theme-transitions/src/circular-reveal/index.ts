@@ -17,8 +17,9 @@ export function onCircularRevealAnimation(
   origin: ThemeRevealOrigin,
   options?: CircularRevealOptions,
 ): void {
-  const x = (origin.clientX / window.innerWidth) * 100;
-  const y = (origin.clientY / window.innerHeight) * 100;
+  const calc = (value: number, dimension: number) => (value / dimension) * 100;
+  const x = calc(origin.clientX, window.innerWidth);
+  const y = calc(origin.clientY, window.innerHeight);
 
   const html = $html();
 
