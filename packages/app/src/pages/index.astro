@@ -1,7 +1,9 @@
 ---
 import AnimationDemosSection from '@/components/animation-demos-section.astro';
 import AppFooter from '@/components/app-footer.astro';
-import InstallAndUseGuide from '@/components/install-and-use-guide.astro';
+import AppSidebar from '@/components/app-sidebar.astro';
+import InstallGuide from '@/components/install-guide.astro';
+import UserGuide from '@/components/user-guide.astro';
 import AppLayout from '@/layouts/app-layout.astro';
 import GithubIcon from '@/components/icons/github.astro';
 import { GITHUB_JS_THEME_ANIMATION_URL } from '@/consts/app';
@@ -9,41 +11,48 @@ import { GITHUB_JS_THEME_ANIMATION_URL } from '@/consts/app';
 
 <AppLayout>
   <main
-    class="mx-auto flex min-h-dvh max-w-5xl flex-col gap-16 px-6 py-16 sm:px-8 sm:py-24"
+    class="mx-auto grid min-h-dvh max-w-7xl sm:grid-cols-[200px_1fr_100px] gap-10 px-6 py-16 sm:gap-12 sm:px-8 sm:py-20 lg:gap-x-12"
   >
-    <header class="space-y-6 text-center">
-      <p
-        class="inline-flex items-center gap-2 rounded-full border border-surface-border bg-surface px-4 py-1.5 text-sm text-muted-foreground backdrop-blur-sm"
-      >
-        <span class="size-1.5 rounded-full bg-accent" aria-hidden="true"></span>
-        View Transitions API
-      </p>
-      <h1
-        class="bg-linear-to-br from-foreground via-foreground to-muted-foreground bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-5xl md:text-6xl"
-      >
-        JS Theme Animation
-      </h1>
-      <p
-        class="mx-auto max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg"
-      >
-        Lightweight, CSS-first theme transitions for the web. Try the demos
-        below — each interaction reveals a different animation technique.
-      </p>
-      <a
-        href={GITHUB_JS_THEME_ANIMATION_URL}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-flex items-center gap-2 rounded-full border border-surface-border bg-surface px-5 py-2.5 text-sm font-medium text-foreground backdrop-blur-sm transition-colors duration-200 hover:border-accent/40 hover:bg-muted"
-      >
-        <GithubIcon id="github-icon" class="size-5 shrink-0" />
-        View on GitHub
-      </a>
-    </header>
+    <AppSidebar />
 
-    <AnimationDemosSection />
+    <div class="mx-auto w-full min-w-0 max-w-5xl space-y-8">
+      <header class="space-y-8 text-center">
+        <p
+          class="inline-flex items-center gap-2 rounded-full border border-surface-border bg-surface px-4 py-1.5 text-sm text-muted-foreground backdrop-blur-sm"
+        >
+          <span class="size-1.5 rounded-full bg-accent" aria-hidden="true"
+          ></span>
+          View Transitions API
+        </p>
+        <h1
+          class="bg-linear-to-br from-foreground via-foreground to-muted-foreground bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-5xl md:text-6xl"
+        >
+          JS Theme Animation
+        </h1>
+        <p
+          class="mx-auto max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg"
+        >
+          Lightweight, CSS-first theme transitions for the web. Try the demos
+          below — each interaction reveals a different animation technique.
+        </p>
+        <a
+          href={GITHUB_JS_THEME_ANIMATION_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 rounded-full border border-surface-border bg-surface px-5 py-2.5 text-sm font-medium text-foreground backdrop-blur-sm transition-colors duration-200 hover:border-accent/40 hover:bg-muted"
+        >
+          <GithubIcon id="github-icon" class="size-5 shrink-0" />
+          View on GitHub
+        </a>
+      </header>
 
-    <InstallAndUseGuide />
+      <AnimationDemosSection />
 
-    <AppFooter />
+      <InstallGuide />
+
+      <UserGuide />
+
+      <AppFooter />
+    </div>
   </main>
 </AppLayout>

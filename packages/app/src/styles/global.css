@@ -48,6 +48,10 @@
   --palette-glow: rgb(167 139 250 / 0.4);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--palette-background);
   color: var(--palette-foreground);
