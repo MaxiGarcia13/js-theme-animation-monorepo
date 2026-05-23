@@ -27,7 +27,9 @@ const chevronId = id ? `${id}-chevron` : 'select-chevron';
   >
     {
       options.map((option) => (
-        <option value={option.value}>{option.label}</option>
+        <option value={option.value} selected={option.value === rest.value}>
+          {option.label}
+        </option>
       ))
     }
   </select>
