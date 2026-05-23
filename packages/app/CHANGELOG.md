@@ -1,3 +1,22 @@
+## 0.3.0 (2026-05-23)
+
+### 🚀 Features
+
+- update index page layout and enhance user guides ([bf1dae8](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/bf1dae8))
+- add navigation and installation guide components ([a092276](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/a092276))
+- add install guide component for user navigation ([650720c](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/650720c))
+- add guide components for user documentation ([d93fef3](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/d93fef3))
+- integrate navigation section into animation demos ([d10a773](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/d10a773))
+- add app sidebar component for navigation ([0259448](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/0259448))
+
+### 🩹 Fixes
+
+- set selected option in select component ([a761fdb](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/a761fdb))
+
+### ❤️ Thank You
+
+- Maximiliano Garcia Mortigliengo
+
 ## 0.2.0 (2026-05-22)
 
 ### 🚀 Features
