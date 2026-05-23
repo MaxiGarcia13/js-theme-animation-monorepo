@@ -1,0 +1,28 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+import type { AppNavItem } from '@/consts/app-nav';
+
+interface Props extends HTMLAttributes<'div'> {
+  navItem: AppNavItem;
+  headingId?: string;
+}
+
+const { navItem, headingId, class: className, ...rest } = Astro.props;
+const resolvedHeadingId = headingId ?? `${navItem.id}-heading`;
+---
+
+<div
+  {...rest}
+  id={navItem.id}
+  data-nav-section={navItem.id}
+  class:list={['scroll-mt-24 flex flex-col', className]}
+  aria-labelledby={resolvedHeadingId}
+>
+  <h3
+    id={resolvedHeadingId}
+    class="text-sm font-semibold tracking-wide text-muted-foreground uppercase"
+  >
+    {navItem.label}
+  </h3>
+  <slot />
+</div>

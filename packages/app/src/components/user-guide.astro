@@ -1,0 +1,21 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+import { USER_GUIDE_NAV_ITEM } from '@/consts/app-nav';
+import { userGuideCards } from '@/consts/user-guide';
+import GuideCard from './guide-card.astro';
+import GuideNavSection from './guide-nav-section.astro';
+
+interface Props extends HTMLAttributes<'div'> {}
+
+const { class: className, ...rest } = Astro.props;
+---
+
+<GuideNavSection
+  {...rest}
+  navItem={USER_GUIDE_NAV_ITEM}
+  class:list={['gap-6', className]}
+>
+  <div class="space-y-6">
+    {userGuideCards.map((guide) => <GuideCard guide={guide} />)}
+  </div>
+</GuideNavSection>
