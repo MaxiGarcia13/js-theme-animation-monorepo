@@ -34,30 +34,6 @@ Install the library in another project:
 npm install @maxigarcia/theme-transitions
 ```
 
-## Workspace tooling (Nx)
-
-This monorepo uses [Nx](https://nx.dev/) to track project dependencies, run tasks in the right order, and release the npm library.
-
-- `@maxigarcia/theme-transitions-app` depends on `@maxigarcia/theme-transitions` via npm workspaces (`"*"` in `package.json`); Nx detects the link from imports and workspace metadata.
-- `nx run-many -t build` builds the library before the app (`dependsOn: ["^build"]` in `nx.json`).
-- `nx graph` shows the project graph.
-
-## Releasing
-
-Releases use [Nx Release](https://nx.dev/docs/features/manage-releases) with [independent versioning](https://nx.dev/docs/guides/nx-release/release-projects-independently) and [Conventional Commits](https://www.conventionalcommits.org/). Each released project gets a git tag like `@maxigarcia/theme-transitions@1.2.3`.
-
-| Project                             | npm publish    | git tag                                       |
-| ----------------------------------- | -------------- | --------------------------------------------- |
-| `@maxigarcia/theme-transitions`     | yes            | `@maxigarcia/theme-transitions@{version}`     |
-| `@maxigarcia/theme-transitions-app` | no (`private`) | `@maxigarcia/theme-transitions-app@{version}` |
-
-From the repo root (local dry run):
-
-```bash
-npm run version-packages   # bump versions, changelogs, and git tags (no publish)
-npm run release            # publish the library to npm only (usually run in CI)
-```
-
 ## Requirements
 
 - Node **≥ 22.12.0** (for the demo app)
