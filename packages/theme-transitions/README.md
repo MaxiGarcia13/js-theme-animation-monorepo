@@ -27,7 +27,7 @@ Each module has its own README with setup, API, and usage examples.
 
 ## Live demo
 
-See the [app package](../app/) in this monorepo for an interactive landing page with both techniques.
+Go to the [demo](https://theme-transitions.vercel.app)
 
 ```bash
 # from monorepo root
@@ -44,17 +44,6 @@ npm run build -w @maxigarcia/theme-transitions
 # or: nx run @maxigarcia/theme-transitions:build
 npm run lint -w @maxigarcia/theme-transitions
 ```
-
-### Versioning & publish (Nx Release)
-
-Use [Conventional Commits](https://www.conventionalcommits.org/) for changes under this package (`feat`, `fix`, `perf`, etc.). From the monorepo root:
-
-```bash
-npm run version-packages   # bump version + changelog (no publish)
-npm run release            # publish to npm
-```
-
-CI on `main` versions and tags both projects, but only publishes this package to npm. See the [root README](../../README.md#releasing).
 
 ## Browser support
 

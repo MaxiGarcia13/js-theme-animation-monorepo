@@ -108,4 +108,4 @@ jobs:
     secrets: inherit
     with:
       deployment_environment: Production
-      deployment_url: https://js-theme-animation.vercel.app
+      deployment_url: https://theme-transitions.vercel.app
