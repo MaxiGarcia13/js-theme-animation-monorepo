@@ -6,9 +6,9 @@ export interface AppNavItem {
 };
 
 export const DEMOS_NAV_ITEM: AppNavItem = {
-  id: 'animation-demos',
-  label: 'Animation demos',
-  href: '#animation-demos',
+  id: 'live-demos',
+  label: 'Live demos',
+  href: '#live-demos',
 } as const;
 
 export const INSTALL_NAV_ITEM: AppNavItem = {
