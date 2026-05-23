@@ -34,14 +34,14 @@
   ],
   "scripts": {
     "build": "nx run-many -t build",
-    "dev": "nx dev @maxigarcia/js-theme-animation-app",
-    "preview": "nx preview @maxigarcia/js-theme-animation-app",
+    "dev": "nx dev @maxigarcia/theme-transitions-app",
+    "preview": "nx preview @maxigarcia/theme-transitions-app",
     "lint": "eslint packages",
     "lint:fix": "eslint --fix packages",
     "version-packages": "nx release --skip-publish",
     "release": "nx release publish --projects=@maxigarcia/theme-transitions --access public",
-    "clean": "npm run phoenix -w @maxigarcia/theme-transitions && npm run phoenix -w @maxigarcia/js-theme-animation-app",
-    "phoenix": "npm run clean && npm i && npm run build"
+    "clean": "npm run phoenix -w @maxigarcia/theme-transitions && npm run phoenix -w @maxigarcia/theme-transitions-app",
+    "phoenix": "nx reset && npm run clean && npm i && npm run build"
   },
   "devDependencies": {
     "@maxigarcia/eslint-config": "^1.5.0",

@@ -17,7 +17,7 @@
   "release": {
     "projects": [
       "@maxigarcia/theme-transitions",
-      "@maxigarcia/js-theme-animation-app"
+      "@maxigarcia/theme-transitions-app"
     ],
     "projectsRelationship": "independent",
     "releaseTag": {
@@ -25,7 +25,7 @@
     },
     "version": {
       "conventionalCommits": true,
-      "preVersionCommand": "npx nx run-many -t build -p @maxigarcia/theme-transitions,@maxigarcia/js-theme-animation-app"
+      "preVersionCommand": "npx nx run-many -t build -p @maxigarcia/theme-transitions,@maxigarcia/theme-transitions-app"
     },
     "changelog": {
       "workspaceChangelog": false,

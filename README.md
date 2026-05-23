@@ -13,7 +13,7 @@ The published npm package is the library; the demo app lets you try both techniq
 | Package                                                            | Role                                                                                              | Docs                                              |
 | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
 | [`@maxigarcia/theme-transitions`](./packages/js-theme-animation/) | Publishable library: `onCircularRevealAnimation`, `onSweepRevealAnimation`, and per-animation CSS | [README](./packages/js-theme-animation/README.md) |
-| [`@maxigarcia/js-theme-animation-app`](./packages/app/)            | Private Astro demo site (versioned & tagged, not published to npm)                                | [README](./packages/app/README.md)                |
+| [`@maxigarcia/theme-transitions-app`](./packages/app/)            | Private Astro demo site (versioned & tagged, not published to npm)                                | [README](./packages/app/README.md)                |
 
 Per-animation usage lives under:
 
@@ -38,7 +38,7 @@ npm install @maxigarcia/theme-transitions
 
 This monorepo uses [Nx](https://nx.dev/) to track project dependencies, run tasks in the right order, and release the npm library.
 
-- `@maxigarcia/js-theme-animation-app` depends on `@maxigarcia/theme-transitions` via npm workspaces (`"*"` in `package.json`); Nx detects the link from imports and workspace metadata.
+- `@maxigarcia/theme-transitions-app` depends on `@maxigarcia/theme-transitions` via npm workspaces (`"*"` in `package.json`); Nx detects the link from imports and workspace metadata.
 - `nx run-many -t build` builds the library before the app (`dependsOn: ["^build"]` in `nx.json`).
 - `nx graph` shows the project graph.
 
@@ -49,7 +49,7 @@ Releases use [Nx Release](https://nx.dev/docs/features/manage-releases) with [in
 | Project                              | npm publish    | git tag                                        |
 | ------------------------------------ | -------------- | ---------------------------------------------- |
 | `@maxigarcia/theme-transitions`     | yes            | `@maxigarcia/theme-transitions@{version}`     |
-| `@maxigarcia/js-theme-animation-app` | no (`private`) | `@maxigarcia/js-theme-animation-app@{version}` |
+| `@maxigarcia/theme-transitions-app` | no (`private`) | `@maxigarcia/theme-transitions-app@{version}` |
 
 From the repo root (local dry run):
 
