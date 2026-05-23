@@ -9,8 +9,9 @@ import {
 
 const keywords = keywordsArray.join(', ');
 const websiteUrl = Astro.url.toString();
-const faviconUrl = websiteUrl + 'favicon.svg';
-const title = 'JS Theme Animation';
+const faviconName = 'favicon.png';
+const faviconUrl = websiteUrl + faviconName;
+const title = 'Theme Transitions';
 ---
 
 <html lang="en" class="dark">
@@ -20,8 +21,7 @@ const title = 'JS Theme Animation';
       name="viewport"
       content="width=device-width, initial-scale=1.0, interactive-widget=overlays-content"
     />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" href={`/${faviconName}`} />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
 

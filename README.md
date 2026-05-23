@@ -1,4 +1,4 @@
-# JS Theme Animation
+# Theme Transitions
 
 Monorepo for **lightweight, CSS-first dark/light theme transitions** on the web. The project uses the [View Transitions API](https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API) to animate theme changes—no Framer Motion or similar libraries.
 
@@ -10,8 +10,8 @@ The published npm package is the library; the demo app lets you try both techniq
 
 ## Packages
 
-| Package                                                            | Role                                                                                              | Docs                                              |
-| ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
+| Package                                                           | Role                                                                                              | Docs                                              |
+| ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
 | [`@maxigarcia/theme-transitions`](./packages/js-theme-animation/) | Publishable library: `onCircularRevealAnimation`, `onSweepRevealAnimation`, and per-animation CSS | [README](./packages/js-theme-animation/README.md) |
 | [`@maxigarcia/theme-transitions-app`](./packages/app/)            | Private Astro demo site (versioned & tagged, not published to npm)                                | [README](./packages/app/README.md)                |
 
@@ -46,8 +46,8 @@ This monorepo uses [Nx](https://nx.dev/) to track project dependencies, run task
 
 Releases use [Nx Release](https://nx.dev/docs/features/manage-releases) with [independent versioning](https://nx.dev/docs/guides/nx-release/release-projects-independently) and [Conventional Commits](https://www.conventionalcommits.org/). Each released project gets a git tag like `@maxigarcia/theme-transitions@1.2.3`.
 
-| Project                              | npm publish    | git tag                                        |
-| ------------------------------------ | -------------- | ---------------------------------------------- |
+| Project                             | npm publish    | git tag                                       |
+| ----------------------------------- | -------------- | --------------------------------------------- |
 | `@maxigarcia/theme-transitions`     | yes            | `@maxigarcia/theme-transitions@{version}`     |
 | `@maxigarcia/theme-transitions-app` | no (`private`) | `@maxigarcia/theme-transitions-app@{version}` |
 
