@@ -19,9 +19,9 @@ Each module has its own README with setup, API, and usage examples.
 
 ## Package exports
 
-| Import                                                    | Purpose                                                      |
-| --------------------------------------------------------- | ------------------------------------------------------------ |
-| `@maxigarcia/theme-transitions`                           | `onCircularRevealAnimation`, `onSweepRevealAnimation`, types |
+| Import                                              | Purpose                                                      |
+| --------------------------------------------------- | ------------------------------------------------------------ |
+| `@maxigarcia/theme-transitions`                     | `onCircularRevealAnimation`, `onSweepRevealAnimation`, types |
 | `@maxigarcia/theme-transitions/circular-reveal.css` | Styles for circular reveal                                   |
 | `@maxigarcia/theme-transitions/sweep-reveal.css`    | Styles for sweep reveal                                      |
 
