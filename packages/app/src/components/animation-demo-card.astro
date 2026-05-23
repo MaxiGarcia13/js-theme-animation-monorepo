@@ -9,8 +9,14 @@ interface Props extends HTMLAttributes<'article'> {
   githubUrl?: string;
 }
 
-const { title, description, badge, githubUrl, class: className, ...rest } =
-  Astro.props;
+const {
+  title,
+  description,
+  badge,
+  githubUrl,
+  class: className,
+  ...rest
+} = Astro.props;
 
 const githubIconId = `github-icon-${title.toLowerCase().replace(/\s+/g, '-')}`;
 ---
@@ -66,7 +72,7 @@ const githubIconId = `github-icon-${title.toLowerCase().replace(/\s+/g, '-')}`;
   </header>
 
   <div
-    class="relative flex min-h-32 flex-1 items-center justify-center rounded-xl border border-dashed border-surface-border bg-muted/40 p-6"
+    class="relative flex min-h-32 gap-4 flex-1 flex-wrap items-center justify-center rounded-xl border border-dashed border-surface-border bg-muted/40 p-6"
   >
     <slot />
   </div>
