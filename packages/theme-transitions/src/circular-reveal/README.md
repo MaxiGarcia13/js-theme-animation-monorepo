@@ -15,7 +15,7 @@ html {
 2. Import the companion styles:
 
 ```css
-@import '@maxigarcia/theme-transitions/circular-reveal/index.css';
+@import '@maxigarcia/theme-transitions/circular-reveal.css';
 ```
 
 ## Usage

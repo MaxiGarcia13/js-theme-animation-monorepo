@@ -31,8 +31,8 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     },
-    "./circular-reveal/index.css": "./dist/circular-reveal/index.css",
-    "./sweep-reveal/index.css": "./dist/sweep-reveal/index.css"
+    "./circular-reveal.css": "./dist/circular-reveal/index.css",
+    "./sweep-reveal.css": "./dist/sweep-reveal/index.css"
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

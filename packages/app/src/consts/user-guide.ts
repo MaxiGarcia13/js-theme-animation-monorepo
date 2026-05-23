@@ -5,9 +5,9 @@ import {
   GITHUB_SWEEP_REVEAL_URL,
 } from './app';
 
-export const circularRevealSetupCss = `@import '${PACKAGE_NAME}/circular-reveal/index.css';`;
+export const circularRevealSetupCss = `@import '${PACKAGE_NAME}/circular-reveal.css';`;
 
-export const sweepRevealSetupCss = `@import '${PACKAGE_NAME}/sweep-reveal/index.css';`;
+export const sweepRevealSetupCss = `@import '${PACKAGE_NAME}/sweep-reveal.css';`;
 
 export const circularRevealUsage = `import { onCircularRevealAnimation } from '${PACKAGE_NAME}';
 
