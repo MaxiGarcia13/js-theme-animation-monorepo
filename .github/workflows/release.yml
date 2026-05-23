@@ -43,7 +43,7 @@ jobs:
         id: version-commit
         run: |
           before="$(git rev-parse HEAD)"
-          npm run version-packages -- --first-release
+          npm run version-packages
 
           after="$(git rev-parse HEAD)"
           if [ "$before" = "$after" ]; then
