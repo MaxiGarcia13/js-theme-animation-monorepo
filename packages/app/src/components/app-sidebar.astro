@@ -1,0 +1,44 @@
+---
+import { APP_NAV_ITEMS } from '@/consts/app-nav';
+---
+
+<aside
+  class="sticky top-8 hidden max-h-[calc(100dvh-4rem)] w-52 shrink-0 self-start overflow-y-auto overscroll-y-contain sm:block"
+  aria-label="Page navigation"
+>
+  <p
+    class="mb-3 px-3 text-xs font-semibold tracking-wide text-muted-foreground uppercase"
+  >
+    Getting Started
+  </p>
+  <ul class="flex flex-col gap-0.5">
+    {
+      APP_NAV_ITEMS.flatMap((item) => [
+        <li>
+          <a
+            href={item.href}
+            data-nav-link={item.id}
+            class={
+              'block rounded-md border border-transparent px-3 py-2 text-sm font-medium text-muted-foreground transition-colors duration-200 hover:border-surface-border hover:bg-muted hover:text-foreground'
+            }
+          >
+            {item.label}
+          </a>
+        </li>,
+        ...(item.children?.map((child) => (
+          <li>
+            <a
+              href={child.href}
+              data-nav-link={child.id}
+              class={
+                'block rounded-md border border-transparent py-1.5 pr-3 pl-6 text-xs font-medium text-muted-foreground transition-colors duration-200 hover:border-surface-border hover:bg-muted hover:text-foreground'
+              }
+            >
+              {child.label}
+            </a>
+          </li>
+        )) ?? []),
+      ])
+    }
+  </ul>
+</aside>
