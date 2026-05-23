@@ -16,7 +16,7 @@
   },
   "release": {
     "projects": [
-      "@maxigarcia/js-theme-animation",
+      "@maxigarcia/theme-transitions",
       "@maxigarcia/js-theme-animation-app"
     ],
     "projectsRelationship": "independent",
@@ -25,7 +25,7 @@
     },
     "version": {
       "conventionalCommits": true,
-      "preVersionCommand": "npx nx run-many -t build -p @maxigarcia/js-theme-animation,@maxigarcia/js-theme-animation-app"
+      "preVersionCommand": "npx nx run-many -t build -p @maxigarcia/theme-transitions,@maxigarcia/js-theme-animation-app"
     },
     "changelog": {
       "workspaceChangelog": false,

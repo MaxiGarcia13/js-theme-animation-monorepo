@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
-@import '@maxigarcia/js-theme-animation/circular-reveal/index.css';
-@import '@maxigarcia/js-theme-animation/sweep-reveal/index.css';
+@import '@maxigarcia/theme-transitions/circular-reveal/index.css';
+@import '@maxigarcia/theme-transitions/sweep-reveal/index.css';
 
 @custom-variant dark (&:where(.dark, .dark *));
 

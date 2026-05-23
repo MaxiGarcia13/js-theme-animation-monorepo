@@ -1,11 +1,11 @@
-# @maxigarcia/js-theme-animation
+# @maxigarcia/theme-transitions
 
 Lightweight, CSS-first theme transitions for the web. Wrap your theme change in the [View Transitions API](https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API) and reveal the new theme with a **circular** or **sweep** animation—no animation framework required.
 
 ## Install
 
 ```bash
-npm install @maxigarcia/js-theme-animation
+npm install @maxigarcia/theme-transitions
 ```
 
 ## Animations
@@ -21,9 +21,9 @@ Each module has its own README with setup, API, and usage examples.
 
 | Import                                                     | Purpose                                                      |
 | ---------------------------------------------------------- | ------------------------------------------------------------ |
-| `@maxigarcia/js-theme-animation`                           | `onCircularRevealAnimation`, `onSweepRevealAnimation`, types |
-| `@maxigarcia/js-theme-animation/circular-reveal/index.css` | Styles for circular reveal                                   |
-| `@maxigarcia/js-theme-animation/sweep-reveal/index.css`    | Styles for sweep reveal                                      |
+| `@maxigarcia/theme-transitions`                           | `onCircularRevealAnimation`, `onSweepRevealAnimation`, types |
+| `@maxigarcia/theme-transitions/circular-reveal/index.css` | Styles for circular reveal                                   |
+| `@maxigarcia/theme-transitions/sweep-reveal/index.css`    | Styles for sweep reveal                                      |
 
 ## Live demo
 
@@ -40,9 +40,9 @@ npm run dev
 From the monorepo root:
 
 ```bash
-npm run build -w @maxigarcia/js-theme-animation
-# or: nx run @maxigarcia/js-theme-animation:build
-npm run lint -w @maxigarcia/js-theme-animation
+npm run build -w @maxigarcia/theme-transitions
+# or: nx run @maxigarcia/theme-transitions:build
+npm run lint -w @maxigarcia/theme-transitions
 ```
 
 ### Versioning & publish (Nx Release)

@@ -6,7 +6,7 @@
   "description": "Smooth, dependency-free theme transitions using the native View Transitions API. Just clean, high-performance animations built straight into the browser.",
   "author": "Maximiliano Garcia Mortigliengo",
   "license": "ISC",
-  "homepage": "https://github.com/MaxiGarcia13/js-theme-animation#readme",
+  "homepage": "https://github.com/MaxiGarcia13/js-theme-animation-monorepo#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MaxiGarcia13/js-theme-animation.git"
@@ -39,8 +39,8 @@
     "lint": "eslint packages",
     "lint:fix": "eslint --fix packages",
     "version-packages": "nx release --skip-publish",
-    "release": "nx release publish --projects=@maxigarcia/js-theme-animation --access public",
-    "clean": "npm run phoenix -w @maxigarcia/js-theme-animation && npm run phoenix -w @maxigarcia/js-theme-animation-app",
+    "release": "nx release publish --projects=@maxigarcia/theme-transitions --access public",
+    "clean": "npm run phoenix -w @maxigarcia/theme-transitions && npm run phoenix -w @maxigarcia/js-theme-animation-app",
     "phoenix": "npm run clean && npm i && npm run build"
   },
   "devDependencies": {

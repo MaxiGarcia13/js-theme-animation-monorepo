@@ -15,7 +15,7 @@ html {
 2. Import the companion styles:
 
 ```css
-@import '@maxigarcia/js-theme-animation/circular-reveal/index.css';
+@import '@maxigarcia/theme-transitions/circular-reveal/index.css';
 ```
 
 ## Usage
@@ -23,7 +23,7 @@ html {
 Call `onCircularRevealAnimation` around your theme toggle. Pass a `MouseEvent` (or any object with `clientX` / `clientY`) so the circle originates at the click:
 
 ```ts
-import { onCircularRevealAnimation } from '@maxigarcia/js-theme-animation';
+import { onCircularRevealAnimation } from '@maxigarcia/theme-transitions';
 
 button.addEventListener('click', (event) => {
   onCircularRevealAnimation(

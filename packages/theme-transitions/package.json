@@ -1,15 +1,15 @@
 {
-  "name": "@maxigarcia/js-theme-animation",
+  "name": "@maxigarcia/theme-transitions",
   "type": "module",
   "version": "0.1.0",
   "license": "ISC",
-  "homepage": "https://github.com/MaxiGarcia13/js-theme-animation/tree/main/packages/js-theme-animation#readme",
+  "homepage": "https://github.com/MaxiGarcia13/js-theme-animation-monorepo/tree/main/packages/theme-transitions#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MaxiGarcia13/js-theme-animation.git"
+    "url": "git+https://github.com/MaxiGarcia13/js-theme-animation-monorepo.git"
   },
   "bugs": {
-    "url": "https://github.com/MaxiGarcia13/js-theme-animation/issues"
+    "url": "https://github.com/MaxiGarcia13/js-theme-animation-monorepo/issues"
   },
   "keywords": [
     "theme",

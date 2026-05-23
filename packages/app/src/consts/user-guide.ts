@@ -1,5 +1,5 @@
 import type { GuideCardData } from './guide';
-import { name as PACKAGE_NAME } from '../../../js-theme-animation/package.json';
+import { name as PACKAGE_NAME } from '../../../theme-transitions/package.json';
 import {
   GITHUB_CIRCULAR_REVEAL_URL,
   GITHUB_SWEEP_REVEAL_URL,

@@ -15,7 +15,7 @@
     "phoenix": "npm run clean && rm -rf node_modules"
   },
   "dependencies": {
-    "@maxigarcia/js-theme-animation": "*",
+    "@maxigarcia/theme-transitions": "*",
     "@tailwindcss/vite": "^4.3.0",
     "astro": "^6.3.7",
     "tailwindcss": "^4.3.0"

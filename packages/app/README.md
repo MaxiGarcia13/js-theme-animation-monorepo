@@ -1,6 +1,6 @@
 # @maxigarcia/js-theme-animation-app
 
-Private demo site for [@maxigarcia/js-theme-animation](../js-theme-animation/). Versioned and tagged in git (`@maxigarcia/js-theme-animation-app@{version}`) but not published to npm. It is the public-facing landing page where visitors can try each theme transition technique before adopting the library in their own projects.
+Private demo site for [@maxigarcia/theme-transitions](../js-theme-animation/). Versioned and tagged in git (`@maxigarcia/js-theme-animation-app@{version}`) but not published to npm. It is the public-facing landing page where visitors can try each theme transition technique before adopting the library in their own projects.
 
 ## Purpose
 
@@ -16,7 +16,7 @@ The homepage (`src/pages/index.astro`) renders two live demo cards side by side.
 
 - [Astro](https://astro.build/) — static site with islands for client-side demo scripts
 - [Tailwind CSS v4](https://tailwindcss.com/) — layout, typography, and theme tokens (`src/styles/global.css`)
-- Workspace dependency on `@maxigarcia/js-theme-animation`
+- Workspace dependency on `@maxigarcia/theme-transitions`
 
 ## Development
 

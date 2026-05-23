@@ -15,7 +15,7 @@ html {
 2. Import the companion styles:
 
 ```css
-@import '@maxigarcia/js-theme-animation/sweep-reveal/index.css';
+@import '@maxigarcia/theme-transitions/sweep-reveal/index.css';
 ```
 
 ## Usage
@@ -23,7 +23,7 @@ html {
 Call `onSweepRevealAnimation` with your theme update and a sweep direction:
 
 ```ts
-import { onSweepRevealAnimation } from '@maxigarcia/js-theme-animation';
+import { onSweepRevealAnimation } from '@maxigarcia/theme-transitions';
 
 button.addEventListener('click', () => {
   onSweepRevealAnimation(

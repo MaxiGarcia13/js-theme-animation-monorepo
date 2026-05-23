@@ -1,5 +1,5 @@
 import type { GuideCardData } from './guide';
-import { name as PACKAGE_NAME } from '../../../js-theme-animation/package.json';
+import { name as PACKAGE_NAME } from '../../../theme-transitions/package.json';
 import { GITHUB_JS_THEME_ANIMATION_URL } from './app';
 
 export const installCommand = `npm install ${PACKAGE_NAME}`;
