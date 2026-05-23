@@ -31,19 +31,19 @@ const blurAmountOptions = [
   githubUrl={GITHUB_CIRCULAR_REVEAL_URL}
   class:list={[className]}
 >
-  <div class="inline-flex flex-1 flex-wrap items-center justify-center gap-4">
-    <ThemeToggleButton id="circular" />
-
+  <div class="flex no-wrap gap-2">
     <Checkbox id="circular-blur" data-circular-blur label="Blur" />
 
     <Select
       id="circular-blur-amount"
-      data-circular-blur-amount
       options={blurAmountOptions}
       value="12px"
-      class="h-full max-w-24"
+      class="max-w-24"
+      data-circular-blur-amount
     />
   </div>
+
+  <ThemeToggleButton id="circular" />
 </AnimationDemoCard>
 
 <script>

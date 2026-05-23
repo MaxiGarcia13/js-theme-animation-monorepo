@@ -30,16 +30,14 @@ const sweepDirections = [
   githubUrl={GITHUB_SWEEP_REVEAL_URL}
   class:list={[className]}
 >
-  <div class="flex-1 inline-flex items-center justify-center gap-4">
-    <ThemeToggleButton id="sweep" />
+  <ThemeToggleButton id="sweep" />
 
-    <Select
-      id="sweep-direction"
-      data-sweep-direction
-      options={sweepDirections}
-      class="h-full max-w-24"
-    />
-  </div>
+  <Select
+    id="sweep-direction"
+    data-sweep-direction
+    options={sweepDirections}
+    class="max-w-24"
+  />
 </AnimationDemoCard>
 
 <script>
