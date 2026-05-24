@@ -47,6 +47,9 @@ jobs:
       - name: Bump app version
         run: npm run version:app
 
+      - name: Push commit and tags
+        run: git push && git push --tags
+
   release-notes:
     needs: release
     permissions:
