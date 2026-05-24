@@ -1,8 +1,8 @@
 ---
 import { GITHUB_SWEEP_REVEAL_URL } from '@/consts/app';
 import AnimationDemoCard from './animation-demo-card.astro';
-import Select from './select.astro';
-import ThemeToggleButton from './theme-toggle-button.astro';
+import Select from '../select.astro';
+import ThemeToggleButton from '../theme-toggle-button.astro';
 import { SWEEP_REVEAL_DEMO_NAV_ITEM } from '@/consts/navigation/demo';
 
 interface Props {
@@ -44,7 +44,7 @@ const sweepDirections = [
 
 <script>
   import { onSweepRevealAnimation } from '@maxigarcia/theme-transitions';
-  import { toggleTheme } from '../utils/toggle-theme';
+  import { toggleTheme } from '../../utils/toggle-theme';
 
   type SweepDirection = 'up' | 'down' | 'left' | 'right';
 

@@ -1,9 +1,9 @@
 ---
 import { GITHUB_CIRCULAR_REVEAL_URL } from '@/consts/app';
 import AnimationDemoCard from './animation-demo-card.astro';
-import Checkbox from './checkbox.astro';
-import Select from './select.astro';
-import ThemeToggleButton from './theme-toggle-button.astro';
+import Checkbox from '../checkbox.astro';
+import Select from '../select.astro';
+import ThemeToggleButton from '../theme-toggle-button.astro';
 import { CIRCULAR_REVEAL_DEMO_NAV_ITEM } from '@/consts/navigation/demo';
 
 interface Props {
@@ -50,7 +50,7 @@ const blurAmountOptions = [
 
 <script>
   import { onCircularRevealAnimation } from '@maxigarcia/theme-transitions';
-  import { toggleTheme } from '../utils/toggle-theme';
+  import { toggleTheme } from '../../utils/toggle-theme';
 
   const demo = document.querySelector('[data-circular-reveal-demo]');
   const button = demo?.querySelector<HTMLButtonElement>(

@@ -1,9 +1,9 @@
 ---
 import type { HTMLAttributes } from 'astro/types';
-import GithubIcon from './icons/github.astro';
+import GithubIcon from '../icons/github.astro';
 import { GITHUB_JS_THEME_ANIMATION_URL } from '@/consts/app';
-import packageJson from '../../package.json';
-import packageJsonThemeTransitions from '../../../theme-transitions/package.json';
+import packageJson from '../../../package.json';
+import packageJsonThemeTransitions from '../../../../theme-transitions/package.json';
 
 interface Props extends HTMLAttributes<'footer'> {}
 
