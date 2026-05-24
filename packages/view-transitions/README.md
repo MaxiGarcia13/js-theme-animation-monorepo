@@ -21,8 +21,8 @@ Each module has its own README with setup, API, and usage examples.
 
 ## Package exports
 
-| Import                                              | Purpose                                                                                                |
-| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| Import                                             | Purpose                                                                                                |
+| -------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
 | `@maxigarcia/view-transitions`                     | `onCircularRevealAnimation`, `onSweepRevealAnimation`, `onFallAnimation`, `onPageTurnAnimation`, types |
 | `@maxigarcia/view-transitions/page-turn.css`       | Styles for page turn                                                                                   |
 | `@maxigarcia/view-transitions/circular-reveal.css` | Styles for circular reveal                                                                             |
