@@ -1,4 +1,4 @@
-import { $html, $onTransitionEnd } from '../utils/index.js';
+import { $html } from '../utils/index.js';
 
 export interface ThemeRevealOrigin {
   clientX: number;
@@ -40,7 +40,7 @@ export function onCircularRevealAnimation(
   html.style.setProperty('--theme-reveal-x', `${x}%`);
   html.style.setProperty('--theme-reveal-y', `${y}%`);
 
-  document.startViewTransition(apply);
+  const transition = document.startViewTransition(apply);
 
   const animationComplete = () => {
     html.style.removeProperty('--theme-reveal-x');
@@ -50,5 +50,5 @@ export function onCircularRevealAnimation(
     html.classList.remove('circular-reveal', 'circular-reveal--blur-circle');
   };
 
-  $onTransitionEnd(animationComplete, 600);
+  void transition.finished.finally(animationComplete);
 }

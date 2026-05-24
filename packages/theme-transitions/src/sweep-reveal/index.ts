@@ -1,4 +1,4 @@
-import { $html, $onTransitionEnd } from '../utils/index.js';
+import { $html } from '../utils/index.js';
 
 export type SweepDirection
   = 'up'
@@ -38,7 +38,7 @@ export function onSweepRevealAnimation(
   html.style.setProperty('--theme-reveal-direction-from', directionFrom);
   html.style.setProperty('--theme-reveal-direction-to', directionTo);
 
-  document.startViewTransition(apply);
+  const transition = document.startViewTransition(apply);
 
   const animationComplete = () => {
     html.classList.remove('sweep-reveal');
@@ -46,5 +46,5 @@ export function onSweepRevealAnimation(
     html.style.removeProperty('--theme-reveal-direction-to');
   };
 
-  $onTransitionEnd(animationComplete, 600);
+  void transition.finished.finally(animationComplete);
 }
