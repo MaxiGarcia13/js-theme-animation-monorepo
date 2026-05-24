@@ -1,18 +1,18 @@
-import type { AppNavItem } from './type';
+import type { NavigationItem } from '@/types/navigation';
 
-export const CIRCULAR_REVEAL_DEMO_NAV_ITEM: AppNavItem = {
+export const CIRCULAR_REVEAL_DEMO_NAV_ITEM: NavigationItem = {
   id: 'circular-reveal-demo',
   label: 'Circular reveal',
   href: '#circular-reveal-demo',
 } as const;
 
-export const SWEEP_REVEAL_DEMO_NAV_ITEM: AppNavItem = {
+export const SWEEP_REVEAL_DEMO_NAV_ITEM: NavigationItem = {
   id: 'sweep-reveal-demo',
   label: 'Sweep reveal',
   href: '#sweep-reveal-demo',
 } as const;
 
-export const DEMOS_NAV_ITEM: AppNavItem = {
+export const DEMOS_NAV_ITEM: NavigationItem = {
   id: 'live-demos',
   label: 'Live demos',
   href: '#live-demos',

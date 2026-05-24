@@ -1,4 +1,4 @@
-import type { GuideCardData } from './guide';
+import type { GuideCardData } from '@/types/guide';
 import { name as PACKAGE_NAME } from '../../../theme-transitions/package.json';
 import {
   GITHUB_CIRCULAR_REVEAL_URL,

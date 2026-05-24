@@ -1,5 +1,5 @@
 ---
-import { APP_NAV_ITEMS } from '@/consts/navigation';
+import { NAVIGATION_ITEMS } from '@/consts/navigation';
 ---
 
 <aside
@@ -13,7 +13,7 @@ import { APP_NAV_ITEMS } from '@/consts/navigation';
   </p>
   <ul class="flex flex-col gap-0.5">
     {
-      APP_NAV_ITEMS.flatMap((item) => [
+      NAVIGATION_ITEMS.flatMap((item) => [
         <li>
           <a
             href={item.href}

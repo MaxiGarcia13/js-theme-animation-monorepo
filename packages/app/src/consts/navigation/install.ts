@@ -1,6 +1,6 @@
-import type { AppNavItem } from './type';
+import type { NavigationItem } from '@/types/navigation';
 
-export const INSTALL_NAV_ITEM: AppNavItem = {
+export const INSTALL_NAV_ITEM: NavigationItem = {
   id: 'install',
   label: 'Install',
   href: '#install',

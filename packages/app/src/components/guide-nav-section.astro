@@ -1,9 +1,9 @@
 ---
 import type { HTMLAttributes } from 'astro/types';
-import type { AppNavItem } from '@/consts/navigation';
+import type { NavigationItem } from '@/types/navigation';
 
 interface Props extends HTMLAttributes<'div'> {
-  navItem: AppNavItem;
+  navItem: NavigationItem;
   headingId?: string;
 }
 
