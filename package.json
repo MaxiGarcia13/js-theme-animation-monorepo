@@ -38,7 +38,7 @@
     "preview": "nx preview @maxigarcia/theme-transitions-app",
     "lint": "eslint packages",
     "lint:fix": "eslint --fix packages",
-    "version:app": "nx release --projects=@maxigarcia/theme-transitions-app --skip-publish --yes",
+    "version:app": "nx release --projects=@maxigarcia/theme-transitions-app --skip-publish",
     "release:lib": "nx release --projects=@maxigarcia/theme-transitions --yes",
     "clean": "npm run phoenix -w @maxigarcia/theme-transitions && npm run phoenix -w @maxigarcia/theme-transitions-app",
     "phoenix": "nx reset && npm run clean && npm i && npm run build"
