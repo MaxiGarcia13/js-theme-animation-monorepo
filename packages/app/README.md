@@ -1,6 +1,6 @@
-# @maxigarcia/theme-transitions-app
+# @maxigarcia/view-transitions-app
 
-Private demo site for [@maxigarcia/theme-transitions](../js-theme-animation/). Versioned and tagged in git (`@maxigarcia/theme-transitions-app@{version}`) but not published to npm. It is the public-facing landing page where visitors can try each theme transition technique before adopting the library in their own projects.
+Private demo site for [@maxigarcia/view-transitions](../js-theme-animation/). Versioned and tagged in git (`@maxigarcia/view-transitions-app@{version}`) but not published to npm. It is the public-facing landing page where visitors can try each theme transition technique before adopting the library in their own projects.
 
 ## Purpose
 
@@ -16,7 +16,7 @@ The homepage (`src/pages/index.astro`) renders two live demo cards side by side.
 
 - [Astro](https://astro.build/) — static site with islands for client-side demo scripts
 - [Tailwind CSS v4](https://tailwindcss.com/) — layout, typography, and theme tokens (`src/styles/global.css`)
-- Workspace dependency on `@maxigarcia/theme-transitions`
+- Workspace dependency on `@maxigarcia/view-transitions`
 
 ## Development
 
@@ -27,7 +27,7 @@ npm install
 npm run dev
 ```
 
-That runs the demo via Nx (`nx dev @maxigarcia/theme-transitions-app` → `astro dev`). The site is usually available at `http://localhost:4321`.
+That runs the demo via Nx (`nx dev @maxigarcia/view-transitions-app` → `astro dev`). The site is usually available at `http://localhost:4321`.
 
 From this package only:
 
@@ -40,7 +40,7 @@ Build and preview:
 
 ```bash
 npm run build   # builds the library, then the app
-npm run preview -w @maxigarcia/theme-transitions-app
+npm run preview -w @maxigarcia/view-transitions-app
 ```
 
 Node **≥ 22.12.0** is required (see `package.json` `engines`).

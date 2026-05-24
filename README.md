@@ -17,15 +17,15 @@ The published npm package is the library; the demo app lets you try every techni
 
 | Package                                                          | Role                                                                                                                                        | Docs                                             |
 | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| [`@maxigarcia/theme-transitions`](./packages/theme-transitions/) | Publishable library: `onCircularRevealAnimation`, `onSweepRevealAnimation`, `onFallAnimation`, `onPageTurnAnimation`, and per-animation CSS | [README](./packages/theme-transitions/README.md) |
-| [`@maxigarcia/theme-transitions-app`](./packages/app/)           | Private Astro demo site (versioned & tagged, not published to npm)                                                                          | [README](./packages/app/README.md)               |
+| [`@maxigarcia/view-transitions`](./packages/view-transitions/) | Publishable library: `onCircularRevealAnimation`, `onSweepRevealAnimation`, `onFallAnimation`, `onPageTurnAnimation`, and per-animation CSS | [README](./packages/view-transitions/README.md) |
+| [`@maxigarcia/view-transitions-app`](./packages/app/)           | Private Astro demo site (versioned & tagged, not published to npm)                                                                          | [README](./packages/app/README.md)               |
 
 Per-animation usage lives under:
 
-- [Circular reveal](./packages/theme-transitions/src/circular-reveal/README.md)
-- [Sweep reveal](./packages/theme-transitions/src/sweep-reveal/README.md)
-- [Fall](./packages/theme-transitions/src/fall/README.md)
-- [Page turn](./packages/theme-transitions/src/page-turn/README.md)
+- [Circular reveal](./packages/view-transitions/src/circular-reveal/README.md)
+- [Sweep reveal](./packages/view-transitions/src/sweep-reveal/README.md)
+- [Fall](./packages/view-transitions/src/fall/README.md)
+- [Page turn](./packages/view-transitions/src/page-turn/README.md)
 
 ## Getting started
 
@@ -38,7 +38,7 @@ npm run build    # library + app (Nx builds dependencies first)
 Install the library in another project:
 
 ```bash
-npm install @maxigarcia/theme-transitions
+npm install @maxigarcia/view-transitions
 ```
 
 Live demo: [theme-transitions.vercel.app](https://theme-transitions.vercel.app)

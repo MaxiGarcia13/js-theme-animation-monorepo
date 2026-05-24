@@ -7,7 +7,7 @@ The current theme turns away like a book page, pivoting on the left or right edg
 Import the companion styles:
 
 ```css
-@import '@maxigarcia/theme-transitions/page-turn.css';
+@import '@maxigarcia/view-transitions/page-turn.css';
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ Import the companion styles:
 Call `onPageTurnAnimation` around your theme toggle:
 
 ```ts
-import { onPageTurnAnimation } from '@maxigarcia/theme-transitions';
+import { onPageTurnAnimation } from '@maxigarcia/view-transitions';
 
 button.addEventListener('click', () => {
   onPageTurnAnimation(() => document.documentElement.classList.toggle('dark'));

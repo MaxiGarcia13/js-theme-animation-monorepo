@@ -1,9 +1,9 @@
 @import 'tailwindcss';
 
-@import '@maxigarcia/theme-transitions/page-turn.css';
-@import '@maxigarcia/theme-transitions/circular-reveal.css';
-@import '@maxigarcia/theme-transitions/fall.css';
-@import '@maxigarcia/theme-transitions/sweep-reveal.css';
+@import '@maxigarcia/view-transitions/page-turn.css';
+@import '@maxigarcia/view-transitions/circular-reveal.css';
+@import '@maxigarcia/view-transitions/fall.css';
+@import '@maxigarcia/view-transitions/sweep-reveal.css';
 
 html {
   view-transition-name: root;

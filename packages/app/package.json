@@ -1,5 +1,5 @@
 {
-  "name": "@maxigarcia/theme-transitions-app",
+  "name": "@maxigarcia/view-transitions-app",
   "type": "module",
   "version": "0.5.3",
   "private": true,
@@ -15,7 +15,7 @@
     "phoenix": "npm run clean && rm -rf node_modules"
   },
   "dependencies": {
-    "@maxigarcia/theme-transitions": "*",
+    "@maxigarcia/view-transitions": "*",
     "@tailwindcss/vite": "^4.3.0",
     "astro": "^6.3.7",
     "tailwindcss": "^4.3.0"

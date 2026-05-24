@@ -3,7 +3,7 @@ import type { HTMLAttributes } from 'astro/types';
 import GithubIcon from '../icons/github.astro';
 import { GITHUB_JS_THEME_ANIMATION_URL } from '@/consts/app';
 import packageJson from '../../../package.json';
-import packageJsonThemeTransitions from '../../../../theme-transitions/package.json';
+import packageJsonViewTransitions from '../../../../view-transitions/package.json';
 
 interface Props extends HTMLAttributes<'footer'> {}
 
@@ -24,7 +24,7 @@ const { class: className, ...rest } = Astro.props;
     class="inline-flex items-center gap-2 transition-colors hover:text-foreground"
   >
     <GithubIcon id="github-icon-footer" class="size-4 shrink-0" />
-    {packageJsonThemeTransitions.name}
+    {packageJsonViewTransitions.name}
   </a>
   - APP v{packageJson.version}
 </footer>

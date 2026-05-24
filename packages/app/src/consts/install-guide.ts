@@ -1,5 +1,5 @@
 import type { GuideCardData } from '@/types/guide';
-import { name as PACKAGE_NAME } from '../../../theme-transitions/package.json';
+import { name as PACKAGE_NAME } from '../../../view-transitions/package.json';
 import { GITHUB_JS_THEME_ANIMATION_URL } from './app';
 import { INSTALL_NAV_ITEM } from './navigation';
 

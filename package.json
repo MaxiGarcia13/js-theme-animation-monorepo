@@ -34,13 +34,13 @@
   ],
   "scripts": {
     "build": "nx run-many -t build",
-    "dev": "nx dev @maxigarcia/theme-transitions-app",
-    "preview": "nx preview @maxigarcia/theme-transitions-app",
+    "dev": "nx dev @maxigarcia/view-transitions-app",
+    "preview": "nx preview @maxigarcia/view-transitions-app",
     "lint": "eslint packages",
     "lint:fix": "eslint --fix packages",
-    "version:app": "nx release --projects=@maxigarcia/theme-transitions-app --skip-publish",
-    "release:lib": "nx release --projects=@maxigarcia/theme-transitions --yes",
-    "clean": "npm run phoenix -w @maxigarcia/theme-transitions && npm run phoenix -w @maxigarcia/theme-transitions-app",
+    "version:app": "nx release --projects=@maxigarcia/view-transitions-app --skip-publish",
+    "release:lib": "nx release --projects=@maxigarcia/view-transitions --yes",
+    "clean": "npm run phoenix -w @maxigarcia/view-transitions && npm run phoenix -w @maxigarcia/view-transitions-app",
     "phoenix": "nx reset && npm run clean && npm i && npm run build"
   },
   "devDependencies": {

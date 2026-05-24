@@ -7,7 +7,7 @@ The current theme drops off the bottom of the screen while the new theme appears
 Import the companion styles:
 
 ```css
-@import '@maxigarcia/theme-transitions/fall.css';
+@import '@maxigarcia/view-transitions/fall.css';
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ Import the companion styles:
 Call `onFallAnimation` around your theme toggle:
 
 ```ts
-import { onFallAnimation } from '@maxigarcia/theme-transitions';
+import { onFallAnimation } from '@maxigarcia/view-transitions';
 
 button.addEventListener('click', () => {
   onFallAnimation(() => document.documentElement.classList.toggle('dark'));
