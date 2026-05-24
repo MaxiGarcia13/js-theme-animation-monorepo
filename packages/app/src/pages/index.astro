@@ -6,7 +6,7 @@ import InstallGuide from '@/components/install/install-guide.astro';
 import UserGuide from '@/components/user-guide/user-guide.astro';
 import AppLayout from '@/layouts/app-layout.astro';
 import GithubIcon from '@/components/icons/github.astro';
-import { GITHUB_JS_THEME_ANIMATION_URL } from '@/consts/app';
+import { GITHUB_VIEW_TRANSITIONS_URL } from '@/consts/app';
 import Badge from '@/components/badge.astro';
 ---
 
@@ -23,16 +23,17 @@ import Badge from '@/components/badge.astro';
         <h1
           class="bg-linear-to-br from-foreground via-foreground to-muted-foreground bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-5xl md:text-6xl"
         >
-          Theme Transitions
+          View Transitions
         </h1>
         <p
           class="mx-auto max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg"
         >
-          Lightweight, CSS-first theme transitions for the web. Try the demos
-          below — each interaction reveals a different animation technique.
+          Lightweight, CSS-first transitions powered by the View Transitions
+          API. Try the demos below — each interaction reveals a different
+          animation technique.
         </p>
         <a
-          href={GITHUB_JS_THEME_ANIMATION_URL}
+          href={GITHUB_VIEW_TRANSITIONS_URL}
           target="_blank"
           rel="noopener noreferrer"
           class="inline-flex items-center gap-2 rounded-full border border-surface-border bg-surface px-5 py-2.5 text-sm font-medium text-foreground backdrop-blur-sm transition-colors duration-200 hover:border-accent/40 hover:bg-muted"

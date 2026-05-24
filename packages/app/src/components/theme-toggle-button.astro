@@ -1,6 +1,7 @@
 ---
 import MoonIcon from './icons/moon.astro';
 import SunIcon from './icons/sun.astro';
+import Button from './button.astro';
 
 interface Props {
   id?: string;
@@ -9,16 +10,12 @@ interface Props {
 const { id = 'default' } = Astro.props;
 ---
 
-<button
-  type="button"
-  data-theme-toggle-button
-  class="inline-flex cursor-pointer items-center gap-3 rounded-xl border border-surface-border bg-accent px-5 py-3 text-sm font-medium text-accent-foreground shadow-sm transition-[transform,box-shadow] duration-200 hover:shadow-md hover:shadow-glow/30 active:scale-[0.98]"
->
+<Button data-theme-toggle-button>
   <span data-theme-icon="moon" class="contents">
     <MoonIcon id={`moon-icon-${id}`} class="hidden size-5 shrink-0" />
   </span>
   <span data-theme-icon="sun" class="contents">
     <SunIcon id={`sun-icon-${id}`} class="block size-5 shrink-0" />
   </span>
-  <span>Toggle theme</span>
-</button>
+  <span>Toggle dark mode</span>
+</Button>

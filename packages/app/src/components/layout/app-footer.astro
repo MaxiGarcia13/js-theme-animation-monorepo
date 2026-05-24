@@ -1,7 +1,7 @@
 ---
 import type { HTMLAttributes } from 'astro/types';
 import GithubIcon from '../icons/github.astro';
-import { GITHUB_JS_THEME_ANIMATION_URL } from '@/consts/app';
+import { GITHUB_VIEW_TRANSITIONS_URL } from '@/consts/app';
 import packageJson from '../../../package.json';
 import packageJsonViewTransitions from '../../../../view-transitions/package.json';
 
@@ -18,7 +18,7 @@ const { class: className, ...rest } = Astro.props;
   ]}
 >
   <a
-    href={GITHUB_JS_THEME_ANIMATION_URL}
+    href={GITHUB_VIEW_TRANSITIONS_URL}
     target="_blank"
     rel="noopener noreferrer"
     class="inline-flex items-center gap-2 transition-colors hover:text-foreground"
