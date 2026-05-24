@@ -1,6 +1,6 @@
 import type { GuideCardData } from '@/types/guide';
 import { name as PACKAGE_NAME } from '../../../view-transitions/package.json';
-import { GITHUB_JS_THEME_ANIMATION_URL } from './app';
+import { GITHUB_VIEW_TRANSITIONS_URL } from './app';
 import { INSTALL_NAV_ITEM } from './navigation';
 
 export const INSTALL_COMMAND = `npm install ${PACKAGE_NAME}`;
@@ -10,6 +10,6 @@ export const INSTALL_GUIDE_CARD: GuideCardData = {
   title: INSTALL_NAV_ITEM.label,
   description:
     'Add the package to your project. It ships the animation helpers and companion CSS for the View Transitions API.',
-  githubUrl: GITHUB_JS_THEME_ANIMATION_URL,
+  githubUrl: GITHUB_VIEW_TRANSITIONS_URL,
   snippets: [{ label: 'Terminal', code: INSTALL_COMMAND }],
 };

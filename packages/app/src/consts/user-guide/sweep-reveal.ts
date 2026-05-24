@@ -18,7 +18,7 @@ export const SWEEP_REVEAL_GUIDE_CARD: GuideCardData = {
   id: SWEEP_REVEAL_GUIDE_NAV_ITEM.id,
   title: SWEEP_REVEAL_GUIDE_NAV_ITEM.label,
   description:
-    'Wrap your theme toggle with onSweepRevealAnimation. Pick a sweep direction so the new theme slides in from an edge or corner.',
+    'Call onSweepRevealAnimation with a callback that toggles the `dark` class. Pick a sweep direction so the updated appearance slides in from an edge or corner.',
   githubUrl: GITHUB_SWEEP_REVEAL_URL,
   snippets: [
     { label: 'CSS', code: SWEEP_REVEAL_SETUP_CSS },

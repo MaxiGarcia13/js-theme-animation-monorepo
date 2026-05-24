@@ -18,7 +18,7 @@ export const CIRCULAR_REVEAL_GUIDE_CARD: GuideCardData = {
   id: CIRCULAR_REVEAL_GUIDE_NAV_ITEM.id,
   title: CIRCULAR_REVEAL_GUIDE_NAV_ITEM.label,
   description:
-    'Wrap your theme toggle with onCircularRevealAnimation. Pass the click event so a radial clip-path expands from the pointer and reveals the new theme.',
+    'Call onCircularRevealAnimation with a callback that toggles the `dark` class. Pass the click event so a radial clip-path expands from the pointer and reveals the updated appearance.',
   githubUrl: GITHUB_CIRCULAR_REVEAL_URL,
   snippets: [
     { label: 'CSS', code: CIRCULAR_REVEAL_SETUP_CSS },

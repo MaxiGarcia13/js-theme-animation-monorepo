@@ -15,7 +15,7 @@ export const FALL_GUIDE_CARD: GuideCardData = {
   id: FALL_GUIDE_NAV_ITEM.id,
   title: FALL_GUIDE_NAV_ITEM.label,
   description:
-    'Wrap your theme toggle with onFallAnimation. The old theme drops off the bottom edge while the new theme appears underneath.',
+    'Call onFallAnimation with a callback that toggles the `dark` class. The previous appearance drops off the bottom edge while the updated appearance appears underneath.',
   githubUrl: GITHUB_FALL_URL,
   snippets: [
     { label: 'CSS', code: FALL_SETUP_CSS },
