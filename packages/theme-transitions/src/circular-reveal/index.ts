@@ -17,6 +17,11 @@ export function onCircularRevealAnimation(
   origin: ThemeRevealOrigin,
   options?: CircularRevealOptions,
 ): void {
+  if (!document.startViewTransition) {
+    apply();
+    return;
+  }
+
   const x = (origin.clientX / window.innerWidth) * 100;
   const y = (origin.clientY / window.innerHeight) * 100;
 
@@ -34,11 +39,6 @@ export function onCircularRevealAnimation(
 
   html.style.setProperty('--theme-reveal-x', `${x}%`);
   html.style.setProperty('--theme-reveal-y', `${y}%`);
-
-  if (!document.startViewTransition) {
-    apply();
-    return;
-  }
 
   document.startViewTransition(apply);
 
