@@ -1,24 +1,24 @@
-# Theme Transitions
+# View Transitions
 
-Monorepo for **lightweight, CSS-first dark/light theme transitions** on the web. The project uses the [View Transitions API](https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API) to animate theme changes—no animation framework required.
+Monorepo for **lightweight, CSS-first transitions** on the web. Helpers and companion CSS use the [View Transitions API](https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API) to animate DOM updates—no animation framework required.
 
 ## Purpose
 
-Switching themes (for example toggling a `dark` class) can feel abrupt. This repository provides small helpers and companion CSS that reveal the new theme with a polished transition:
+Updating the page (for example toggling a class on `<html>`) can feel abrupt. This repository provides small helpers and companion CSS that reveal the change with a polished transition:
 
 - **Circular reveal** — radial clip-path from the click point
 - **Sweep reveal** — directional wipe from an edge or corner
-- **Fall** — the old theme drops off the bottom
-- **Page turn** — the old theme pivots away on the left or right edge, like turning a book page
+- **Fall** — the previous state drops off the bottom
+- **Page turn** — the previous state pivots away on the left or right edge, like turning a book page
 
 The published npm package is the library; the demo app lets you try every technique in the browser before integrating them elsewhere.
 
 ## Packages
 
-| Package                                                          | Role                                                                                                                                        | Docs                                             |
-| ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
+| Package                                                        | Role                                                                                                                                        | Docs                                            |
+| -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
 | [`@maxigarcia/view-transitions`](./packages/view-transitions/) | Publishable library: `onCircularRevealAnimation`, `onSweepRevealAnimation`, `onFallAnimation`, `onPageTurnAnimation`, and per-animation CSS | [README](./packages/view-transitions/README.md) |
-| [`@maxigarcia/view-transitions-app`](./packages/app/)           | Private Astro demo site (versioned & tagged, not published to npm)                                                                          | [README](./packages/app/README.md)               |
+| [`@maxigarcia/view-transitions-app`](./packages/app/)          | Private Astro demo site (versioned & tagged, not published to npm)                                                                          | [README](./packages/app/README.md)              |
 
 Per-animation usage lives under:
 
@@ -41,12 +41,12 @@ Install the library in another project:
 npm install @maxigarcia/view-transitions
 ```
 
-Live demo: [theme-transitions.vercel.app](https://theme-transitions.vercel.app)
+Live demo: [view-transitionsapi.vercel.app](https://view-transitionsapi.vercel.app)
 
 ## Requirements
 
 - Node **≥ 22.12.0** (for the demo app)
-- [View Transitions](https://caniuse.com/view-transitions) in the browser for animated reveals; theme changes still apply when unsupported
+- [View Transitions](https://caniuse.com/view-transitions) in the browser for animated reveals; updates still apply when unsupported
 
 ## License
 

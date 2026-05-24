@@ -1,21 +1,21 @@
 # @maxigarcia/view-transitions-app
 
-Private demo site for [@maxigarcia/view-transitions](../js-theme-animation/). Versioned and tagged in git (`@maxigarcia/view-transitions-app@{version}`) but not published to npm. It is the public-facing landing page where visitors can try each theme transition technique before adopting the library in their own projects.
+Private demo site for [@maxigarcia/view-transitions](../view-transitions/). Versioned and tagged in git (`@maxigarcia/view-transitions-app@{version}`) but not published to npm. It is the public-facing landing page where visitors can try each View Transitions animation before adopting the library in their own projects.
 
 ## Purpose
 
 This package is **not** the published npm library. It exists to:
 
-- Showcase **circular reveal** and **sweep reveal** animations driven by the [View Transitions API](https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API)
-- Let users tweak demo options (blur amount, sweep direction) and see the effect immediately
-- Link to the corresponding source in `packages/js-theme-animation` on GitHub
+- Showcase **circular reveal**, **sweep reveal**, **fall**, and **page turn** animations driven by the [View Transitions API](https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API)
+- Let users tweak demo options (blur amount, sweep direction, page-turn edge) and see the effect immediately
+- Link to the corresponding source in `packages/view-transitions` on GitHub
 
-The homepage (`src/pages/index.astro`) renders two live demo cards side by side. Each card wires a theme toggle button to the library helpers (`onCircularRevealAnimation`, `onSweepRevealAnimation`) and applies `toggleTheme` to switch the `dark` class on `<html>`.
+The homepage (`src/pages/index.astro`) renders live demo cards for each animation. Each card wires a control to the library helpers (`onCircularRevealAnimation`, `onSweepRevealAnimation`, `onFallAnimation`, `onPageTurnAnimation`) and passes an update callback that changes classes on `<html>`.
 
 ## Tech stack
 
 - [Astro](https://astro.build/) — static site with islands for client-side demo scripts
-- [Tailwind CSS v4](https://tailwindcss.com/) — layout, typography, and theme tokens (`src/styles/global.css`)
+- [Tailwind CSS v4](https://tailwindcss.com/) — layout, typography, and design tokens (`src/styles/global.css`)
 - Workspace dependency on `@maxigarcia/view-transitions`
 
 ## Development
