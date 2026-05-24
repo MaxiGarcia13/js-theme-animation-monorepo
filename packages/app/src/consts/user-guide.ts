@@ -6,11 +6,11 @@ import {
 } from './app';
 import { CIRCULAR_REVEAL_GUIDE_NAV_ITEM, SWEEP_REVEAL_GUIDE_NAV_ITEM } from './navigation/user-guide';
 
-export const circularRevealSetupCss = `@import '${PACKAGE_NAME}/circular-reveal.css';`;
+export const CIRCULAR_REVEAL_SETUP_CSS = `@import '${PACKAGE_NAME}/circular-reveal.css';`;
 
-export const sweepRevealSetupCss = `@import '${PACKAGE_NAME}/sweep-reveal.css';`;
+export const SWEEP_REVEAL_SETUP_CSS = `@import '${PACKAGE_NAME}/sweep-reveal.css';`;
 
-export const circularRevealUsage = `import { onCircularRevealAnimation } from '${PACKAGE_NAME}';
+export const CIRCULAR_REVEAL_USAGE = `import { onCircularRevealAnimation } from '${PACKAGE_NAME}';
 
 button.addEventListener('click', (event) => {
   onCircularRevealAnimation(
@@ -19,7 +19,7 @@ button.addEventListener('click', (event) => {
   );
 });`;
 
-export const sweepRevealUsage = `import { onSweepRevealAnimation } from '${PACKAGE_NAME}';
+export const SWEEP_REVEAL_USAGE = `import { onSweepRevealAnimation } from '${PACKAGE_NAME}';
 
 button.addEventListener('click', () => {
   onSweepRevealAnimation(
@@ -28,31 +28,31 @@ button.addEventListener('click', () => {
   );
 });`;
 
-export const circularRevealGuideCard: GuideCardData = {
+export const CIRCULAR_REVEAL_GUIDE_CARD: GuideCardData = {
   id: CIRCULAR_REVEAL_GUIDE_NAV_ITEM.id,
   title: CIRCULAR_REVEAL_GUIDE_NAV_ITEM.label,
   description:
     'Wrap your theme toggle with onCircularRevealAnimation. Pass the click event so a radial clip-path expands from the pointer and reveals the new theme.',
   githubUrl: GITHUB_CIRCULAR_REVEAL_URL,
   snippets: [
-    { label: 'CSS', code: circularRevealSetupCss },
-    { label: 'JavaScript', code: circularRevealUsage },
+    { label: 'CSS', code: CIRCULAR_REVEAL_SETUP_CSS },
+    { label: 'JavaScript', code: CIRCULAR_REVEAL_USAGE },
   ],
 };
 
-export const sweepRevealGuideCard: GuideCardData = {
+export const SWEEP_REVEAL_GUIDE_CARD: GuideCardData = {
   id: SWEEP_REVEAL_GUIDE_NAV_ITEM.id,
   title: SWEEP_REVEAL_GUIDE_NAV_ITEM.label,
   description:
     'Wrap your theme toggle with onSweepRevealAnimation. Pick a sweep direction so the new theme slides in from an edge or corner.',
   githubUrl: GITHUB_SWEEP_REVEAL_URL,
   snippets: [
-    { label: 'CSS', code: sweepRevealSetupCss },
-    { label: 'JavaScript', code: sweepRevealUsage },
+    { label: 'CSS', code: SWEEP_REVEAL_SETUP_CSS },
+    { label: 'JavaScript', code: SWEEP_REVEAL_USAGE },
   ],
 };
 
-export const userGuideCards = [
-  circularRevealGuideCard,
-  sweepRevealGuideCard,
+export const USER_GUIDE_CARDS = [
+  CIRCULAR_REVEAL_GUIDE_CARD,
+  SWEEP_REVEAL_GUIDE_CARD,
 ] as const;

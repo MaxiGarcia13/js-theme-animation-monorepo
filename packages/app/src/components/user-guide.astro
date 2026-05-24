@@ -1,7 +1,7 @@
 ---
 import type { HTMLAttributes } from 'astro/types';
 import { USER_GUIDE_NAV_ITEM } from '@/consts/navigation';
-import { userGuideCards } from '@/consts/user-guide';
+import { USER_GUIDE_CARDS } from '@/consts/user-guide';
 import GuideCard from './guide-card.astro';
 import GuideNavSection from './guide-nav-section.astro';
 
@@ -16,6 +16,6 @@ const { class: className, ...rest } = Astro.props;
   class:list={['gap-6', className]}
 >
   <div class="space-y-6">
-    {userGuideCards.map((guide) => <GuideCard guide={guide} />)}
+    {USER_GUIDE_CARDS.map((guide) => <GuideCard guide={guide} />)}
   </div>
 </GuideNavSection>
