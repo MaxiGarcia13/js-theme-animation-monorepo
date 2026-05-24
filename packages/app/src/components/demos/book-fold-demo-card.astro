@@ -1,0 +1,40 @@
+---
+import { GITHUB_BOOK_FOLD_URL } from '@/consts/app';
+import AnimationDemoCard from './animation-demo-card.astro';
+import ThemeToggleButton from '../theme-toggle-button.astro';
+import { BOOK_FOLD_DEMO_NAV_ITEM } from '@/consts/navigation/demo';
+
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<AnimationDemoCard
+  id={BOOK_FOLD_DEMO_NAV_ITEM.id}
+  data-book-fold-demo
+  title="Book fold"
+  description="The current theme turns away like a page, revealing the new theme underneath."
+  badge="Live demo"
+  githubUrl={GITHUB_BOOK_FOLD_URL}
+  class:list={[className]}
+>
+  <ThemeToggleButton id="book-fold" />
+</AnimationDemoCard>
+
+<script>
+  import { onBookFoldAnimation } from '@maxigarcia/theme-transitions';
+  import { toggleTheme } from '../../utils/toggle-theme';
+
+  const demo = document.querySelector('[data-book-fold-demo]');
+  const button = demo?.querySelector<HTMLButtonElement>(
+    '[data-theme-toggle-button]',
+  );
+
+  if (button) {
+    button.addEventListener('click', () => {
+      onBookFoldAnimation(() => toggleTheme(button));
+    });
+  }
+</script>

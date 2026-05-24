@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 
+@import '@maxigarcia/theme-transitions/book-fold.css';
 @import '@maxigarcia/theme-transitions/circular-reveal.css';
 @import '@maxigarcia/theme-transitions/fall.css';
 @import '@maxigarcia/theme-transitions/sweep-reveal.css';

@@ -31,6 +31,7 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     },
+    "./book-fold.css": "./dist/book-fold/index.css",
     "./circular-reveal.css": "./dist/circular-reveal/index.css",
     "./fall.css": "./dist/fall/index.css",
     "./sweep-reveal.css": "./dist/sweep-reveal/index.css"

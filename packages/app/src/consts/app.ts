@@ -12,3 +12,6 @@ export const GITHUB_SWEEP_REVEAL_URL
 
 export const GITHUB_FALL_URL
   = `${GITHUB_JS_THEME_ANIMATION_URL}/src/fall`;
+
+export const GITHUB_BOOK_FOLD_URL
+  = `${GITHUB_JS_THEME_ANIMATION_URL}/src/book-fold`;

@@ -18,6 +18,12 @@ export const FALL_DEMO_NAV_ITEM: NavigationItem = {
   href: '#fall-demo',
 } as const;
 
+export const BOOK_FOLD_DEMO_NAV_ITEM: NavigationItem = {
+  id: 'book-fold-demo',
+  label: 'Book fold',
+  href: '#book-fold-demo',
+} as const;
+
 export const DEMOS_NAV_ITEM: NavigationItem = {
   id: 'live-demos',
   label: 'Live demos',
@@ -26,5 +32,6 @@ export const DEMOS_NAV_ITEM: NavigationItem = {
     CIRCULAR_REVEAL_DEMO_NAV_ITEM,
     SWEEP_REVEAL_DEMO_NAV_ITEM,
     FALL_DEMO_NAV_ITEM,
+    BOOK_FOLD_DEMO_NAV_ITEM,
   ],
 } as const;

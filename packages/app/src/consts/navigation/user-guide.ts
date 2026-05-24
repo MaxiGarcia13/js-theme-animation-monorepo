@@ -18,6 +18,12 @@ export const FALL_GUIDE_NAV_ITEM: NavigationItem = {
   href: '#fall-guide',
 } as const;
 
+export const BOOK_FOLD_GUIDE_NAV_ITEM: NavigationItem = {
+  id: 'book-fold-guide',
+  label: 'Book fold',
+  href: '#book-fold-guide',
+} as const;
+
 export const USER_GUIDE_NAV_ITEM: NavigationItem = {
   id: 'user-guide',
   label: 'User Guide',
@@ -26,5 +32,6 @@ export const USER_GUIDE_NAV_ITEM: NavigationItem = {
     CIRCULAR_REVEAL_GUIDE_NAV_ITEM,
     SWEEP_REVEAL_GUIDE_NAV_ITEM,
     FALL_GUIDE_NAV_ITEM,
+    BOOK_FOLD_GUIDE_NAV_ITEM,
   ],
 } as const;
