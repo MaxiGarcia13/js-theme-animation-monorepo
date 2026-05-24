@@ -4,6 +4,7 @@ export interface GuideSnippet {
 }
 
 export interface GuideCardData {
+  id: string;
   title: string;
   description: string;
   githubUrl: string;

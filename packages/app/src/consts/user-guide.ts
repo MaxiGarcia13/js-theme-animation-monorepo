@@ -4,6 +4,7 @@ import {
   GITHUB_CIRCULAR_REVEAL_URL,
   GITHUB_SWEEP_REVEAL_URL,
 } from './app';
+import { CIRCULAR_REVEAL_GUIDE_NAV_ITEM, SWEEP_REVEAL_GUIDE_NAV_ITEM } from './navigation/user-guide';
 
 export const circularRevealSetupCss = `@import '${PACKAGE_NAME}/circular-reveal.css';`;
 
@@ -28,7 +29,8 @@ button.addEventListener('click', () => {
 });`;
 
 export const circularRevealGuideCard: GuideCardData = {
-  title: 'Circular reveal',
+  id: CIRCULAR_REVEAL_GUIDE_NAV_ITEM.id,
+  title: CIRCULAR_REVEAL_GUIDE_NAV_ITEM.label,
   description:
     'Wrap your theme toggle with onCircularRevealAnimation. Pass the click event so a radial clip-path expands from the pointer and reveals the new theme.',
   githubUrl: GITHUB_CIRCULAR_REVEAL_URL,
@@ -39,7 +41,8 @@ export const circularRevealGuideCard: GuideCardData = {
 };
 
 export const sweepRevealGuideCard: GuideCardData = {
-  title: 'Sweep reveal',
+  id: SWEEP_REVEAL_GUIDE_NAV_ITEM.id,
+  title: SWEEP_REVEAL_GUIDE_NAV_ITEM.label,
   description:
     'Wrap your theme toggle with onSweepRevealAnimation. Pick a sweep direction so the new theme slides in from an edge or corner.',
   githubUrl: GITHUB_SWEEP_REVEAL_URL,
