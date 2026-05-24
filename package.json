@@ -39,7 +39,7 @@
     "lint": "eslint packages",
     "lint:fix": "eslint --fix packages",
     "version:app": "nx release --projects=@maxigarcia/theme-transitions-app --skip-publish",
-    "release": "nx release publish --projects=@maxigarcia/theme-transitions --access public",
+    "release": "nx release --projects=@maxigarcia/theme-transitions --access public",
     "clean": "npm run phoenix -w @maxigarcia/theme-transitions && npm run phoenix -w @maxigarcia/theme-transitions-app",
     "phoenix": "nx reset && npm run clean && npm i && npm run build"
   },
