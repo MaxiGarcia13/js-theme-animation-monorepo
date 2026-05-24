@@ -4,15 +4,7 @@ The current theme drops off the bottom of the screen while the new theme appears
 
 ## Setup
 
-1. Enable view transitions on `<html>` (and optionally on other elements):
-
-```css
-html {
-  view-transition-name: root;
-}
-```
-
-2. Import the companion styles:
+Import the companion styles:
 
 ```css
 @import '@maxigarcia/theme-transitions/fall.css';
