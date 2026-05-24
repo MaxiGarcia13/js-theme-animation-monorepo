@@ -98,4 +98,4 @@ jobs:
     secrets: inherit
     with:
       deployment_environment: Production
-      deployment_url: https://theme-transitions.vercel.app
+      deployment_url: https://view-transitionsapi.vercel.app
