@@ -1,3 +1,18 @@
+## 0.5.2 (2026-05-24)
+
+### 🚀 Features
+
+- replace book fold animation with page turn animation ([96f06d8](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/96f06d8))
+- add book fold animation and related components ([b20a950](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/b20a950))
+
+### 🧱 Updated Dependencies
+
+- Updated @maxigarcia/theme-transitions to 0.4.0
+
+### ❤️ Thank You
+
+- Maximiliano Garcia Mortigliengo
+
 ## 0.5.1 (2026-05-24)
 
 ### 🚀 Features
