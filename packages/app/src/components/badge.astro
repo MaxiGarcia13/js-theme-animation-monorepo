@@ -1,0 +1,36 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+type Size = 'sm' | 'md';
+
+interface Props extends HTMLAttributes<'p'> {
+  text: string;
+  dot?: boolean;
+  size?: Size;
+}
+
+const {
+  text,
+  class: className,
+  dot = true,
+  size = 'sm',
+  ...rest
+} = Astro.props;
+
+const sizeClasses: Record<Size, string> = {
+  sm: 'px-2.5 py-0.5',
+  md: 'px-4 py-1.5',
+};
+---
+
+<span
+  {...rest}
+  class:list={[
+    'inline-flex items-center gap-2 rounded-full border border-surface-border bg-surface text-sm text-muted-foreground backdrop-blur-sm',
+    sizeClasses[size],
+    className,
+  ]}
+>
+  {dot && <span class="size-1.5 rounded-full bg-accent" aria-hidden="true" />}
+  {text}
+</span>
