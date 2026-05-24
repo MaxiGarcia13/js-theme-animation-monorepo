@@ -1,3 +1,13 @@
+## 0.2.1 (2026-05-24)
+
+### 🩹 Fixes
+
+- handle non-supporting browsers in circular reveal animation ([5fb2b36](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/5fb2b36))
+
+### ❤️ Thank You
+
+- Maximiliano Garcia Mortigliengo
+
 ## 0.2.0 (2026-05-23)
 
 This was a version bump only for @maxigarcia/theme-transitions to align it with other projects, there were no code changes.

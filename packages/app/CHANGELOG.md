@@ -1,3 +1,9 @@
+## 0.4.1 (2026-05-24)
+
+### 🧱 Updated Dependencies
+
+- Updated @maxigarcia/theme-transitions to 0.2.1
+
 ## 0.4.0 (2026-05-23)
 
 ### 🚀 Features
