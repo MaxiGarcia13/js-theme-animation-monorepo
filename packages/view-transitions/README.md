@@ -1,6 +1,6 @@
 # @maxigarcia/view-transitions
 
-Lightweight, CSS-first theme transitions for the web. Wrap your theme change in the [View Transitions API](https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API) and reveal the new theme with a **circular**, **sweep**, **fall**, or **page turn** animation—no animation framework required.
+Lightweight, CSS-first transitions for the web. Wrap a DOM update in the [View Transitions API](https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API) and reveal the change with a **circular**, **sweep**, **fall**, or **page turn** animation—no animation framework required.
 
 ## Install
 
@@ -31,7 +31,7 @@ Each module has its own README with setup, API, and usage examples.
 
 ## Live demo
 
-Go to the [demo](https://theme-transitions.vercel.app)
+Go to the [demo](https://view-transitionsapi.vercel.app)
 
 ```bash
 # from monorepo root
@@ -51,4 +51,4 @@ npm run lint -w @maxigarcia/view-transitions
 
 ## Browser support
 
-Requires [View Transitions](https://caniuse.com/view-transitions) for animated reveals. Unsupported browsers still apply the theme change without animation.
+Requires [View Transitions](https://caniuse.com/view-transitions) for animated reveals. Unsupported browsers still run your update callback without animation.
