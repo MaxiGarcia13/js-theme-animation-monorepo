@@ -1,7 +1,12 @@
 @import 'tailwindcss';
 
 @import '@maxigarcia/theme-transitions/circular-reveal.css';
+@import '@maxigarcia/theme-transitions/fall.css';
 @import '@maxigarcia/theme-transitions/sweep-reveal.css';
+
+html {
+  view-transition-name: root;
+}
 
 @custom-variant dark (&:where(.dark, .dark *));
 

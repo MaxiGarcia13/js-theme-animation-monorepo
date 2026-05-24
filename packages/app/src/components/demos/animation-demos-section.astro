@@ -1,6 +1,7 @@
 ---
 import type { HTMLAttributes } from 'astro/types';
 import CircularRevealDemoCard from './circular-reveal-demo-card.astro';
+import FallDemoCard from './fall-demo-card.astro';
 import SweepRevealDemoCard from './sweep-reveal-demo-card.astro';
 import GuideNavSection from '../guide/guide-nav-section.astro';
 import { DEMOS_NAV_ITEM } from '@/consts/navigation';
@@ -20,12 +21,13 @@ const { class: className, ...rest } = Astro.props;
     id="demos"
     data-nav-section="demos"
     class:list={[
-      'scroll-mt-24 flex flex-col gap-6 sm:flex-row flex-wrap',
+      'scroll-mt-24 grid grid-cols-1 gap-6 sm:grid-cols-2 flex-wrap',
       className,
     ]}
     aria-label="Animation demos"
   >
     <CircularRevealDemoCard class="flex-1" />
     <SweepRevealDemoCard class="flex-1" />
+    <FallDemoCard class="flex-1" />
   </section>
 </GuideNavSection>

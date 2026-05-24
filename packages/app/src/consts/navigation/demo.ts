@@ -12,6 +12,12 @@ export const SWEEP_REVEAL_DEMO_NAV_ITEM: NavigationItem = {
   href: '#sweep-reveal-demo',
 } as const;
 
+export const FALL_DEMO_NAV_ITEM: NavigationItem = {
+  id: 'fall-demo',
+  label: 'Fall',
+  href: '#fall-demo',
+} as const;
+
 export const DEMOS_NAV_ITEM: NavigationItem = {
   id: 'live-demos',
   label: 'Live demos',
@@ -19,5 +25,6 @@ export const DEMOS_NAV_ITEM: NavigationItem = {
   children: [
     CIRCULAR_REVEAL_DEMO_NAV_ITEM,
     SWEEP_REVEAL_DEMO_NAV_ITEM,
+    FALL_DEMO_NAV_ITEM,
   ],
 } as const;

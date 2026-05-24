@@ -12,6 +12,12 @@ export const SWEEP_REVEAL_GUIDE_NAV_ITEM: NavigationItem = {
   href: '#sweep-reveal-guide',
 } as const;
 
+export const FALL_GUIDE_NAV_ITEM: NavigationItem = {
+  id: 'fall-guide',
+  label: 'Fall',
+  href: '#fall-guide',
+} as const;
+
 export const USER_GUIDE_NAV_ITEM: NavigationItem = {
   id: 'user-guide',
   label: 'User Guide',
@@ -19,5 +25,6 @@ export const USER_GUIDE_NAV_ITEM: NavigationItem = {
   children: [
     CIRCULAR_REVEAL_GUIDE_NAV_ITEM,
     SWEEP_REVEAL_GUIDE_NAV_ITEM,
+    FALL_GUIDE_NAV_ITEM,
   ],
 } as const;

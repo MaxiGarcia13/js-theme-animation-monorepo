@@ -32,6 +32,7 @@
       "import": "./dist/index.js"
     },
     "./circular-reveal.css": "./dist/circular-reveal/index.css",
+    "./fall.css": "./dist/fall/index.css",
     "./sweep-reveal.css": "./dist/sweep-reveal/index.css"
   },
   "main": "./dist/index.js",

@@ -1,0 +1,40 @@
+---
+import { GITHUB_FALL_URL } from '@/consts/app';
+import AnimationDemoCard from './animation-demo-card.astro';
+import ThemeToggleButton from '../theme-toggle-button.astro';
+import { FALL_DEMO_NAV_ITEM } from '@/consts/navigation/demo';
+
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<AnimationDemoCard
+  id={FALL_DEMO_NAV_ITEM.id}
+  data-fall-demo
+  title="Fall"
+  description="The current theme drops off the bottom edge; the new theme is visible underneath right away."
+  badge="Live demo"
+  githubUrl={GITHUB_FALL_URL}
+  class:list={[className]}
+>
+  <ThemeToggleButton id="fall" />
+</AnimationDemoCard>
+
+<script>
+  import { onFallAnimation } from '@maxigarcia/theme-transitions';
+  import { toggleTheme } from '../../utils/toggle-theme';
+
+  const demo = document.querySelector('[data-fall-demo]');
+  const button = demo?.querySelector<HTMLButtonElement>(
+    '[data-theme-toggle-button]',
+  );
+
+  if (button) {
+    button.addEventListener('click', () => {
+      onFallAnimation(() => toggleTheme(button));
+    });
+  }
+</script>
