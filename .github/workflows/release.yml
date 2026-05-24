@@ -43,7 +43,7 @@ jobs:
         run: npm run version:app
 
       - name: Publish to npm
-        run: npm run release
+        run: npm run release:lib
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
