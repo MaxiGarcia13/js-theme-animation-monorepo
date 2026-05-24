@@ -40,7 +40,7 @@ jobs:
         uses: MaxiGarcia13/gh-actions/.github/actions/configure-git-author@main
 
       - name: Version packages
-        run: npm run version-packages
+        run: npm run version:app
 
       - name: Publish to npm
         run: npm run release
