@@ -1,3 +1,14 @@
+## 0.5.3 (2026-05-24)
+
+### 🩹 Fixes
+
+- correct favicon path in app layout ([44efbbe](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/44efbbe))
+- update website URL and favicon path in app layout ([9b6efbd](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/9b6efbd))
+
+### ❤️ Thank You
+
+- Maximiliano Garcia Mortigliengo
+
 ## 0.5.2 (2026-05-24)
 
 ### 🚀 Features
