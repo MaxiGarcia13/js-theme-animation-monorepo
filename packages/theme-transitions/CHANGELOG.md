@@ -1,3 +1,13 @@
+## 0.3.0 (2026-05-24)
+
+### 🚀 Features
+
+- add fall animation demo and update related components ([9774506](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/9774506))
+
+### ❤️ Thank You
+
+- Maximiliano Garcia Mortigliengo
+
 ## 0.2.1 (2026-05-24)
 
 ### 🩹 Fixes
