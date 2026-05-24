@@ -3,6 +3,7 @@
   "type": "module",
   "version": "0.5.3",
   "private": true,
+  "description": "Demo site for @maxigarcia/view-transitions — try View Transitions API theme animations in the browser.",
   "engines": {
     "node": ">=22.12.0"
   },

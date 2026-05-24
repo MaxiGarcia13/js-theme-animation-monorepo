@@ -2,6 +2,7 @@
   "name": "@maxigarcia/view-transitions",
   "type": "module",
   "version": "0.4.0",
+  "description": "Lightweight, CSS-first transitions powered by the View Transitions API. Circular, sweep, fall, and page turn animations.",
   "license": "ISC",
   "homepage": "https://github.com/MaxiGarcia13/js-theme-animation-monorepo/tree/main/packages/view-transitions#readme",
   "repository": {

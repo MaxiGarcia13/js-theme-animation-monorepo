@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "private": true,
-  "description": "Smooth, dependency-free theme transitions using the native View Transitions API. Just clean, high-performance animations built straight into the browser.",
+  "description": "Smooth, dependency-free transitions using the native View Transitions API. Lightweight CSS-first animations—no framework required.",
   "author": "Maximiliano Garcia Mortigliengo",
   "license": "ISC",
   "homepage": "https://github.com/MaxiGarcia13/js-theme-animation-monorepo#readme",
