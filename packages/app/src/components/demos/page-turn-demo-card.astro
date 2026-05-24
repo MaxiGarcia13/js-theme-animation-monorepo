@@ -1,0 +1,60 @@
+---
+import { GITHUB_PAGE_TURN_URL } from '@/consts/app';
+import AnimationDemoCard from './animation-demo-card.astro';
+import Select from '../select.astro';
+import ThemeToggleButton from '../theme-toggle-button.astro';
+import { PAGE_TURN_DEMO_NAV_ITEM } from '@/consts/navigation/demo';
+
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+
+const pageTurnEdges = [
+  { value: 'left', label: 'Left edge' },
+  { value: 'right', label: 'Right edge' },
+];
+---
+
+<AnimationDemoCard
+  id={PAGE_TURN_DEMO_NAV_ITEM.id}
+  data-page-turn-demo
+  title="Page turn"
+  description="The current theme turns away like a book page, revealing the new theme underneath."
+  badge="Live demo"
+  githubUrl={GITHUB_PAGE_TURN_URL}
+  class:list={[className]}
+>
+  <ThemeToggleButton id="page-turn" />
+
+  <Select
+    id="page-turn-edge"
+    data-page-turn-edge
+    options={pageTurnEdges}
+    class="max-w-32"
+  />
+</AnimationDemoCard>
+
+<script>
+  import {
+    onPageTurnAnimation,
+    type PageTurnEdge,
+  } from '@maxigarcia/theme-transitions';
+  import { toggleTheme } from '../../utils/toggle-theme';
+
+  const demo = document.querySelector('[data-page-turn-demo]');
+  const button = demo?.querySelector<HTMLButtonElement>(
+    '[data-theme-toggle-button]',
+  );
+  const edgeSelect = demo?.querySelector<HTMLSelectElement>(
+    '[data-page-turn-edge]',
+  );
+
+  if (button && edgeSelect) {
+    button.addEventListener('click', () => {
+      const edge = edgeSelect.value as PageTurnEdge;
+      onPageTurnAnimation(() => toggleTheme(button), { edge });
+    });
+  }
+</script>

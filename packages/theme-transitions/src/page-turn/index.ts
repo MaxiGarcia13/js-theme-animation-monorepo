@@ -1,17 +1,17 @@
 import { $html } from '../utils/index.js';
 
-export type BookFoldEdge = 'left' | 'right';
+export type PageTurnEdge = 'left' | 'right';
 
-export interface BookFoldOptions {
-  /** Fold duration in milliseconds. Defaults to `750`. */
+export interface PageTurnOptions {
+  /** Page turn duration in milliseconds. Defaults to `750`. */
   duration?: number;
   /** Edge the page pivots on. Defaults to `left`. */
-  edge?: BookFoldEdge;
+  edge?: PageTurnEdge;
 }
 
-export function onBookFoldAnimation(
+export function onPageTurnAnimation(
   apply: () => void,
-  options?: BookFoldOptions,
+  options?: PageTurnOptions,
 ): void {
   if (!document.startViewTransition) {
     apply();
@@ -22,14 +22,14 @@ export function onBookFoldAnimation(
   const edge = options?.edge ?? 'left';
   const html = $html();
 
-  html.classList.add('book-fold', `book-fold--${edge}`);
-  html.style.setProperty('--theme-book-fold-duration', `${duration}ms`);
+  html.classList.add('page-turn', `page-turn--${edge}`);
+  html.style.setProperty('--theme-page-turn-duration', `${duration}ms`);
 
   const transition = document.startViewTransition(apply);
 
   const animationComplete = () => {
-    html.classList.remove('book-fold', `book-fold--${edge}`);
-    html.style.removeProperty('--theme-book-fold-duration');
+    html.classList.remove('page-turn', `page-turn--${edge}`);
+    html.style.removeProperty('--theme-page-turn-duration');
   };
 
   void transition.finished.finally(animationComplete);

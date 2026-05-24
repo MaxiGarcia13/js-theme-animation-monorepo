@@ -18,10 +18,10 @@ export const FALL_DEMO_NAV_ITEM: NavigationItem = {
   href: '#fall-demo',
 } as const;
 
-export const BOOK_FOLD_DEMO_NAV_ITEM: NavigationItem = {
-  id: 'book-fold-demo',
-  label: 'Book fold',
-  href: '#book-fold-demo',
+export const PAGE_TURN_DEMO_NAV_ITEM: NavigationItem = {
+  id: 'page-turn-demo',
+  label: 'Page turn',
+  href: '#page-turn-demo',
 } as const;
 
 export const DEMOS_NAV_ITEM: NavigationItem = {
@@ -32,6 +32,6 @@ export const DEMOS_NAV_ITEM: NavigationItem = {
     CIRCULAR_REVEAL_DEMO_NAV_ITEM,
     SWEEP_REVEAL_DEMO_NAV_ITEM,
     FALL_DEMO_NAV_ITEM,
-    BOOK_FOLD_DEMO_NAV_ITEM,
+    PAGE_TURN_DEMO_NAV_ITEM,
   ],
 } as const;
