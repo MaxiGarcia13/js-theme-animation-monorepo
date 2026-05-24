@@ -1,3 +1,14 @@
+## 0.5.0 (2026-05-24)
+
+### 🚀 Features
+
+- add animation demo components and update structure ([5dd3f87](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/5dd3f87))
+- add navigation constants for demo cards and update components ([61db144](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/61db144))
+
+### ❤️ Thank You
+
+- Maximiliano Garcia Mortigliengo
+
 ## 0.4.1 (2026-05-24)
 
 ### 🧱 Updated Dependencies
