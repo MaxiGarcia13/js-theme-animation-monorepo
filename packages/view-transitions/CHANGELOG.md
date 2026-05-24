@@ -1,3 +1,13 @@
+## 0.5.0 (2026-05-24)
+
+### 🚀 Features
+
+- introduce view transitions package with multiple animation techniques ([473bd09](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/473bd09))
+
+### ❤️ Thank You
+
+- Maximiliano Garcia Mortigliengo
+
 ## 0.4.0 (2026-05-24)
 
 ### 🚀 Features
