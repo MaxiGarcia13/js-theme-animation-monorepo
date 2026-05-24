@@ -4,6 +4,7 @@ import AnimationDemoCard from './animation-demo-card.astro';
 import Checkbox from './checkbox.astro';
 import Select from './select.astro';
 import ThemeToggleButton from './theme-toggle-button.astro';
+import { CIRCULAR_REVEAL_DEMO_NAV_ITEM } from '@/consts/navigation/demo';
 
 interface Props {
   class?: string;
@@ -24,6 +25,7 @@ const blurAmountOptions = [
 ---
 
 <AnimationDemoCard
+  id={CIRCULAR_REVEAL_DEMO_NAV_ITEM.id}
   data-circular-reveal-demo
   title="Circular Reveal"
   description="A radial clip-path expands from the click origin, sweeping the new theme into view."

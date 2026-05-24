@@ -3,6 +3,7 @@ import { GITHUB_SWEEP_REVEAL_URL } from '@/consts/app';
 import AnimationDemoCard from './animation-demo-card.astro';
 import Select from './select.astro';
 import ThemeToggleButton from './theme-toggle-button.astro';
+import { SWEEP_REVEAL_DEMO_NAV_ITEM } from '@/consts/navigation/demo';
 
 interface Props {
   class?: string;
@@ -23,6 +24,7 @@ const sweepDirections = [
 ---
 
 <AnimationDemoCard
+  id={SWEEP_REVEAL_DEMO_NAV_ITEM.id}
   data-sweep-reveal-demo
   title="Sweep Reveal"
   description="The new theme sweeps in from the chosen edge."
