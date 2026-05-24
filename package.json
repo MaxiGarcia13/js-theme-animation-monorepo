@@ -39,7 +39,7 @@
     "lint": "eslint packages",
     "lint:fix": "eslint --fix packages",
     "version:app": "nx release --projects=@maxigarcia/view-transitions-app --skip-publish",
-    "release:lib": "nx release --projects=@maxigarcia/view-transitions --yes",
+    "release:lib": "nx release --projects=@maxigarcia/view-transitions --yes --first-release",
     "clean": "npm run phoenix -w @maxigarcia/view-transitions && npm run phoenix -w @maxigarcia/view-transitions-app",
     "phoenix": "nx reset && npm run clean && npm i && npm run build"
   },
