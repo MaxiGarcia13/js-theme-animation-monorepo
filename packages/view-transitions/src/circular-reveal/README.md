@@ -61,11 +61,11 @@ If `document.startViewTransition` is unavailable, `apply` runs immediately with 
 
 **`CircularRevealOptions`**
 
-| Option       | Type                              | Default | Description                                                            |
-| ------------ | --------------------------------- | ------- | ---------------------------------------------------------------------- |
-| `blur`       | `boolean`                         | `false` | Blur inside the expanding circle; clears as the reveal finishes.       |
-| `blurAmount` | `string`                          | `12px`  | Blur radius when `blur` is `true`.                                     |
-| `duration`   | `` `${number}ms` ``/`` `${number}s` `` | `0.5s`  | Animation duration. Accepts CSS time values like `'600ms'` or `'1s'`.  |
+| Option       | Type                                   | Default | Description                                                           |
+| ------------ | -------------------------------------- | ------- | --------------------------------------------------------------------- |
+| `blur`       | `boolean`                              | `false` | Blur inside the expanding circle; clears as the reveal finishes.      |
+| `blurAmount` | `string`                               | `12px`  | Blur radius when `blur` is `true`.                                    |
+| `duration`   | `` `${number}ms` ``/`` `${number}s` `` | `0.5s`  | Animation duration. Accepts CSS time values like `'600ms'` or `'1s'`. |
 
 ## Behavior
 

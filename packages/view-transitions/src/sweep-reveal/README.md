@@ -53,11 +53,11 @@ If `document.startViewTransition` is unavailable, `apply` runs immediately with 
 
 ### `onSweepRevealAnimation(apply, direction?, options?)`
 
-| Parameter   | Type                  | Default | Description                                                                |
-| ----------- | --------------------- | ------- | -------------------------------------------------------------------------- |
-| `apply`     | `() => void`          | —       | Runs inside `startViewTransition`; update theme classes or variables here. |
-| `direction` | `SweepDirection`      | `'up'`  | Edge or corner the sweep comes from.                                       |
-| `options`   | `SweepRevealOptions`  | —       | Optional blur and duration overrides.                                      |
+| Parameter   | Type                 | Default | Description                                                                |
+| ----------- | -------------------- | ------- | -------------------------------------------------------------------------- |
+| `apply`     | `() => void`         | —       | Runs inside `startViewTransition`; update theme classes or variables here. |
+| `direction` | `SweepDirection`     | `'up'`  | Edge or corner the sweep comes from.                                       |
+| `options`   | `SweepRevealOptions` | —       | Optional blur and duration overrides.                                      |
 
 **`SweepDirection`**
 
@@ -74,11 +74,11 @@ If `document.startViewTransition` is unavailable, `apply` runs immediately with 
 
 **`SweepRevealOptions`**
 
-| Option       | Type                              | Default | Description                                                            |
-| ------------ | --------------------------------- | ------- | ---------------------------------------------------------------------- |
-| `blur`       | `boolean`                         | `false` | Blur inside the sweeping area; clears as the reveal finishes.          |
-| `blurAmount` | `string`                          | `12px`  | Blur radius when `blur` is `true`.                                     |
-| `duration`   | `` `${number}ms` ``/`` `${number}s` `` | `0.5s`  | Animation duration. Accepts CSS time values like `'600ms'` or `'1s'`.  |
+| Option       | Type                                   | Default | Description                                                           |
+| ------------ | -------------------------------------- | ------- | --------------------------------------------------------------------- |
+| `blur`       | `boolean`                              | `false` | Blur inside the sweeping area; clears as the reveal finishes.         |
+| `blurAmount` | `string`                               | `12px`  | Blur radius when `blur` is `true`.                                    |
+| `duration`   | `` `${number}ms` ``/`` `${number}s` `` | `0.5s`  | Animation duration. Accepts CSS time values like `'600ms'` or `'1s'`. |
 
 ## Behavior
 

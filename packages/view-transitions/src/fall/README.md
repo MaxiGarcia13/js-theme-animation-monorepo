@@ -44,9 +44,9 @@ If `document.startViewTransition` is unavailable, `apply` runs immediately with 
 
 **`FallOptions`**
 
-| Option     | Type                              | Default | Description                                                            |
-| ---------- | --------------------------------- | ------- | ---------------------------------------------------------------------- |
-| `duration` | `` `${number}ms` ``/`` `${number}s` `` | `700ms` | Animation duration. Accepts CSS time values like `'900ms'` or `'1s'`.  |
+| Option     | Type                                   | Default | Description                                                           |
+| ---------- | -------------------------------------- | ------- | --------------------------------------------------------------------- |
+| `duration` | `` `${number}ms` ``/`` `${number}s` `` | `700ms` | Animation duration. Accepts CSS time values like `'900ms'` or `'1s'`. |
 
 ## Behavior
 
