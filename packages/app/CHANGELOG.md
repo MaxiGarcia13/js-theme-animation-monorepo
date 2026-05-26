@@ -1,3 +1,9 @@
+## 0.5.7 (2026-05-26)
+
+### 🧱 Updated Dependencies
+
+- Updated @maxigarcia/view-transitions to 0.6.2
+
 ## 0.5.6 (2026-05-26)
 
 ### 🧱 Updated Dependencies

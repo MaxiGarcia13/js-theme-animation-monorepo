@@ -1,3 +1,13 @@
+## 0.6.2 (2026-05-26)
+
+### Fixes
+
+- correct circular reveal class application logic ([a7948f1](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/a7948f1))
+
+### ❤️ Thank You
+
+- Maximiliano Garcia Mortigliengo
+
 ## 0.6.1 (2026-05-26)
 
 ### Fixes
