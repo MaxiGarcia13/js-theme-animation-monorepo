@@ -25,10 +25,22 @@ export function onSweepRevealAnimation(
     'down': ['inset(100% 0 0 0)', 'inset(0 0 0 0)'],
     'left': ['inset(0 100% 0 0)', 'inset(0 0 0 0)'],
     'right': ['inset(0 0 0 100%)', 'inset(0 0 0 0)'],
-    'corner-top-left': ['inset(0 100% 100% 0)', 'inset(0 0 0 0)'],
-    'corner-top-right': ['inset(0 0 100% 100%)', 'inset(0 0 0 0)'],
-    'corner-bottom-left': ['inset(100% 100% 0 0)', 'inset(0 0 0 0)'],
-    'corner-bottom-right': ['inset(100% 0 0 100%)', 'inset(0 0 0 0)'],
+    'corner-top-left': [
+      'polygon(0% 0%, 0% 0%, 0% 0%)',
+      'polygon(0% 0%, 200% 0%, 0% 200%)',
+    ],
+    'corner-top-right': [
+      'polygon(100% 0%, 100% 0%, 100% 0%)',
+      'polygon(100% 0%, -100% 0%, 100% 200%)',
+    ],
+    'corner-bottom-left': [
+      'polygon(0% 100%, 0% 100%, 0% 100%)',
+      'polygon(0% 100%, 200% 100%, 0% -100%)',
+    ],
+    'corner-bottom-right': [
+      'polygon(100% 100%, 100% 100%, 100% 100%)',
+      'polygon(100% 100%, -100% 100%, 100% -100%)',
+    ],
   };
 
   const [directionFrom, directionTo] = directions[direction] ?? directions.up;
