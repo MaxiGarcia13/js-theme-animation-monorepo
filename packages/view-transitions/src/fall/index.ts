@@ -1,9 +1,8 @@
+import type { Options } from '../utils/options.js';
 import { $html } from '../utils/index.js';
+import { removeOptions, setOptions } from '../utils/options.js';
 
-export interface FallOptions {
-  /** Fall duration in milliseconds. Defaults to `700`. */
-  duration?: number;
-}
+export type FallOptions = Pick<Options, 'duration'>;
 
 export function onFallAnimation(
   apply: () => void,
@@ -14,18 +13,18 @@ export function onFallAnimation(
     return;
   }
 
-  const duration = options?.duration ?? 700;
   const html = $html();
 
   html.classList.add('fall');
 
-  html.style.setProperty('--theme-fall-duration', `${duration}ms`);
+  setOptions(html, options);
 
   const transition = document.startViewTransition(apply);
 
   const animationComplete = () => {
     html.classList.remove('fall');
-    html.style.removeProperty('--theme-fall-duration');
+
+    removeOptions(html);
   };
 
   void transition.finished.finally(animationComplete);
