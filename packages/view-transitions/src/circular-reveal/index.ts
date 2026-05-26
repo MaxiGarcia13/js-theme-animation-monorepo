@@ -27,14 +27,14 @@ export function onCircularRevealAnimation(
 
   const html = $html();
 
+  html.classList.add('circular-reveal');
+
   if (options?.blurCircle) {
     html.classList.add('circular-reveal--blur-circle');
 
     if (options.blurAmount) {
       html.style.setProperty('--theme-reveal-blur', options.blurAmount);
     }
-  } else {
-    html.classList.add('circular-reveal');
   }
 
   html.style.setProperty('--theme-reveal-x', `${x}%`);
