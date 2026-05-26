@@ -7,6 +7,17 @@
   }
 }
 
+@keyframes sweep-reveal-blur {
+  from {
+    clip-path: var(--theme-reveal-direction-from);
+    filter: blur(var(--theme-reveal-blur-amount, 12px));
+  }
+  to {
+    clip-path: var(--theme-reveal-direction-to);
+    filter: blur(0);
+  }
+}
+
 html.sweep-reveal::view-transition-old(root),
 html.sweep-reveal::view-transition-new(root) {
   animation: none;
@@ -19,7 +30,11 @@ html.sweep-reveal::view-transition-old(root) {
 
 html.sweep-reveal::view-transition-new(root) {
   z-index: 1;
-  animation: sweep-reveal 0.45s ease-in-out forwards;
+  animation: sweep-reveal var(--theme-reveal-duration, 0.5s) ease-in-out forwards;
+}
+
+.sweep-reveal.theme-reveal--blur::view-transition-new(root) {
+  animation: sweep-reveal-blur var(--theme-reveal-duration, 0.5s) ease-in-out forwards;
 }
 
 /* Reduce motion */

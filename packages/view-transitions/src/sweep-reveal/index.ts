@@ -1,4 +1,6 @@
+import type { Options } from '../utils/options.js';
 import { $html } from '../utils/index.js';
+import { removeOptions, setOptions } from '../utils/options.js';
 
 export type SweepDirection
   = 'up'
@@ -9,6 +11,8 @@ export type SweepDirection
     | 'corner-top-right'
     | 'corner-bottom-left'
     | 'corner-bottom-right';
+
+export type SweepRevealOptions = Options;
 
 const directions = {
   'up': ['inset(0 0 100% 0)', 'inset(0 0 0 0)'],
@@ -36,6 +40,7 @@ const directions = {
 export function onSweepRevealAnimation(
   apply: () => void,
   direction: SweepDirection = 'up',
+  options?: SweepRevealOptions,
 ): void {
   if (!document.startViewTransition) {
     apply();
@@ -43,9 +48,11 @@ export function onSweepRevealAnimation(
   }
   const html = $html();
 
-  const [directionFrom, directionTo] = directions[direction] ?? directions.up;
-
   html.classList.add('sweep-reveal');
+
+  setOptions(html, options);
+
+  const [directionFrom, directionTo] = directions[direction] ?? directions.up;
 
   html.style.setProperty('--theme-reveal-direction-from', directionFrom);
   html.style.setProperty('--theme-reveal-direction-to', directionTo);
@@ -56,6 +63,8 @@ export function onSweepRevealAnimation(
     html.classList.remove('sweep-reveal');
     html.style.removeProperty('--theme-reveal-direction-from');
     html.style.removeProperty('--theme-reveal-direction-to');
+
+    removeOptions(html);
   };
 
   void transition.finished.finally(animationComplete);
