@@ -1,3 +1,13 @@
+## 0.8.1 (2026-05-26)
+
+### Documentation
+
+- streamline setup instructions in README files for circular-reveal and sweep-reveal ([7c13440](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/7c13440))
+
+### ❤️ Thank You
+
+- Maximiliano Garcia Mortigliengo
+
 ## 0.8.0 (2026-05-26)
 
 ### Features
