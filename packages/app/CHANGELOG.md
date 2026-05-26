@@ -1,3 +1,21 @@
+## 0.5.8 (2026-05-26)
+
+### Features
+
+- enhance sweep-reveal demo with blur options ([e92d951](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/e92d951))
+
+### Fixes
+
+- reposition ThemeToggleButton in sweep-reveal demo card ([5632069](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/5632069))
+
+### 🧱 Updated Dependencies
+
+- Updated @maxigarcia/view-transitions to 0.7.0
+
+### ❤️ Thank You
+
+- Maximiliano Garcia Mortigliengo
+
 ## 0.5.7 (2026-05-26)
 
 ### 🧱 Updated Dependencies

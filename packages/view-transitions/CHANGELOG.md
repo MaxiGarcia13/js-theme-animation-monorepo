@@ -1,3 +1,19 @@
+## 0.7.0 (2026-05-26)
+
+### Features
+
+- add options for blur effects in sweep-reveal animation ([30f9831](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/30f9831))
+- enhance sweep-reveal animation with blur effect and options ([4e26640](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/4e26640))
+
+### Refactors
+
+- update fall animation to use consistent duration variable ([7237841](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/7237841))
+- update circular reveal animation properties for consistency ([e9dce4b](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/e9dce4b))
+
+### ❤️ Thank You
+
+- Maximiliano Garcia Mortigliengo
+
 ## 0.6.2 (2026-05-26)
 
 ### Fixes
