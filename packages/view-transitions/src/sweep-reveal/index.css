@@ -1,3 +1,10 @@
+/* Drives the position of the soft mask edge along the sweep axis when blur is on. */
+@property --sweep-reveal-progress {
+  syntax: '<percentage>';
+  initial-value: 0%;
+  inherits: false;
+}
+
 @keyframes sweep-reveal {
   from {
     clip-path: var(--theme-reveal-direction-from);
@@ -7,14 +14,15 @@
   }
 }
 
+/* Sweeps `--sweep-reveal-progress` from before the viewport to past it so the
+   mask's fade band (and therefore the visible border) starts hidden and ends
+   fully revealed without clipping artifacts at either end. */
 @keyframes sweep-reveal-blur {
   from {
-    clip-path: var(--theme-reveal-direction-from);
-    filter: blur(var(--theme-reveal-blur-amount, 12px));
+    --sweep-reveal-progress: -10%;
   }
   to {
-    clip-path: var(--theme-reveal-direction-to);
-    filter: blur(0);
+    --sweep-reveal-progress: 110%;
   }
 }
 
@@ -33,8 +41,17 @@ html.sweep-reveal::view-transition-new(root) {
   animation: sweep-reveal var(--theme-reveal-duration, 0.5s) ease-in-out forwards;
 }
 
+/* Blur variant: instead of blurring the whole incoming content, fade only the
+   moving border with a soft band whose width is driven by `--theme-reveal-blur-amount`. */
 .sweep-reveal.theme-reveal--blur::view-transition-new(root) {
   animation: sweep-reveal-blur var(--theme-reveal-duration, 0.5s) ease-in-out forwards;
+  mask-image: linear-gradient(
+    var(--theme-reveal-direction-angle, to bottom),
+    black 0%,
+    black calc(var(--sweep-reveal-progress) - var(--theme-reveal-blur-amount, 12px) * 4),
+    transparent var(--sweep-reveal-progress),
+    transparent 100%
+  );
 }
 
 /* Reduce motion */

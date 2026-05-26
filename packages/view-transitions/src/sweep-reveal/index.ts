@@ -14,27 +14,56 @@ export type SweepDirection
 
 export type SweepRevealOptions = Options;
 
-const directions = {
-  'up': ['inset(0 0 100% 0)', 'inset(0 0 0 0)'],
-  'down': ['inset(100% 0 0 0)', 'inset(0 0 0 0)'],
-  'left': ['inset(0 100% 0 0)', 'inset(0 0 0 0)'],
-  'right': ['inset(0 0 0 100%)', 'inset(0 0 0 0)'],
-  'corner-top-left': [
-    'polygon(0% 0%, 0% 0%, 0% 0%)',
-    'polygon(0% 0%, 200% 0%, 0% 200%)',
-  ],
-  'corner-top-right': [
-    'polygon(100% 0%, 100% 0%, 100% 0%)',
-    'polygon(100% 0%, -100% 0%, 100% 200%)',
-  ],
-  'corner-bottom-left': [
-    'polygon(0% 100%, 0% 100%, 0% 100%)',
-    'polygon(0% 100%, 200% 100%, 0% -100%)',
-  ],
-  'corner-bottom-right': [
-    'polygon(100% 100%, 100% 100%, 100% 100%)',
-    'polygon(100% 100%, -100% 100%, 100% -100%)',
-  ],
+interface DirectionConfig {
+  /** Initial clip-path used when blur is disabled. */
+  from: string;
+  /** Final clip-path used when blur is disabled. */
+  to: string;
+  /** Linear-gradient direction used by the blurry-border mask. */
+  angle: string;
+}
+
+const directions: Record<SweepDirection, DirectionConfig> = {
+  'up': {
+    from: 'inset(0 0 100% 0)',
+    to: 'inset(0 0 0 0)',
+    angle: 'to bottom',
+  },
+  'down': {
+    from: 'inset(100% 0 0 0)',
+    to: 'inset(0 0 0 0)',
+    angle: 'to top',
+  },
+  'left': {
+    from: 'inset(0 100% 0 0)',
+    to: 'inset(0 0 0 0)',
+    angle: 'to right',
+  },
+  'right': {
+    from: 'inset(0 0 0 100%)',
+    to: 'inset(0 0 0 0)',
+    angle: 'to left',
+  },
+  'corner-top-left': {
+    from: 'polygon(0% 0%, 0% 0%, 0% 0%)',
+    to: 'polygon(0% 0%, 200% 0%, 0% 200%)',
+    angle: 'to bottom right',
+  },
+  'corner-top-right': {
+    from: 'polygon(100% 0%, 100% 0%, 100% 0%)',
+    to: 'polygon(100% 0%, -100% 0%, 100% 200%)',
+    angle: 'to bottom left',
+  },
+  'corner-bottom-left': {
+    from: 'polygon(0% 100%, 0% 100%, 0% 100%)',
+    to: 'polygon(0% 100%, 200% 100%, 0% -100%)',
+    angle: 'to top right',
+  },
+  'corner-bottom-right': {
+    from: 'polygon(100% 100%, 100% 100%, 100% 100%)',
+    to: 'polygon(100% 100%, -100% 100%, 100% -100%)',
+    angle: 'to top left',
+  },
 };
 
 export function onSweepRevealAnimation(
@@ -52,10 +81,11 @@ export function onSweepRevealAnimation(
 
   setOptions(html, options);
 
-  const [directionFrom, directionTo] = directions[direction] ?? directions.up;
+  const { from, to, angle } = directions[direction] ?? directions.up;
 
-  html.style.setProperty('--theme-reveal-direction-from', directionFrom);
-  html.style.setProperty('--theme-reveal-direction-to', directionTo);
+  html.style.setProperty('--theme-reveal-direction-from', from);
+  html.style.setProperty('--theme-reveal-direction-to', to);
+  html.style.setProperty('--theme-reveal-direction-angle', angle);
 
   const transition = document.startViewTransition(apply);
 
@@ -63,6 +93,7 @@ export function onSweepRevealAnimation(
     html.classList.remove('sweep-reveal');
     html.style.removeProperty('--theme-reveal-direction-from');
     html.style.removeProperty('--theme-reveal-direction-to');
+    html.style.removeProperty('--theme-reveal-direction-angle');
 
     removeOptions(html);
   };
