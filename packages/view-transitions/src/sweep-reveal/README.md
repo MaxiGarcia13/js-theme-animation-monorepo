@@ -4,15 +4,7 @@ The new theme sweeps in from a chosen edge or corner using a directional `clip-p
 
 ## Setup
 
-1. Enable a root view transition on `<html>`:
-
-```css
-html {
-  view-transition-name: root;
-}
-```
-
-2. Import the companion styles:
+Import the companion styles:
 
 ```css
 @import '@maxigarcia/view-transitions/sweep-reveal.css';
