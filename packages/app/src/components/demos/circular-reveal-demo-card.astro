@@ -66,8 +66,8 @@ const blurAmountOptions = [
   if (button && blurCheckbox && blurAmountSelect) {
     button.addEventListener('click', (event) => {
       onCircularRevealAnimation(() => toggleTheme(button), event, {
-        blurCircle: blurCheckbox.checked,
-        blurAmount: blurAmountSelect.value,
+        blur: blurCheckbox.checked,
+        blurAmount: blurAmountSelect?.value,
       });
     });
   }

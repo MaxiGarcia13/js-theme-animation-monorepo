@@ -4,6 +4,7 @@ import AnimationDemoCard from './animation-demo-card.astro';
 import Select from '../select.astro';
 import ThemeToggleButton from '../theme-toggle-button.astro';
 import { SWEEP_REVEAL_DEMO_NAV_ITEM } from '@/consts/navigation/demo';
+import Checkbox from '../checkbox.astro';
 
 interface Props {
   class?: string;
@@ -21,6 +22,17 @@ const sweepDirections = [
   { value: 'corner-bottom-left', label: 'Corner Bottom Left' },
   { value: 'corner-bottom-right', label: 'Corner Bottom Right' },
 ];
+
+const blurAmountOptions = [
+  { value: '4px', label: '4px' },
+  { value: '8px', label: '8px' },
+  { value: '12px', label: '12px' },
+  { value: '16px', label: '16px' },
+  { value: '24px', label: '24px' },
+  { value: '32px', label: '32px' },
+  { value: '40px', label: '40px' },
+  { value: '60px', label: '60px' },
+];
 ---
 
 <AnimationDemoCard
@@ -34,12 +46,22 @@ const sweepDirections = [
 >
   <ThemeToggleButton id="sweep" />
 
-  <Select
-    id="sweep-direction"
-    data-sweep-direction
-    options={sweepDirections}
-    class="max-w-24"
-  />
+  <div class="flex no-wrap gap-2">
+    <Select
+      id="sweep-direction"
+      data-sweep-direction
+      options={sweepDirections}
+    />
+
+    <Checkbox id="sweep-blur" data-sweep-blur label="Blur" />
+
+    <Select
+      id="sweep-blur-amount"
+      options={blurAmountOptions}
+      value="12px"
+      data-sweep-blur-amount
+    />
+  </div>
 </AnimationDemoCard>
 
 <script>
@@ -56,10 +78,20 @@ const sweepDirections = [
     '[data-sweep-direction]',
   );
 
+  const blurCheckbox =
+    demo?.querySelector<HTMLInputElement>('[data-sweep-blur]');
+  const blurAmountSelect = demo?.querySelector<HTMLSelectElement>(
+    '[data-sweep-blur-amount]',
+  );
+
   if (button && directionSelect) {
     button.addEventListener('click', () => {
       const direction = directionSelect.value as SweepDirection;
-      onSweepRevealAnimation(() => toggleTheme(button), direction);
+
+      onSweepRevealAnimation(() => toggleTheme(button), direction, {
+        blur: blurCheckbox?.checked,
+        blurAmount: blurAmountSelect?.value,
+      });
     });
   }
 </script>
