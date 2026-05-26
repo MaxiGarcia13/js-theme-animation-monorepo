@@ -1,3 +1,17 @@
+## 0.8.0 (2026-05-26)
+
+### Features
+
+- enhance animations with optional blur and duration settings ([95d4903](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/95d4903))
+
+### Refactors
+
+- standardize option tables in README files ([fa49d6e](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/fa49d6e))
+
+### ❤️ Thank You
+
+- Maximiliano Garcia Mortigliengo
+
 ## 0.7.0 (2026-05-26)
 
 ### Features
