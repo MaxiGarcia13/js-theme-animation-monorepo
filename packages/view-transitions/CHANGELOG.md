@@ -1,3 +1,13 @@
+## 0.9.0 (2026-05-26)
+
+### Features
+
+- enhance sweep-reveal animation with new CSS properties and direction configuration ([c4191a3](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/c4191a3))
+
+### ❤️ Thank You
+
+- Maximiliano Garcia Mortigliengo
+
 ## 0.8.1 (2026-05-26)
 
 ### Documentation
