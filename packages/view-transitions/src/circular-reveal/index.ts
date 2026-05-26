@@ -1,16 +1,13 @@
+import type { Options } from '../utils/options.js';
 import { $html } from '../utils/index.js';
+import { removeOptions, setOptions } from '../utils/options.js';
 
 export interface ThemeRevealOrigin {
   clientX: number;
   clientY: number;
 }
 
-export interface CircularRevealOptions {
-  /** Blur inside the expanding circle; clears as the reveal finishes. */
-  blurCircle?: boolean;
-  /** Blur radius when `blurCircle` is true. Defaults to `12px`. */
-  blurAmount?: string;
-}
+export type CircularRevealOptions = Options;
 
 export function onCircularRevealAnimation(
   apply: () => void,
@@ -29,13 +26,7 @@ export function onCircularRevealAnimation(
 
   html.classList.add('circular-reveal');
 
-  if (options?.blurCircle) {
-    html.classList.add('circular-reveal--blur-circle');
-
-    if (options.blurAmount) {
-      html.style.setProperty('--theme-reveal-blur', options.blurAmount);
-    }
-  }
+  setOptions(html, options);
 
   html.style.setProperty('--theme-reveal-x', `${x}%`);
   html.style.setProperty('--theme-reveal-y', `${y}%`);
@@ -43,11 +34,11 @@ export function onCircularRevealAnimation(
   const transition = document.startViewTransition(apply);
 
   const animationComplete = () => {
+    html.classList.remove('circular-reveal');
     html.style.removeProperty('--theme-reveal-x');
     html.style.removeProperty('--theme-reveal-y');
-    html.style.removeProperty('--theme-reveal-blur');
 
-    html.classList.remove('circular-reveal', 'circular-reveal--blur-circle');
+    removeOptions(html);
   };
 
   void transition.finished.finally(animationComplete);

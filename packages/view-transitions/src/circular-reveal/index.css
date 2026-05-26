@@ -10,7 +10,7 @@
 @keyframes circular-reveal-blur {
   from {
     clip-path: circle(0% at var(--theme-reveal-x, 50%) var(--theme-reveal-y, 50%));
-    filter: blur(var(--theme-reveal-blur, 12px));
+    filter: blur(var(--theme-reveal-blur-amount, 12px));
   }
   to {
     clip-path: circle(150% at var(--theme-reveal-x, 50%) var(--theme-reveal-y, 50%));
@@ -30,11 +30,11 @@ html.circular-reveal::view-transition-old(root) {
 
 html.circular-reveal::view-transition-new(root) {
   z-index: 1;
-  animation: circular-reveal 0.5s ease-in-out;
+  animation: circular-reveal var(--theme-reveal-duration, 0.5s) ease-in-out;
 }
 
-html.circular-reveal--blur-circle::view-transition-new(root) {
-  animation: circular-reveal-blur 0.5s ease-in-out;
+.circular-reveal.theme-reveal--blur::view-transition-new(root) {
+  animation: circular-reveal-blur var(--theme-reveal-duration, 0.5s) ease-in-out;
 }
 
 /* Reduce motion */
