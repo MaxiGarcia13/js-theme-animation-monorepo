@@ -27,7 +27,7 @@ button.addEventListener('click', () => {
 ```ts
 onFallAnimation(
   () => document.documentElement.classList.toggle('dark'),
-  { duration: 900 },
+  { duration: '900ms' },
 );
 ```
 
@@ -40,19 +40,21 @@ If `document.startViewTransition` is unavailable, `apply` runs immediately with 
 | Parameter | Type          | Description                                                                |
 | --------- | ------------- | -------------------------------------------------------------------------- |
 | `apply`   | `() => void`  | Runs inside `startViewTransition`; update theme classes or variables here. |
-| `options` | `FallOptions` | Optional duration.                                                         |
+| `options` | `FallOptions` | Optional duration override.                                                |
 
 **`FallOptions`**
 
-| Option     | Type     | Default | Description                    |
-| ---------- | -------- | ------- | ------------------------------ |
-| `duration` | `number` | `700`   | Fall duration in milliseconds. |
+| Option     | Type                              | Default | Description                                                            |
+| ---------- | --------------------------------- | ------- | ---------------------------------------------------------------------- |
+| `duration` | `` `${number}ms` ``/`` `${number}s` `` | `700ms` | Animation duration. Accepts CSS time values like `'900ms'` or `'1s'`.  |
 
 ## Behavior
 
-- Adds `fall` on `<html>` and sets `--theme-fall-duration` for the duration of the transition.
+- Adds `fall` on `<html>` for the duration of the transition.
+- When `duration` is provided, sets `--theme-reveal-duration` on `<html>`.
 - The old snapshot falls from the **bottom** (`transform-origin: bottom center`) and exits downward.
 - The new snapshot is visible immediately underneath with no reveal delay.
+- Cleans up classes and inline styles when the transition finishes.
 - Respects `prefers-reduced-motion: reduce` via CSS (animation disabled).
 
 Your app owns theme logic (class names, `color-scheme`, CSS variables, etc.). This module only orchestrates the transition.
