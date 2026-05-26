@@ -1,3 +1,13 @@
+## 0.6.1 (2026-05-26)
+
+### Fixes
+
+- ensure circular reveal class is added correctly based on blurCircle option ([3036309](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/3036309))
+
+### ❤️ Thank You
+
+- Maximiliano Garcia Mortigliengo
+
 ## 0.6.0 (2026-05-26)
 
 ### Refactors

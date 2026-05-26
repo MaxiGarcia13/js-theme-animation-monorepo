@@ -1,7 +1,7 @@
 {
   "name": "@maxigarcia/view-transitions-app",
   "type": "module",
-  "version": "0.5.5",
+  "version": "0.5.6",
   "private": true,
   "description": "Demo site for @maxigarcia/view-transitions — try View Transitions API theme animations in the browser.",
   "engines": {
