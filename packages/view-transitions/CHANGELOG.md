@@ -1,3 +1,14 @@
+## 0.6.0 (2026-05-26)
+
+### Refactors
+
+- consolidate direction definitions for sweep-reveal animation ([10b0f63](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/10b0f63))
+- update corner animation definitions for sweep-reveal ([3c4e5f6](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/3c4e5f6))
+
+### ❤️ Thank You
+
+- Maximiliano Garcia Mortigliengo
+
 ## 0.5.0 (2026-05-24)
 
 ### 🚀 Features

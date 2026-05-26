@@ -1,3 +1,17 @@
+## 0.5.5 (2026-05-26)
+
+### Styles
+
+- remove unused HTML view transition declaration from global CSS ([4dad8b8](https://github.com/MaxiGarcia13/js-theme-animation-monorepo/commit/4dad8b8))
+
+### 🧱 Updated Dependencies
+
+- Updated @maxigarcia/view-transitions to 0.6.0
+
+### ❤️ Thank You
+
+- Maximiliano Garcia Mortigliengo
+
 ## 0.5.4 (2026-05-24)
 
 ### 🚀 Features
